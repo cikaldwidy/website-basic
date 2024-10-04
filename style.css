@@ -1,0 +1,347 @@
+.logo-small {
+  width: 50px;
+  height: auto;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+:root {
+  --bg-color: #fff;
+  --text-color1: #1f1f21;
+  --text-color2: #fff;
+  --main-color: #15a6f5;
+  --bg-opacity: #fffefa;
+
+  --big-font: 3rem;
+  --title-font: 40px;
+  --p-font: 1rem;
+}
+body {
+  background: var(--bg-color);
+  overflow-x: hidden;
+}
+/* navbar */
+.navbar {
+  width: auto;
+  height: 70px;
+  margin: 15px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  transition: 0.3s background-color;
+  -webkit-transition: 0.3s background-color;
+  -moz-transition: 0.3s background-color;
+  -ms-transition: 0.3s background-color;
+  -o-transition: 0.3s background-color;
+}
+
+.navbar-brand img {
+  width: 40px;
+  height: auto;
+}
+
+.login-button {
+  margin-right: 10px;
+  background-color: var(--main-color);
+  opacity: 100%;
+  color: var(--text-color2);
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s backgroud-color;
+  -webkit-transition: 0.3s backgroud-color;
+  -moz-transition: 0.3s backgroud-color;
+  -ms-transition: 0.3s backgroud-color;
+  -o-transition: 0.3s backgroud-color;
+}
+.login-button:hover {
+  background-color: var(--main-color);
+  opacity: 70%;
+}
+.offcanvas-header img {
+  width: 40px;
+  height: auto;
+}
+.navbar-toggler {
+  border: none;
+  font-size: 1.5rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+.navbar .nav-link.active {
+  color: var(--text-color1);
+  font-weight: 700;
+}
+
+.navbar .nav-link {
+  color: var(--text-color1);
+  font-size: 18px;
+  font-weight: 550;
+  opacity: 85%;
+  position: relative;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active:hover {
+  color: var(--text-color1);
+  font-weight: 650;
+  opacity: 100%;
+}
+
+@media (min-width: 990px) {
+  .navbar .nav-link::before {
+    content: "";
+    color: var(--text-color2);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    visibility: hidden;
+    transition: 0.3s ease-out;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -ms-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+
+  .navbar .nav-link:hover::before,
+  .navbar .navlink.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+
+/* content1 */
+.content-1 {
+  position: relative;
+  background: var(--bg-color);
+  width: 100%;
+  height: 100vh;
+}
+.img-fluid {
+  width: 30rem;
+  height: auto;
+}
+/* Tombol Daftar Sekarang */
+.container-fluid .btn {
+  position: relative;
+  margin-top: 15px;
+  width: 10rem;
+  height: auto;
+  padding: 10px 10px;
+  background: var(--main-color);
+  color: var(--text-color2);
+  border: 2px solid var(--main-color);
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.container-fluid .btn:hover {
+  background: transparent;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+}
+
+.container-fluid h1 {
+  font-size: 70px;
+  text-align: start;
+  font-weight: 650;
+  background: linear-gradient(to right, #011f46, var(--main-color));
+  opacity: 90%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container-fluid h3 {
+  text-align: start;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text-color1);
+  opacity: 90%;
+}
+.container-fluid p {
+  margin-top: 20px;
+  opacity: 90%;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  text-align: start;
+}
+
+/* content2 */
+.content-2 {
+  margin-top: 20px;
+}
+.container h1 {
+  font-size: 37px; /* Ukuran font default untuk layar besar */
+  font-weight: 605;
+  background: linear-gradient(to right, #011f46, var(--main-color));
+  opacity: 90%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container h3 {
+  margin-top: 20px;
+  color: var(--text-color1);
+  opacity: 90%;
+  font-size: 24px;
+  font-weight: 600;
+}
+.circle img {
+  width: 150px;
+  height: 150px;
+  margin: 20px 70px;
+}
+.d-flex .circle .rounded-circle {
+  border: 15px solid var(--text-color2);
+}
+.d-flex .circle h5 {
+  font-size: 20px;
+  font-weight: 650;
+  color: var(--text-color1);
+  opacity: 87%;
+}
+
+.d-flex .circle p {
+  text-align: justify;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 380;
+  color: var(--text-color1);
+  opacity: 87%;
+  letter-spacing: 0.9px;
+}
+
+/* content-3 */
+.custom-container .row,
+.h5 .p .a {
+  max-width: 1200px;
+  text-align: start;
+  margin: 10px 5rem;
+}
+.custom-container .row h5 {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--text-color1);
+  opacity: 87%;
+  letter-spacing: 0.7px;
+}
+.custom-container .row p {
+  font-size: var(--p-font);
+  color: var(--text-color1);
+  opacity: 80%;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+}
+.custom-container .row a {
+  font-size: 16px;
+  font-weight: 650;
+  background: linear-gradient(to right, #011f46, var(--main-color));
+  opacity: 90%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 85%;
+}
+.jumbotron h3 {
+  font-size: 18px;
+  font-weight: 550;
+  background: linear-gradient(to right, #011f46, var(--main-color));
+  opacity: 90%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* footer */
+
+.list1,
+.footer-links,
+.list2 {
+  list-style-type: none; /* Menghapus bullet points */
+  padding-left: 0; /* Menghapus padding kiri */
+}
+
+.list1 li,
+.footer-links li,
+.list2 li {
+  margin-bottom: 10px; /* Jarak bawah untuk item daftar */
+}
+
+/* Gaya untuk tautan di list1 */
+.list1 a {
+  color: var(--text-color2); /* Menggunakan variabel warna */
+  text-decoration: none; /* Menghapus garis bawah */
+  letter-spacing: 1px; /* Jarak antar huruf */
+  font-size: 16px; /* Ukuran font */
+}
+
+.list1 a:hover {
+  text-decoration: underline; /* Garis bawah saat hover */
+}
+
+/* Gaya untuk tautan di footer-links */
+.footer-links a {
+  text-decoration: none; /* Menghapus garis bawah */
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Garis bawah saat hover */
+}
+
+/* Gaya untuk tautan di list2 */
+.list2 a {
+  color: var(--text-color2); /* Menggunakan variabel warna */
+  text-decoration: none; /* Menghapus garis bawah */
+  letter-spacing: 0.5px; /* Jarak antar huruf */
+  font-size: 15px; /* Ukuran font */
+}
+
+.list2 a:hover {
+  text-decoration: underline; /* Garis bawah saat hover */
+}
+
+/* Gaya untuk judul di footer */
+.footer h4 {
+  color: var(--text-color2); /* Menggunakan variabel warna */
+  font-weight: 600; /* Bobot font */
+  font-size: 20px; /* Ukuran font */
+}
+
+/* Gaya untuk footer */
+.footer {
+  background: linear-gradient(
+    to right,
+    #011f46,
+    var(--main-color)
+  ); /* Gradien latar belakang */
+  opacity: 0.9; /* Transparansi */
+}
+
+/* Gaya untuk elemen tambahan */
+.list4,
+.follow,
+.copyright {
+  color: var(--text-color2); /* Menggunakan variabel warna */
+}

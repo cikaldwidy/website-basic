@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <style>
+        :root {
+            /* Deklarasi variabel global untuk warna dan ukuran font */
+            --bg-color: #fff;
+            /* Warna latar belakang umum */
+            --text-color1: #1f1f21;
+            /* Warna teks utama */
+            --text-color2: #fff;
+            /* Warna teks sekunder */
+            --main-color: #15a6f5;
+            /* Warna utama untuk elemen interaktif */
+            --bg-opacity: #fffefa;
+            /* Warna latar belakang dengan opasitas */
+            --big-font: 3rem;
+            /* Ukuran font besar */
+            --title-font: 40px;
+            /* Ukuran font untuk judul */
+            --p-font: 1rem;
+            /* Ukuran font untuk paragraf */
+        }
+
+        body {
+            /* Pengaturan umum untuk body */
+            background-color: #f0f4f8;
+            /* Warna latar belakang */
+            font-family: 'Arial', sans-serif;
+            /* Font yang digunakan */
+        }
+
+        .about-us-container {
+            /* Gaya untuk kontainer 'About Us' */
+            margin-top: 50px;
+            /* Jarak atas */
+            padding-bottom: 50px;
+            /* Padding bawah */
+        }
+
+        .jumbotron {
+            /* Gaya untuk jumbotron yang menampilkan informasi penting */
+            margin: 0 auto;
+            /* Centering jumbotron */
+            max-width: 1000px;
+            /* Lebar maksimum */
+            background-color: #ffffff;
+            /* Warna latar belakang */
+            padding: 30px;
+            /* Padding dalam jumbotron */
+            border-radius: 10px;
+            /* Sudut membulat */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Bayangan */
+            margin-bottom: 40px;
+            /* Jarak bawah */
+        }
+
+        .jumbotron h1 {
+            /* Gaya untuk judul dalam jumbotron */
+            font-size: 3em;
+            /* Ukuran font judul */
+            font-weight: bold;
+            /* Ketebalan font */
+            color: #3a3a3a;
+            /* Warna font */
+        }
+
+        .jumbotron img {
+            /* Gaya untuk gambar dalam jumbotron */
+            border-radius: 50%;
+            /* Membulatkan gambar */
+            border: 5px solid #007bff;
+            /* Border untuk gambar */
+            margin-bottom: 20px;
+            /* Jarak bawah gambar */
+        }
+
+        .jumbotron p {
+            /* Gaya untuk paragraf dalam jumbotron */
+            font-size: 1.2em;
+            /* Ukuran font paragraf */
+            line-height: 1.6em;
+            /* Jarak antar baris */
+            color: #555;
+            /* Warna font */
+            text-align: justify;
+            /* Rata kanan kiri */
+        }
+
+        .team-member {
+            /* Gaya untuk anggota tim */
+            margin-bottom: 30px;
+            /* Jarak bawah */
+            text-align: center;
+            /* Centering teks */
+        }
+
+        .team-member img {
+            /* Gaya untuk gambar anggota tim */
+            border-radius: 50%;
+            /* Membulatkan gambar */
+            width: 150px;
+            /* Lebar gambar */
+            height: 150px;
+            /* Tinggi gambar */
+            margin-bottom: 15px;
+            /* Jarak bawah gambar */
+            border: 2px solid #007bff;
+            /* Border untuk gambar */
+            transition: transform 0.2s;
+            /* Efek transisi saat hover */
+        }
+
+        .team-member img:hover {
+            /* Efek saat hover pada gambar anggota tim */
+            transform: scale(1.1);
+            /* Membesarkan gambar */
+        }
+
+        .team-member h3 {
+            /* Gaya untuk nama anggota tim */
+            font-size: 1.5em;
+            /* Ukuran font */
+            font-weight: bold;
+            /* Ketebalan font */
+            color: #3a3a3a;
+            /* Warna font */
+        }
+
+        .team-member p {
+            /* Gaya untuk deskripsi anggota tim */
+            color: #777;
+            /* Warna font */
+        }
+
+        .text-center h1 {
+            /* Gaya untuk judul teks center */
+            font-size: 2.5em;
+            /* Ukuran font */
+            margin-bottom: 30px;
+            /* Jarak bawah */
+            color: #3a3a3a;
+            /* Warna font */
+            font-weight: bold;
+            /* Ketebalan font */
+        }
+
+        .gallery {
+            /* Gaya untuk galeri */
+            text-align: center;
+            /* Centering teks */
+        }
+
+        .gallery img {
+            /* Gaya untuk gambar dalam galeri */
+            width: 100%;
+            /* Lebar gambar 100% dari kontainer */
+            height: 200px;
+            /* Tinggi gambar */
+            object-fit: cover;
+            /* Memastikan gambar tetap proporsional */
+            margin-bottom: 15px;
+            /* Jarak bawah gambar */
+            border-radius: 8px;
+            /* Sudut membulat */
+            transition: transform 0.2s;
+            /* Efek transisi saat hover */
+        }
+
+        .gallery img:hover {
+            /* Efek saat hover pada gambar galeri */
+            transform: scale(1.05);
+            /* Membesarkan gambar */
+        }
+
+        .gallery-description {
+            /* Gaya untuk deskripsi dalam galeri */
+            margin-bottom: 30px;
+            /* Jarak bawah */
+            font-weight: bold;
+            /* Ketebalan font */
+            color: #555;
+            /* Warna font */
+        }
+
+        .divider {
+            /* Gaya untuk pemisah */
+            border: none;
+            /* Tanpa border */
+            height: 2px;
+            /* Tinggi pemisah */
+            background-color: #007bff;
+            /* Warna pemisah */
+            margin: 40px 0;
+            /* Margin atas dan bawah */
+        }
+
+        .tulisan-gallery {
+            /* Gaya untuk teks galeri */
+            font-weight: bold;
+            /* Ketebalan font */
+        }
+
+
+        /* navbar */
+        .navbar {
+            width: auto;
+            height: 70px;
+            margin: 15px;
+            border-radius: 25px;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            -ms-border-radius: 25px;
+            -o-border-radius: 25px;
+            transition: 0.3s background-color;
+            -webkit-transition: 0.3s background-color;
+            -moz-transition: 0.3s background-color;
+            -ms-transition: 0.3s background-color;
+            -o-transition: 0.3s background-color;
+        }
+
+        .navbar-brand img {
+            width: 40px;
+            height: auto;
+        }
+
+        .login-button {
+            margin-right: 10px;
+            background-color: var(--main-color);
+            opacity: 100%;
+            color: var(--text-color2);
+            font-size: 13px;
+            padding: 8px 12px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s backgroud-color;
+            -webkit-transition: 0.3s backgroud-color;
+            -moz-transition: 0.3s backgroud-color;
+            -ms-transition: 0.3s backgroud-color;
+            -o-transition: 0.3s backgroud-color;
+        }
+
+        .login-button:hover {
+            background-color: var(--main-color);
+            opacity: 70%;
+        }
+
+        .offcanvas-header img {
+            width: 40px;
+            height: auto;
+        }
+
+        .navbar-toggler {
+            border: none;
+            font-size: 1.5rem;
+        }
+
+        .navbar-toggler:focus,
+        .btn-close:focus {
+            box-shadow: none;
+            outline: none;
+        }
+
+        .navbar .nav-link.active {
+            color: var(--text-color1);
+            font-weight: 700;
+        }
+
+        .navbar .nav-link {
+            color: var(--text-color1);
+            font-size: 18px;
+            font-weight: 550;
+            opacity: 85%;
+            position: relative;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active:hover {
+            color: var(--text-color1);
+            font-weight: 650;
+            opacity: 100%;
+        }
+
+        @media (min-width: 990px) {
+            .navbar .nav-link::before {
+                content: "";
+                color: var(--text-color2);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 2px;
+                background-color: var(--main-color);
+                visibility: hidden;
+                transition: 0.3s ease-out;
+                -webkit-transition: 0.3s ease-out;
+                -moz-transition: 0.3s ease-out;
+                -ms-transition: 0.3s ease-out;
+                -o-transition: 0.3s ease-out;
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                -o-transform: translateX(-50%);
+            }
+
+            .navbar .nav-link:hover::before,
+            .navbar .navlink.active::before {
+                width: 100%;
+                visibility: visible;
+            }
+        }
+
+        .logo-small {
+            width: 50px;
+            height: auto;
+        }
+
+        /* footer */
+
+        .list1,
+        .footer-links,
+        .list2 {
+            list-style-type: none;
+            /* Menghapus bullet points */
+            padding-left: 0;
+            /* Menghapus padding kiri */
+        }
+
+        .list1 li,
+        .footer-links li,
+        .list2 li {
+            margin-bottom: 10px;
+            /* Jarak bawah untuk item daftar */
+        }
+
+        /* Gaya untuk tautan di list1 */
+        .list1 a {
+            color: var(--text-color2);
+            /* Menggunakan variabel warna */
+            text-decoration: none;
+            /* Menghapus garis bawah */
+            letter-spacing: 1px;
+            /* Jarak antar huruf */
+            font-size: 16px;
+            /* Ukuran font */
+        }
+
+        .list1 a:hover {
+            text-decoration: underline;
+            /* Garis bawah saat hover */
+        }
+
+        /* Gaya untuk tautan di footer-links */
+        .footer-links a {
+            text-decoration: none;
+            /* Menghapus garis bawah */
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+            /* Garis bawah saat hover */
+        }
+
+        /* Gaya untuk tautan di list2 */
+        .list2 a {
+            color: var(--text-color2);
+            /* Menggunakan variabel warna */
+            text-decoration: none;
+            /* Menghapus garis bawah */
+            letter-spacing: 0.5px;
+            /* Jarak antar huruf */
+            font-size: 15px;
+            /* Ukuran font */
+        }
+
+        .list2 a:hover {
+            text-decoration: underline;
+            /* Garis bawah saat hover */
+        }
+
+        /* Gaya untuk judul di footer */
+        .footer h4 {
+            color: var(--text-color2);
+            /* Menggunakan variabel warna */
+            font-weight: 600;
+            /* Bobot font */
+            font-size: 20px;
+            /* Ukuran font */
+        }
+
+        /* Gaya untuk footer */
+        .footer {
+            background: linear-gradient(to right, #011f46, var(--main-color));
+            /* Gradien latar belakang */
+            opacity: 0.9;
+            /* Transparansi */
+        }
+
+        /* Gaya untuk elemen tambahan */
+        .list4,
+        .follow,
+        .copyright {
+            color: var(--text-color2);
+            /* Menggunakan variabel warna */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand me-auto" href="#">
+                    <img src="./images/logo2.png" alt="logo" class="logo-small" />
+                </a>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                            <img src="./images/logo2.png" alt="logo" class="logo-small" />
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-3" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-3" href="./aboutus.html">About us</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link active dropdown-toggle mx-lg-3" aria-current="page" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Programs
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./programs.html">All-Programs</a></li>
+                                    <li><a class="dropdown-item" href="./myprogram.html">My-Program</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-3" href="./contactus.html">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="./login.html" class="login-button">Log in</a>
+                <button class="navbar-toggler pe-2" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="text-center">
+            <div class="jumbotron text-center" style="margin-top: 100px;">
+                <h1>Siapa Kami?</h1>
+                <img src="images/logo.jpg" alt="Logo Platform" width="150" height="150">
+                <p>Di FunEduCare, kami percaya bahwa belajar
+                    haruslah menyenangkan! Kami menyediakan metode
+                    pembelajaran interaktif yang melibatkan
+                    permainan edukatif, proyek kreatif, dan
+                    aktivitas fisik. Dengan pendekatan ini,
+                    anak-anak tidak hanya belajar konsep-konsep
+                    dasar.</p>
+            </div>
+        </section>
+        <section class="text-center">
+            <h1>Meet Our Teachers</h1>
+            <p>"Kami memiliki tenaga pengasuh profesional yang siap menjaga dan mendampingi anak-anak..."</p>
+            <div class="row">
+                <article class="col-sm-4 team-member">
+                    <img src="images/img-1.jpg" alt="Team Member 1" class="img-responsive img-circle center-block">
+                    <h3>Mr. Adi</h3>
+                    <p>CEO</p>
+                    <p>Pendidikan: S1 Pendidikan Anak Usia Dini...</p>
+                </article>
+                <article class="col-sm-4 team-member">
+                    <img src="images/img-2.jpg" alt="Team Member 2" class="img-responsive img-circle center-block">
+                    <h3>Mr. Putra</h3>
+                    <p>CTO</p>
+                    <p>Pendidikan: S1 Teknologi Pendidikan...</p>
+                </article>
+                <article class="col-sm-4 team-member">
+                    <img src="images/img-3.jpg" alt="Team Member 3" class="img-responsive img-circle center-block">
+                    <h3>Ms. Dewi</h3>
+                    <p>COO</p>
+                    <p>Pendidikan: S2 Psikologi Pendidikan...</p>
+                </article>
+            </div>
+        </section>
+        <hr class="divider">
+        <section class="gallery">
+            <h1 class="text-center tulisan-gallery">Gallery</h1>
+            <p class="text-center">Lihatlah momen-momen berharga...</p>
+            <div class="row">
+                <article class="col-sm-4">
+                    <img src="images/galeri1.jpg" alt="Activity 1">
+                    <div class="gallery-description">
+                        <p>Belajar sambil bermain di ruang kelas.</p>
+                    </div>
+                </article>
+                <article class="col-sm-4">
+                    <img src="images/galeri2.jpg" alt="Activity 2">
+                    <div class="gallery-description">
+                        <p>Aktivitas luar ruangan yang menyenangkan.</p>
+                    </div>
+                </article>
+                <article class="col-sm-4">
+                    <img src="images/galeri1.jpg" alt="Activity 3">
+                    <div class="gallery-description">
+                        <p>Pendidikan seni untuk merangsang kreativitas.</p>
+                    </div>
+                </article>
+                <article class="col-sm-4">
+                    <img src="images/galeri1.jpg" alt="Activity 1">
+                    <div class="gallery-description">
+                        <p>Belajar sambil bermain di ruang kelas.</p>
+                    </div>
+                </article>
+                <article class="col-sm-4">
+                    <img src="images/galeri2.jpg" alt="Activity 2">
+                    <div class="gallery-description">
+                        <p>Aktivitas luar ruangan yang menyenangkan.</p>
+                    </div>
+                </article>
+                <article class="col-sm-4">
+                    <img src="images/galeri1.jpg" alt="Activity 3">
+                    <div class="gallery-description">
+                        <p>Pendidikan seni untuk merangsang kreativitas.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container-footer footer">
+        <div class="pt-4 p-5">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <ul class="list1">
+                        <li><a href="#">TentangKami</a></li>
+                        <li><a href="#">Pendaftaran</a></li>
+                        <li><a href="#">Testimoni</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">LayananLainnya</a></li>
+                        <li><a href="#">KebijakanPrivasi</a></li>
+                        <li><a href="#">Syarat dan Ketentuan</a></li>
+                    </ul>
+                </div>
+                <!-- footer column 2 -->
+                <div class="col-md-4">
+                    <h4>Paket Booking</h4>
+                    <ul class="list2">
+                        <li><a href="#"">DurasiPenitipan</a></li>
+                        <li><a href=" #">Frekuensi</a></li>
+                        <li><a href="#">LayananDasar</a></li>
+                        <li><a href="#">Akses Fasilitas</a></li>
+                        <li><a href="#">LaporanHarian</a></li>
+                        <li><a href="#">PilihanTambahan</a></li>
+                        <li><a href="#">AksesAplikasi</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+
+                    <ul class="list4">
+                        <h4>Kontak Kami</h4>
+                        <h5>Alamat</h5>
+                        <li>Jl.Mawar No 123, Jakarta, Indonesia</li>
+                    </ul>
+                    <ul class="list4">
+                        <h5>Telepon</h5>
+                        <li>(021)1234-5678</li>
+                    </ul>
+                    <ul class="list4">
+                        <h5>Email</h5>
+                        <li>Daycare01@gmail.com</li>
+                    </ul>
+
+                </div>
+
+                <!-- footer column 3/social media -->
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-4 text-center ">
+                        <h5 class="follow">Follow Us</h5>
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="copyright text-center mt-4 ">
+                <p>&copy; 2024 FunEduCare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+
+</body>
+
+
+</html>

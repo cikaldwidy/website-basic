@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Program Section</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /*Mengatur seluruh elemen*/
+    :root {
+      --bg-color: #fff;
+      --text-color1: #1f1f21;
+      --text-color2: #fff;
+      --main-color: #15a6f5;
+      --bg-opacity: #fffefa;
+
+      --big-font: 3rem;
+      --title-font: 40px;
+      --p-font: 1rem;
+    }
+
+    /*Mengatur Navbar*/
+    .navbar {
+      width: auto;
+      height: 70px;
+      margin: 15px;
+      border-radius: 25px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      -ms-border-radius: 25px;
+      -o-border-radius: 25px;
+      transition: 0.3s background-color;
+      -webkit-transition: 0.3s background-color;
+      -moz-transition: 0.3s background-color;
+      -ms-transition: 0.3s background-color;
+      -o-transition: 0.3s background-color;
+    }
+
+    .navbar-brand img {
+      width: 40px;
+      height: auto;
+    }
+
+    .login-button {
+      margin-right: 10px;
+      background-color: var(--main-color);
+      opacity: 100%;
+      color: var(--text-color2);
+      font-size: 13px;
+      padding: 8px 12px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: 0.3s backgroud-color;
+      -webkit-transition: 0.3s backgroud-color;
+      -moz-transition: 0.3s backgroud-color;
+      -ms-transition: 0.3s backgroud-color;
+      -o-transition: 0.3s backgroud-color;
+    }
+
+    .login-button:hover {
+      background-color: var(--main-color);
+      opacity: 70%;
+    }
+
+    .offcanvas-header img {
+      width: 40px;
+      height: auto;
+    }
+
+    .navbar-toggler {
+      border: none;
+      font-size: 1.5rem;
+    }
+
+    .navbar-toggler:focus,
+    .btn-close:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+    .navbar .nav-link.active {
+      color: var(--text-color1);
+      font-weight: 700;
+    }
+
+    .navbar .nav-link {
+      color: var(--text-color1);
+      font-size: 18px;
+      font-weight: 550;
+      opacity: 85%;
+      position: relative;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active:hover {
+      color: var(--text-color1);
+      font-weight: 650;
+      opacity: 100%;
+    }
+
+    @media (min-width: 990px) {
+      .navbar .nav-link::before {
+        content: "";
+        color: var(--text-color2);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: var(--main-color);
+        visibility: hidden;
+        transition: 0.3s ease-out;
+        -webkit-transition: 0.3s ease-out;
+        -moz-transition: 0.3s ease-out;
+        -ms-transition: 0.3s ease-out;
+        -o-transition: 0.3s ease-out;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+      }
+
+      .navbar .nav-link:hover::before,
+      .navbar .navlink.active::before {
+        width: 100%;
+        visibility: visible;
+      }
+    }
+
+    /*Mengatur tampilan depan programs*/
+    .image-section {
+      position: relative;
+      /*Menetapkan posisi elemen relatif terhadap posisinya sendiri.*/
+      height: 50vh;
+      /*Menentukan tinggi elemen 50% dari viewport height */
+      overflow: hidden;
+      /*Menyembunyikan konten yang melebihi batas elemen yang ditampilkan / terpotong*/
+    }
+
+    .image-section img {
+      width: 100%;
+      /*Gambar melebar penuh sesuai dengan ukuran container*/
+      height: 100%;
+      /*Gambar meninggi penuh sesuai dengan ukuran container*/
+      object-fit: cover;
+      /*Gambar tidak terdistorsi dan terlihat baik, karena mengisi seluruh area tanpa mengubah rasio*/
+    }
+
+    .overlay {
+      position: absolute;
+      /*Agar relatif bergerak terhadap posisi element parent-nya yaitu position relative*/
+      top: 0;
+      /*Membuat overlay menutupi seluruh area di atas konten di bawahnya.*/
+      left: 0;
+      /*Membuat overlay menutupi seluruh area di atas konten di bawahnya.*/
+      width: 100%;
+      /*Menentukan lebar overlay agar mengisi seluruh ruang*/
+      height: 100%;
+      /*Menentukan tinggi overlay agar mengisi seluruh ruang*/
+      background-color: rgba(0, 0, 0, 0.5);
+      /*Memberikan warna latar belakang hitam dengan transparansi 50%.*/
+      display: flex;
+      /*Mengatur penataan konten di dalamnya dengan mudah. */
+      flex-direction: column;
+      /*Mengatur arah penataan elemen agar disusun secara vertikal*/
+      justify-content: center;
+      /*Menyusun elemen  di tengah secara vertikal dalam overlay.*/
+      align-items: center;
+      /*Menyusun elemen  di tengah secara horizontal dalam overlay.*/
+      color: white;
+      /*Mengatur elemen teks menjadi warna putih*/
+      text-align: center;
+      /*mengatur teks didalam menjadi ke tengah*/
+    }
+
+    /* footer */
+
+    .list1,
+    .footer-links,
+    .list2 {
+      list-style-type: none;
+      /* Menghapus bullet points */
+      padding-left: 0;
+      /* Menghapus padding kiri */
+    }
+
+    .list1 li,
+    .footer-links li,
+    .list2 li {
+      margin-bottom: 10px;
+      /* Jarak bawah untuk item daftar */
+    }
+
+    /* Gaya untuk tautan di list1 */
+    .list1 a {
+      color: var(--text-color2);
+      /* Menggunakan variabel warna */
+      text-decoration: none;
+      /* Menghapus garis bawah */
+      letter-spacing: 1px;
+      /* Jarak antar huruf */
+      font-size: 16px;
+      /* Ukuran font */
+    }
+
+    .list1 a:hover {
+      text-decoration: underline;
+      /* Garis bawah saat hover */
+    }
+
+    /* Gaya untuk tautan di footer-links */
+    .footer-links a {
+      text-decoration: none;
+      /* Menghapus garis bawah */
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+      /* Garis bawah saat hover */
+    }
+
+    /* Gaya untuk tautan di list2 */
+    .list2 a {
+      color: var(--text-color2);
+      /* Menggunakan variabel warna */
+      text-decoration: none;
+      /* Menghapus garis bawah */
+      letter-spacing: 0.5px;
+      /* Jarak antar huruf */
+      font-size: 15px;
+      /* Ukuran font */
+    }
+
+    .list2 a:hover {
+      text-decoration: underline;
+      /* Garis bawah saat hover */
+    }
+
+    /* Gaya untuk judul di footer */
+    .footer h4 {
+      color: var(--text-color2);
+      /* Menggunakan variabel warna */
+      font-weight: 600;
+      /* Bobot font */
+      font-size: 20px;
+      /* Ukuran font */
+    }
+
+    /* Gaya untuk footer */
+    .footer {
+      background: linear-gradient(to right, #011f46, var(--main-color));
+      /* Gradien latar belakang */
+      opacity: 0.9;
+      /* Transparansi */
+    }
+
+    /* Gaya untuk elemen tambahan */
+    .list4,
+    .follow,
+    .copyright {
+      color: var(--text-color2);
+      /* Menggunakan variabel warna */
+    }
+  </style>
+</head>
+
+<body>
+  <!--Navbar Section-->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand me-auto" href="#">
+          <img src="./images/logo2.png" alt="logo" class="logo-small" />
+        </a>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <img src="./images/logo2.png" alt="logo" class="logo-small" />
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link  mx-lg-3" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-3" href="./aboutus.html">About us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle mx-lg-3" href="" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Programs
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./programs.html">All-Programs</a></li>
+                  <li><a class="dropdown-item" href="./myprogram.html">My-Program</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-3" href="./contactus.html">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a href="./login.html" class="login-button">Log in</a>
+        <button class="navbar-toggler pe-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!--Hero Programs Section-->
+    <section class="image-section">
+      <img src="./images/programs.jpg" alt="Program Image" />
+      <div class="overlay">
+        <p class="fs-1 fw-bolder">Our Program</p>
+        <p class="fs-4 fw-lighter">
+          Engaging activities for children's growth and development
+        </p>
+      </div>
+    </section>
+
+    <!--Kurikulum Kami-->
+    <section class="pt-5 p-4" id="kurikulum">
+      <div class="container">
+        <p class="text-center fs-1 fw-bolder mx-auto pb-4">Kurikulum Kami</p>
+        <div class="row g-5">
+          <!--Card 1 Infant Care (0-12 Bulan)-->
+          <div class="col-md-4 shadow-sm --bs-tertiary-bg rounded">
+            <div class="card border border-0 d-flex flex-column h-100">
+              <img class="pt-4" src="images/baby.jpg" class="card-img-top" alt="..." />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fs-2 fw-semibold">
+                  Infant Care <br />(0-12 Bulan)
+                </h5>
+                <p class="card-text fw-medium fst-italic mt-4">
+                  Kurikulum Infant Care kami berfokus mencakup
+                </p>
+                <ul class="list-group list-group-flush pb-4">
+                  <li class="list-group-item">
+                    Lingkungan yang aman dan menarik untuk eksplorasi
+                  </li>
+                  <li class="list-group-item">
+                    Mainan dan aktivitas yang sesuai dengan tahap usia
+                  </li>
+                  <li class="list-group-item">
+                    Sesi musik dan gerakan untuk stimulasi
+                  </li>
+                  <li class="list-group-item">
+                    Tummy time seperti aktivitas pengembangan fisik
+                  </li>
+                  <li class="list-group-item">
+                    Pengenalan bahasa isyarat untuk bayi
+                  </li>
+                </ul>
+                <a href="/FunEduCare_13/form_booking/form_booking.html"
+                  class="btn btn-primary mt-auto mb-2 d-grid gap-2">Booking Infant Care Program</a>
+              </div>
+            </div>
+          </div>
+          <!--Card 2 Toddler Program-->
+          <div class="col-md-4 shadow-sm --bs-tertiary-bg rounded">
+            <div class="card border border-0 d-flex flex-column h-100">
+              <img class="pt-4" src="images/toddler.jpg" class="card-img-top" alt="..." />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fs-2 fw-semibold">
+                  Toddler Program <br />
+                  (1-2 Tahun)
+                </h5>
+                <p class="card-text fw-medium fst-italic mt-4">
+                  Kurikulum Toddler kami berfokus mencakup
+                </p>
+                <ul class="list-group list-group-flush pb-4">
+                  <li class="list-group-item">Aktivitas pengembangan bahasa</li>
+                  <li class="list-group-item">
+                    Keterampilan motorik halus dan kasar
+                  </li>
+                  <li class="list-group-item">
+                    Pengenalan warna, bentuk dan angka
+                  </li>
+                  <li class="list-group-item">
+                    Latihan interaksi sosial dan berbagi
+                  </li>
+                  <li class="list-group-item">Program membaca untuk balita</li>
+                  <li class="list-group-item">
+                    Mewarnai menggunakan media tempel
+                  </li>
+                </ul>
+                <a href="/FunEduCare_13/form_booking/form_booking.html"
+                  class="btn btn-primary mt-auto mb-2 d-grid gap-2">Booking Toddler Program</a>
+              </div>
+            </div>
+          </div>
+          <!--Card 3 PreSchool Program-->
+          <div class="col-md-4 shadow-sm --bs-tertiary-bg rounded">
+            <div class="card border border-0 d-flex flex-column h-100">
+              <img class="pt-4" src="images/preschool-1.jpg" class="card-img-top" alt="..." />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fs-2 fw-semibold">
+                  Pre-School <br />(3-4 Tahun)
+                </h5>
+                <p class="card-text fw-medium fst-italic mt-4">
+                  Kurikulum Pre-School kami berfokus mencakup
+                </p>
+                <ul class="list-group list-group-flush pb-4">
+                  <li class="list-group-item">
+                    Keterampilan pra-baca dan menulis
+                  </li>
+                  <li class="list-group-item">Konsep dasar matematika</li>
+                  <li class="list-group-item">
+                    Eksperimen sains dan eksplorasi alam
+                  </li>
+                  <li class="list-group-item">Proyek seni dan kerajinan</li>
+                  <li class="list-group-item">Kelas musikal dan menari</li>
+                  <li class="list-group-item">
+                    Keterampilan pengembangan sosial dan emosional
+                  </li>
+                </ul>
+                <a href="/FunEduCare_13/form_booking/form_booking.html"
+                  class="btn btn-primary mt-auto mb-2 d-grid gap-2">Booking Pre-School Program</a>
+              </div>
+            </div>
+          </div>
+          <!--Card 4 Pre-Kindergarten-->
+          <div class="col-md-4 shadow-sm --bs-tertiary-bg rounded">
+            <div class="card border border-0 d-flex flex-column h-100">
+              <img class="pt-4" src="images/prekindergarten.jpg" class="card-img-top" alt="..." />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fs-2 fw-semibold">
+                  Pre-Kindergarten <br />(4-5 Tahun)
+                </h5>
+                <p class="card-text fw-medium fst-italic mt-4">
+                  Kurikulum Pre-Kindergarten kami berfokus mencakup
+                </p>
+                <ul class="list-group list-group-flush pb-4">
+                  <li class="list-group-item">
+                    Keterampilan literasi tingkat lanjutan
+                  </li>
+                  <li class="list-group-item">Pemahaman penalaran logika</li>
+                  <li class="list-group-item">
+                    Pemikiran kritis dan solusi masalah
+                  </li>
+                  <li class="list-group-item">Pengenalan teknologi</li>
+                  <li class="list-group-item">
+                    Kesadaran budaya dan keberagaraman
+                  </li>
+                  <li class="list-group-item">Edukasi fisik dan olahraga</li>
+                </ul>
+                <a href="#" class="btn btn-primary mt-auto mb-2 d-grid gap-2">Booking Pre-Kindergarten Program</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Program Lainnya-->
+    <section class="pt-5" id="program-lainnya">
+      <div class="container">
+        <p class="text-center fs-1 fw-bolder mx-auto pb-4">Program Lainnya</p>
+        <div class="row g-4">
+          <!--Parenting Seminar-->
+          <div class="col-md">
+            <div class="card border border-1 d-flex flex-column h-100">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fs-2 fw-semibold text-center">
+                  Parenting Seminar
+                </h5>
+                <p class="card-text fw-medium mt-2 text-center">
+                  Ikuti seminar yang dipandu oleh para ahli mengenai berbagai
+                  topik parenting:
+                </p>
+                <ul class="list-group list-group-flush flex-grow-1 pb-5 pt-3">
+                  <li class="list-group-item">
+                    Teknik Kedisplinan anak yang positif
+                  </li>
+                  <li class="list-group-item">
+                    Mendorong kecerdasan emosional pada anak
+                  </li>
+                  <li class="list-group-item">
+                    Cara berkomunikasi yang efektif dengan anak
+                  </li>
+                  <li class="list-group-item">
+                    Mengatasi tantangan perilaku yang sering muncul
+                  </li>
+                </ul>
+                <a href="/FunEduCare_13/form_booking/form_booking.html"
+                  class="btn btn-outline-primary mt-auto rounded-pill">Learn More Parenting Seminar</a>
+              </div>
+            </div>
+          </div>
+          <!--Cooking Class for Children's Nutrition-->
+          <div class="col-md">
+            <div class="card border border-1 d-flex flex-column h-100">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fs-2 fw-semibold text-center">
+                  Cooking Classes for Children's Nutrition
+                </h5>
+                <p class="card-text fw-medium mt-2 text-center">
+                  Pelajari cara menyiapkan makanan bergizi dan lezat untuk
+                  anak-anak Anda:
+                </p>
+                <ul class="list-group list-group-flush flex-grow-1 pb-5">
+                  <li class="list-group-item">
+                    Perencanaan menu yang sesuai usia
+                  </li>
+                  <li class="list-group-item">
+                    Memperkenalkan makanan baru kepada anak picky eaters
+                  </li>
+                  <li class="list-group-item">
+                    Ide kotak makan siang yang cepat dan sehat
+                  </li>
+                  <li class="list-group-item">Memahami kebutuhan gizi anak</li>
+                  <li class="list-group-item">
+                    Memasak bersama anak: resep yang menyenangkan dan edukatif
+                  </li>
+                </ul>
+                <a href="#" class="btn btn-outline-primary mt-auto rounded-pill">Learn More Cooking Class</a>
+              </div>
+            </div>
+          </div>
+          <!--Children's Work Exhibitions-->
+          <div class="col-md">
+            <div class="card border border-1 d-flex flex-column h-100">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fs-2 fw-semibold text-center">
+                  Children's Work Exhibitions
+                </h5>
+                <p class="card-text fw-medium mt-2 text-center">
+                  Pekan pameran karya kreativitas dan pencapaian anak:
+                </p>
+                <ul class="list-group list-group-flush flex-grow-1 pb-5">
+                  <li class="list-group-item">
+                    Pameran seni triwulanan yang menampilkan karya anak-anak
+                  </li>
+                  <li class="list-group-item">
+                    Pameran sains yang menonjolkan proyek-proyek siswa
+                  </li>
+                  <li class="list-group-item">Pertunjukan musik dan tarian</li>
+                  <li class="list-group-item">Pameran keberagaman budaya</li>
+                  <li class="list-group-item">
+                    Presentasi portofolio di penghujung tahun
+                  </li>
+                </ul>
+                <a href="#" class="btn btn-outline-primary mt-auto rounded-pill">Learn More Exhibitions</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--Footer-->
+
+  <footer class="container-footer footer">
+    <div class="pt-4 p-5">
+      <div class="row">
+        <div class="col-md-4 ">
+          <ul class="list1">
+            <li><a href="#">TentangKami</a></li>
+            <li><a href="#">Pendaftaran</a></li>
+            <li><a href="#">Testimoni</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">LayananLainnya</a></li>
+            <li><a href="#">KebijakanPrivasi</a></li>
+            <li><a href="#">Syarat dan Ketentuan</a></li>
+          </ul>
+        </div>
+        <!-- footer column 2 -->
+        <div class="col-md-4">
+          <h4>Paket Booking</h4>
+          <ul class="list2">
+            <li><a href="#"">DurasiPenitipan</a></li>
+                      <li><a href=" #">Frekuensi</a></li>
+            <li><a href="#">LayananDasar</a></li>
+            <li><a href="#">Akses Fasilitas</a></li>
+            <li><a href="#">LaporanHarian</a></li>
+            <li><a href="#">PilihanTambahan</a></li>
+            <li><a href="#">AksesAplikasi</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+
+          <ul class="list4">
+            <h4>Kontak Kami</h4>
+            <h5>Alamat</h5>
+            <li>Jl.Mawar No 123, Jakarta, Indonesia</li>
+          </ul>
+          <ul class="list4">
+            <h5>Telepon</h5>
+            <li>(021)1234-5678</li>
+          </ul>
+          <ul class="list4">
+            <h5>Email</h5>
+            <li>Daycare01@gmail.com</li>
+          </ul>
+
+        </div>
+
+        <!-- footer column 3/social media -->
+        <div class="d-flex justify-content-center">
+          <div class="col-md-4 text-center ">
+            <h5 class="follow">Follow Us</h5>
+            <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="copyright text-center mt-4 ">
+        <p>&copy; 2024 FunEduCare. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- link icon bostrap -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

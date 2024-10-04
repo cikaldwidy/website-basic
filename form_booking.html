@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
+      integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
+      crossorigin="anonymous"
+    />
+
+    <title>Forms</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1
+        style="
+          font-family: 'Arial', sans-serif;
+          font-size: 36px;
+          font-weight: bold;
+          letter-spacing: 2px;
+          color: #333;
+        "
+      >
+        Form Booking Class
+      </h1>
+      <!-- Div container untuk form dengan background -->
+      <div
+        style="background-color: #87a2ff; padding: 20px; border-radius: 10px"
+      >
+        <form>
+          <!-- Nama Orang Tua -->
+          <div class="form-group">
+            <label for="parentName">Nama Orang Tua / Wali</label>
+            <input
+              type="text"
+              class="form-control"
+              id="parentName"
+              placeholder="Masukkan Nama Orang Tua / Wali"
+              required
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              placeholder="Enter email"
+              required
+            />
+          </div>
+
+          <!-- Nomor Telepon -->
+          <div class="form-group">
+            <label for="phone">Nomor Telepon</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="phone"
+              placeholder="Masukkan Nomor Telepon"
+              required
+            />
+          </div>
+
+          <!-- Nama Anak -->
+          <div class="form-group">
+            <label for="childName">Nama Anak</label>
+            <input
+              type="text"
+              class="form-control"
+              id="childName"
+              placeholder="Masukkan Nama Anak"
+              required
+            />
+          </div>
+
+          <!-- Umur Anak -->
+          <div class="form-group">
+            <label for="exampleSelect1">Umur Anak</label>
+            <select class="form-control" id="exampleSelect1" required>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </div>
+
+          <!-- Pilih Program dengan Radio Buttons -->
+          <div
+            style="background-color: #ffffff; padding: 14px; border-radius: 8px"
+          >
+            <fieldset class="form-group">
+              <legend>Pilih Program</legend>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="programOptions"
+                    id="programOption1"
+                    value="toddler"
+                    required
+                  />
+                  Toddler Program (2-3 years)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="programOptions"
+                    id="programOption2"
+                    value="playfull"
+                  />
+                  Playfull Program (3-4 years)
+                </label>
+              </div>
+
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    name="programOptions"
+                    id="programOption3"
+                    value="preschool"
+                  />
+                  Preschool (4-6 years)
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- Tanggal Berkunjung -->
+          <div class="form-group">
+            <label for="startDate">Tanggal Berkunjung:</label>
+            <input
+              type="date"
+              id="startDate"
+              name="startDate"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <!-- Additional Comments -->
+          <div class="form-group">
+            <label for="exampleTextarea">Additional Comments</label>
+            <textarea
+              class="form-control"
+              id="exampleTextarea"
+              rows="3"
+              placeholder="Tambahkan komentar tambahan"
+            ></textarea>
+          </div>
+
+          <!-- Buttons -->
+          <div class="button-group">
+            <button type="button" class="btn btn-secondary">Cancel</button>
+            <button type="submit" class="btn btn-primary">
+              Booking Sekarang
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
