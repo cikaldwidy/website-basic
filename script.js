@@ -2,12 +2,12 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Membuat array yang berisi ID dari semua tombol 'Tampilkan lebih banyak'
   const readMoreButtons = [
-    "readMoreBtn1", // ID tombol pertama
-    "readMoreBtn2", // ID tombol kedua
-    "readMoreBtn3", // ID tombol ketiga
-    "readMoreBtn4", // ID tombol keempat
-    "readMoreBtn5", // ID tombol kelima
-    "readMoreBtn6", // ID tombol keenam
+    "readMoreBtn1",
+    "readMoreBtn2",
+    "readMoreBtn3",
+    "readMoreBtn4",
+    "readMoreBtn5",
+    "readMoreBtn6",
   ];
 
   // Melakukan iterasi atau perulangan pada setiap ID tombol di dalam array

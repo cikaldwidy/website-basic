@@ -17,7 +17,7 @@
         background-size: cover; /* Membuat gambar menutupi seluruh halaman */
         color: black; /* Mengatur warna teks menjadi hitam */
       }
-      
+
       .container {
         display: flex; /* Menggunakan Flexbox untuk tata letak */
         justify-content: center; /* Memposisikan elemen secara horizontal di tengah */
@@ -25,17 +25,17 @@
         flex-direction: column; /* Mengatur elemen secara vertikal (kolom) */
         height: 100vh; /* Mengatur tinggi container menjadi 100% tinggi viewport */
       }
-      
+
       h1 {
         text-align: center; /* Mengatur teks judul agar rata tengah */
         padding-bottom: 50px; /* Menambahkan jarak bawah 50px */
         font-size: 250%; /* Mengatur ukuran font menjadi 250% dari ukuran default */
       }
-      
+
       form {
         width: 500px; /* Mengatur lebar form */
-        background-color: #e3d9d7; /* Mengatur warna latar belakang form */
-        border: solid 1px gray; /* Memberikan border abu-abu dengan lebar 1px */
+        background-color: white; /* Mengatur warna latar belakang form */
+        border: solid 3px #15a6f5;
         backdrop-filter: blur(
           20px
         ); /* Menambahkan efek blur di latar belakang form */
@@ -43,7 +43,7 @@
         border-radius: 20px; /* Membuat sudut form menjadi tumpul dengan radius 5px */
         padding: 30px; /* Menambahkan padding dalam form sebesar 30px */
       }
-      
+
       .submit {
         display: flex; /* Menggunakan Flexbox untuk tata letak */
         justify-content: center; /* Memposisikan elemen secara horizontal di tengah */
@@ -51,39 +51,41 @@
         flex-direction: column; /* Mengatur elemen secara vertikal */
         height: 100px; /* Mengatur tinggi section submit */
       }
-      
+
       .btn {
         width: 150px; /* Mengatur lebar tombol */
-        background-color: #7fa1c4; /* Mengatur warna latar tombol */
+        background-color: #15a6f5; /* Mengatur warna latar tombol */
         border-radius: 15px; /* Membuat sudut tombol melengkung dengan radius 15px */
-        border: solid 1px black; /* Menambahkan border hitam pada tombol */
         font-weight: bold; /* Mengatur teks tombol menjadi tebal */
+        color: white;
       }
-      
+
       .btn:hover {
-        background-color: #6582ae; /* Mengubah warna latar tombol saat hover */
+        background-color: white; /* Mengubah warna latar tombol saat hover */
+        color: #15a6f5;
+        border: solid 3px #15a6f5; /* Mengubah warna border tombol saat hover */
       }
-      
+
       p {
         font-size: 80%; /* Mengatur ukuran font menjadi 80% dari ukuran default */
         padding-top: 5px; /* Menambahkan jarak atas pada paragraf sebesar 5px */
       }
-      
+
       .box {
         padding-bottom: 10px; /* Menambahkan jarak bawah pada elemen box sebesar 10px */
       }
-      
+
       a {
         color: black;
+        font-weight: bold;
       }
-      
     </style>
     <title>Sign In</title>
   </head>
 
   <body>
     <div class="container">
-      <form action="login.html" method="get">
+      <form action="login.html" id="signinForm">
         <h1 class="box">Sign In</h1>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
@@ -119,9 +121,19 @@
           />
         </div>
         <div class="submit">
-          <button type="submit" href="login.html" class="btn">Submit</button>
+          <button href="login.html" type="submit" class="btn">Submit</button>
         </div>
       </form>
     </div>
+
+    <script>
+      document
+        .getElementById("signinForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Mencegah form dari pengiriman default
+          alert("Sign-in Berhasil!"); // Menampilkan pop-up log-in berhasil
+          this.submit(); // Melanjutkan pengiriman form setelah menampilkan alert
+        });
+    </script>
   </body>
 </html>
