@@ -1,92 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FunEduCare</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <!-- js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FunEduCare</title>
+        <link rel="stylesheet" href="style.css">
 
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg fixed-top bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand me-auto" href="#">
-                    <img src="images/logo2.png" alt="logo" class="logo-small" />
-                </a>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- css -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous" />
+        <!-- js -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    </head>
 
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                            <img src="images/logo2.png" alt="logo" class="logo-small" />
-                        </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand me-auto" href="#">
+                        <img src="images/logo2.png" alt="logo"
+                            class="logo-small" />
+                    </a>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1"
+                        id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title"
+                                id="offcanvasNavbarLabel">
+                                <img src="images/logo2.png" alt="logo"
+                                    class="logo-small" />
+                            </h5>
+                            <button type="button" class="btn-close"
+                                data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul
+                                class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active mx-lg-3"
+                                        aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mx-lg-3"
+                                        href="aboutus.html">About us</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle mx-lg-3"
+                                        href role="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Programs
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item"
+                                                href="programs.html">All-Programs</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="myprogram.html">My-Program</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mx-lg-3"
+                                        href="contactus.html">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link active mx-lg-3" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link mx-lg-3" href="aboutus.html">About us</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle mx-lg-3" href="" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Programs
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="programs.html">All-Programs</a></li>
-                                    <li><a class="dropdown-item" href="myprogram.html">My-Program</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link mx-lg-3" href="contactus.html">Contact us</a>
-                            </li>
-                        </ul>
+                    <a href="login.html" class="login-button">Log in</a>
+                    <button class="navbar-toggler pe-2" type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar"
+                        aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- content1 -->
+        <section class="container-fluid content-1">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6 d-flex flex-column justify-content-center p-4 p-md-5">
+                    <h3 class="text-center text-md-start">Belajar lebih Seru!</h3>
+                    <h1 class="text-center text-md-start display-4">FunEduCare</h1>
+                    <hr class="garis mx-auto mx-md-0">
+                    <p class="text-center text-md-start">
+                        Jangan lewatkan kesempatan untuk memberikan yang terbaik bagi anak anda
+                    </p>
+                    <div class="button-group text-center text-md-start">
+                        <a href="#" class="btn btn-2">Jelajahi Kami</a>
+                        <a href="form_booking.html" class="btn btn-1">Daftar Sekarang</a>
                     </div>
                 </div>
-                <a href="login.html" class="login-button">Log in</a>
-                <button class="navbar-toggler pe-2" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <div class="col-12 col-md-6 col-lg-6 my-5 p-4 p-md-5 d-flex justify-content-center">
+                    <img src="./images/h-c1.PNG" class="img-k1 img-fluid" alt="konten">
+                </div>
             </div>
-        </nav>
-    </header>
-    <main>
-    <!-- content1 -->
-    <section class="container-fluid content-1">
-        <div class="row">
-            <div class="col-md-6 d-flex flex-column justify-content-center text-center p-5">
-                <h3>Belajar lebih Seru!</h3>
-                <h1>FunEduCare</h1>
-                <p>Jangan lewatkan kesempatan untuk memberikan yang terbaik bagi anak anda</p>
-                <a href="form_booking.html" class="btn">Daftar Sekarang</a>
-            </div>
-            <div class="col-md-6 my-5 p-5 d-flex justify-content-center">
-                <img src="images/c1.png" class="img-fluid" alt="logo">
-            </div>
-        </div>
-    </section>
-    <!-- content2 -->
+        </section>
+        
+        <!-- content2 -->
         <section class="container content-2">
             <div class="row">
                 <div class="col-sm">
                     <h1>Kenapa harus FunEduCare? </h1>
                     <h3>Tumbuh, bermain, dan belajar anak!</h3>
-                    <div class="d-flex flex-column flex-md-row justify-content-center">
+                    <div
+                        class="d-flex flex-column flex-md-row justify-content-center">
                         <div class="circle mx-5 text-center">
-                            <img src="images/b2.jpg" class="rounded-circle" alt="konten">
+                            <img src="images/b2.jpg" class="rounded-circle"
+                                alt="konten">
                             <h5>Pembelajaran Interaktif </h5>
                             <p>Di FunEduCare, kami percaya bahwa belajar
                                 haruslah menyenangkan! Kami menyediakan metode
@@ -97,7 +130,8 @@
                                 dasar.</p>
                         </div>
                         <div class="circle mx-5 text-center">
-                            <img src="images/b3.jpg" class="rounded-circle" alt="konten">
+                            <img src="images/b3.jpg" class="rounded-circle"
+                                alt="konten">
                             <h5>Kurikulum yang Sesuai</h5>
                             <p>Kami menawarkan kurikulum yang dirancang khusus
                                 untuk memenuhi kebutuhan belajar setiap anak
@@ -109,7 +143,8 @@
                                 menulis, dan berhitung.</p>
                         </div>
                         <div class="circle mx-5 text-center">
-                            <img src="images/b1.jpg" class="rounded-circle" alt="konten">
+                            <img src="images/b1.jpg" class="rounded-circle"
+                                alt="konten">
                             <h5>Lingkungan Menyenangkan</h5>
                             <p>Di FunEduCare, keselamatan dan kesejahteraan anak
                                 adalah prioritas utama kami. Kami menciptakan
@@ -121,125 +156,501 @@
                     </div>
                 </div>
         </section>
-
         <!-- content3 -->
-        <section class="jumbotron text-center">
-            <hr class="my-4" />
-            <h1 class="display-5">Mari Bergabung bersama kami!</h1>
-            <h3 class="lead">Kami menyediakan fasilitas untuk mendukung layanan kami.</h3>
-            <div class="container-fluid custom-container">
-                <div class="row align-items-center">
-                    <div class="col-md-6 ">
-                        <h5>Ruang Bermain Edukatif</h5>
-                        <p> Ruang bermain kami didesain dengan permainan yang aman
-                            dan mendukung perkembangan motorik serta kognitif anak,
-                            setiap mainan memiliki nilai edukasi, membantu anak
-                            belajar sambil bermain.</p>
-                        <a href="#" class="btn-2">Baca Selengkapnya > </a>
+        <section class="container content-3">
+                <div class="row">
+                    <h1 class="mt-5 mb-4 ">Mari Bergabung bersama kami!</h1>
+                    <h5 class=" mb-5">Kami menyediakan fasilitas untuk mendukung
+                        layanan kami.</h5>
+
+                    <div class="row align-items-center mb-6">
+                        <div class="col-lg-6 custom-col mb-4">
+                            <h3>Ruang Bermain Edukatif</h3>
+                            <p>Ruang bermain kami didesain dengan permainan yang
+                                aman dan mendukung perkembangan motorik serta
+                                kognitif anak, setiap mainan memiliki nilai
+                                edukasi, membantu anak belajar sambil
+                                bermain.</p>
+                            <a href="#" class="btn-2">Baca Selengkapnya ></a>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <img src="images/f-konten1.jpg"
+                                class="w-100 rounded" alt="konten">
+                        </div>
                     </div>
-                    <div class="col-md-6 p-5 ">
-                        <img src="images/f-konten1.jpg" class="w-100 rounded" alt="konten">
+
+                    <div class="row align-items-center mb-6">
+                        <div class="col-lg-6 custom-col mb-4">
+                            <img src="images/f-konten2.jpg"
+                                class="w-100 rounded" alt="konten">
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <h3>Ruang Belajar yang Nyaman</h3>
+                            <p>Dilengkapi dengan meja dan kursi ergonomis serta
+                                pencahayaan yang baik, ruang belajar kami
+                                memberikan suasana yang nyaman dan konduktif
+                                untuk anak-anak.</p>
+                            <a href="#" class="btn-2">Baca Selengkapnya ></a>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center mb-6">
+                        <div class="col-lg-6 custom-col mb-4">
+                            <h3>Pengawasan CCTV</h3>
+                            <p>Kami memprioritaskan keamanan anak-anak dengan
+                                pengawasan CCTV di setiap sudut ruangan.</p>
+                            <a href="#" class="btn-2">Baca Selengkapnya ></a>
+                        </div>
+                        <div class="col-md-6 mb-5">
+                            <img src="images/f-konten3.jpg"
+                                class="w-100 rounded" alt="konten">
+                        </div>
+                    </div>
+                    <div class="button-group mb-5 d-flex justify-content-center ">
+                        <a href="#" class="btn btn-1">Selengkapnya</a>
                     </div>
                 </div>
-                <div class="row align-items-center">
-                    <div class="col-md-6 p-5">
-                        <img src="images/f-konten2.jpg" class="w-100 rounded" alt="konten">
+        </section>
+        <!-- content4 -->
+        <section class="container mt-5 content-4">
+                <h3 class="text-center">Testimoni </h3>
+                <h1 class="text-center mb-5">Apa Kata Mereka?</h1>
+                <!-- Carousel -->
+                <div id="testimonialCarousel" class="carousel slide"
+                    data-bs-ride="carousel">
+                    <div class="carousel-inner ">
+                        <div class="carousel-item active">
+                            <div class="row p-3">
+                                <div class="col-md-4">
+                                    <div class="testimonial-card text-center">
+                                        <div class="overlay"></div>
+                                        <div class="content">
+                                            <img src="./images/h-4-m.jpg"
+                                                class="rounded-circle mx-auto d-block"
+                                                alt="logo" width="100px">
+                                            <p class="testimonial-author">Bapak
+                                                Sujono</p>
+                                                <p>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                
+                                                </p>
+                                            <p class="testimonial-text mt-5">
+                                                Lorem ipsum dolor sit amet consectetur adipiscing elit<span
+                                                    id="dots1">...</span>
+                                                <span id="more1"
+                                                    class="hidden-text">                                                
+                                                    sed do eiusmod tempor
+                                                    incididunt ut labore et
+                                                    dolore magna aliqua. Ut enim
+                                                    ad minim veniam, quis
+                                                    nostrud exercitation ullamco
+                                                    laboris nisi ut aliquip ex
+                                                    ea commodo consequat. Duis
+                                                    aute irure dolor in
+                                                    reprehenderit in voluptate
+                                                    velit esse cillum dolore eu
+                                                    fugiat nulla
+                                                    pariatur.</span>
+                                            </p>
+                                            <button class="read-more-btn"
+                                                id="readMoreBtn1">Tampilkan lebih banyak</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="testimonial-card text-center">
+                                        <div class="overlay"></div>
+                                        <div class="content">
+                                            <img src="./images/h-4-m2.jpg"
+                                                class="rounded-circle mx-auto d-block"
+                                                alt="logo" width="100px">
+                                            <p class="testimonial-author">Bapak
+                                                Alfiansyah</p>
+                                                <p>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                
+                                                </p>
+                                            <p class="testimonial-text mt-5">
+                                                Lorem ipsum dolor sit amet consectetur adipiscing elit,
+                                                sed do eiusmod tempor<span
+                                                    id="dots2">...</span>
+                                                <span id="more2"
+                                                    class="hidden-text">                                                  
+                                                    incididunt ut labore et
+                                                    dolore magna aliqua. Ut enim
+                                                    ad minim veniam, quis
+                                                    nostrud exercitation ullamco
+                                                    laboris nisi ut aliquip ex
+                                                    ea commodo consequat. Duis
+                                                    aute irure dolor in
+                                                    reprehenderit in voluptate
+                                                    velit esse cillum dolore eu
+                                                    fugiat nulla
+                                                    pariatur.</span>
+                                            </p>
+                                            <button class="read-more-btn"
+                                                id="readMoreBtn2">Tampilkan lebih banyak</button>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="testimonial-card text-center">
+                                        <div class="overlay"></div>
+                                        <div class="content">
+                                            <img src="./images/h-4-f.jpg"
+                                                class="rounded-circle mx-auto d-block"
+                                                alt="logo" width="100px">
+                                            <p class="testimonial-author">Ibu
+                                                Santi</p>
+                                                <p>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                
+                                                </p>
+                                            <p class="testimonial-text mt-5">
+                                                Lorem ipsum dolor sit amet consectetur adipiscing elit,
+                                                sed do eiusmod tempor
+                                                <span
+                                                id="dots3">...</span>
+                                                <span id="more3"
+                                                    class="hidden-text">
+                                                    labore et
+                                                    dolore magna aliqua. Ut enim
+                                                    ad minim veniam, quis
+                                                    nostrud exercitation ullamco
+                                                    laboris nisi ut aliquip ex
+                                                    ea commodo consequat. Duis
+                                                    aute irure dolor in
+                                                    reprehenderit in voluptate
+                                                    velit esse cillum dolore eu
+                                                    fugiat nulla
+                                                    pariatur.</span>
+                                            </p>
+                                            <button class="read-more-btn"
+                                                id="readMoreBtn3">Tampilkan lebih banyak</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row p-3">
+                                <div class="col-md-4">
+                                    <div class="testimonial-card text-center">
+                                        <div class="overlay"></div>
+                                        <div class="content">
+                                            <img src="./images/h-4-f2.jpg"
+                                                class="rounded-circle mx-auto d-block"
+                                                alt="logo" width="100px">
+                                            <p class="testimonial-author">Ibu
+                                                Wiwik </p>
+                                                <p>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                
+                                                </p>
+                                            <p class="testimonial-text mt-5">
+                                                Lorem ipsum dolor sit amet consectetur adipiscing elit<span
+                                                    id="dots4">...</span>
+                                                <span id="more4"
+                                                    class="hidden-text">                                             
+                                                    sed do eiusmod tempor
+                                                    incididunt ut labore et
+                                                    dolore magna aliqua. Ut enim
+                                                    ad minim veniam, quis
+                                                    nostrud exercitation ullamco
+                                                    laboris nisi ut aliquip ex
+                                                    ea commodo consequat. Duis
+                                                    aute irure dolor in
+                                                    reprehenderit in voluptate
+                                                    velit esse cillum dolore eu
+                                                    fugiat nulla
+                                                    pariatur.</span>
+                                            </p>
+                                            <button class="read-more-btn"
+                                                id="readMoreBtn4">Tampilkan lebih banyak</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="testimonial-card text-center">
+                                        <div class="overlay"></div>
+                                        <div class="content">
+                                            <img src="./images/h-4-m3.jpg"
+                                                class="rounded-circle mx-auto d-block"
+                                                alt="logo" width="100px">
+                                            <p class="testimonial-author">Bapak
+                                                Imam mahmudi</p>
+                                                <p>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                
+                                                </p>
+                                            <p class="testimonial-text mt-5">
+                                                Lorem ipsum dolor sit amet consectetur adipiscing elit,
+                                                sed do eiusmod tempor<span
+                                                    id="dots5">...</span>
+                                                <span id="more5"
+                                                    class="hidden-text">                                                  
+                                                    incididunt ut labore et
+                                                    dolore magna aliqua. Ut enim
+                                                    ad minim veniam, quis
+                                                    nostrud exercitation ullamco
+                                                    laboris nisi ut aliquip ex
+                                                    ea commodo consequat. Duis
+                                                    aute irure dolor in
+                                                    reprehenderit in voluptate
+                                                    velit esse cillum dolore eu
+                                                    fugiat nulla
+                                                    pariatur.</span>
+                                            </p>
+                                            <button class="read-more-btn"
+                                                id="readMoreBtn5">Tampilkan lebih banyak</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="testimonial-card text-center">
+                                        <div class="overlay"></div>
+                                        <div class="content">
+                                            <img src="./images/h-4-f3.jpg"
+                                                class="rounded-circle mx-auto d-block"
+                                                alt="logo" width="100px">
+                                            <p class="testimonial-author">Ibu
+                                                Anggun</p>
+                                                <p>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                                                    <i class="fas fa-star"
+                                                        style="color: gold;"></i>
+                
+                                                </p>
+                                            <p class="testimonial-text mt-5">
+                                                Lorem ipsum dolor sit amet consectetur adipiscing elit,
+                                                sed do eiusmod tempor<span
+                                                    id="dots6">...</span>
+                                                <span id="more6"
+                                                    class="hidden-text">                                                 
+                                                    incididunt ut labore et
+                                                    dolore magna aliqua. Ut enim
+                                                    ad minim veniam, quis
+                                                    nostrud exercitation ullamco
+                                                    laboris nisi ut aliquip ex
+                                                    ea commodo consequat. Duis
+                                                    aute irure dolor in
+                                                    reprehenderit in voluptate
+                                                    velit esse cillum dolore eu
+                                                    fugiat nulla
+                                                    pariatur.</span>
+                                            </p>
+                                            <button class="read-more-btn"
+                                                id="readMoreBtn6">Tampilkan lebih banyak</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 p-5 ">
-                        <h5>Ruang Belajar yang Nyaman</h5>
-                        <p>Dilengkapi dengan meja dan kursi ergonomis serta
-                            pencahayaan yang baik, ruang belajar kami memberikan
-                            suasana yang nyaman dan konduktif untuk anak-anak.</p>
-                        <a href="#" class="btn-2">Baca Selengkapnya > </a>
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button"
+                        data-bs-target="#testimonialCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"
+                            aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        class="carousel-control-next" type="button"
+                        data-bs-target="#testimonialCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"
+                            aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <script src="./script.js"></script>
+
+        </section>
+        <hr class=" mx-auto mx-md-0">
+        <!-- content5 -->
+         <section class="container-fluid content-5">
+            <div class="col-sm mt-5 mb-5 text-center">
+                <div class="row">
+                    <div class="text-content p-4">
+                        <h1 class="mb-4">- OUR MISION -</h1>
+                        <p><span>F</span>uneducare, <span>M</span>isi kami adalah <span>M</span>enciptakan <span>L</span>ingkungan yang <span>M</span>endukung anak-anak untuk <span>T</span>umbuh, <span>B</span>elajar, dan <span>M</span>engeksplorasi <span>K</span>reativitas <span>M</span>ereka. Tujuan kami adalah bermitra dengan keluarga untuk menginspirasi kecintaan pada belajar seumur hidup dan membantu anak-anak membangun kepercayaan diri serta keterampilan yang mereka butuhkan untuk sukses, sambil tetap bersenang-senang!</p>
                     </div>
                 </div>
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <h5>Pengawasan CCTV</h5>
-                        <p> Kami memprioritaskan keamanan anak-anak dengan
-                            pengawasan CCTV di setiap sudut ruangan.</p>
-                        <a href="#" class="btn-2">Baca Selengkapnya > </a>
+            </div>
+         </section>
+        <!-- content6 -->
+        <section class="container content-6">
+            <div class="col-lg mt-5 mb-5">
+              <div class="row">
+                <div class="content-cs d-flex flex-column flex-md-row">
+                  <img src="./images/c-6-1.jpg" alt="img" class="img-fluid custom-img rounded-4" width="500px">
+                  <div class="content-all p-3 p-md-5 mt-3">
+                    <div class="text-center mb-5">
+                      <h1>Hubungi Kami</h1>
+                      <h3>Jika Anda memiliki pertanyaan seputar FunEduCare, silahkan isi form berikut!</h3>
                     </div>
-                    <div class="col-md-6 p-5 ">
-                        <img src="images/f-konten3.jpg" class="w-100 rounded" alt="konten">
+                    <form id="contactForm">
+                    <div class="mt-3">
+                      <label for="nameInput" class="form-label fw-bold">Nama*</label>
+                      <input type="text" class="form-control custom-input" id="nameInput" placeholder="Masukkan nama lengkap Anda">
                     </div>
+                    <div class="mt-3">
+                        <label for="genderInput" class="form-label fw-bold">Jenis Kelamin*</label>
+                        <input type="text" class="form-control custom-input" id="genderInput" placeholder="Masukkan jenis kelamin Anda">
+                      </div>
+                    <div class="mt-3">
+                      <label for="emailInput" class="form-label fw-bold">Email*</label>
+                      <input type="email" class="form-control custom-input" id="emailInput" placeholder="Masukkan email Anda">
+                    </div>
+                    <div class="mt-3">
+                      <label for="phoneInput" class="form-label fw-bold">No.Telp*</label>
+                      <input type="tel" class="form-control custom-input" id="phoneInput" placeholder="Masukkan no telp Anda">
+                    </div>
+                    <div class="mt-3">
+                      <label for="addressInput" class="form-label fw-bold">Alamat*</label>
+                      <textarea class="form-control" id="addressInput" rows="3" placeholder="Masukkan alamat Anda"></textarea>
+                    </div>
+                    <div class="button-group mt-5 d-flex justify-content-center ">
+                    <button type="submit" class="btn btn-1">Kirim</button>
+                    </div>
+                </form>
+                  </div>
                 </div>
+              </div>
             </div>
         </section>
-    </main>
+         <!--Footer-->
+        <footer class="container-footer footer">
+                <div class="pt-4 p-5">
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <ul class="list1">
+                                <li><a href="#">Tentang Kami</a></li>
+                                <li><a href="#">Pendaftaran</a></li>
+                                <li><a href="#">Testimoni</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Layanan Lainnya</a></li>
+                                <li><a href="#">Kebijakan Privasi</a></li>
+                                <li><a href="#">Syarat dan Ketentuan</a></li>
+                            </ul>
+                        </div>
+                        <!-- footer column 2 -->
+                        <div class="col-md-4">
+                            <h4>Paket Booking</h4>
+                            <ul class="list2">
+                                <li><a href="#"">Durasi Penitipan</a></li>
+                                <li><a href=" #">Frekuensi</a></li>
+                                <li><a href="#">Layanan Dasar</a></li>
+                                <li><a href="#">Akses Fasilitas</a></li>
+                                <li><a href="#">Laporan Harian</a></li>
+                                <li><a href="#">Pilihan Tambahan</a></li>
+                                <li><a href="#">Akses Aplikasi</a></li>
+                            </ul>
+                        </div>
 
-    <!--Footer-->
+                        <div class="col-md-4">
 
-    <footer class="container-footer footer">
-        <div class="pt-4 p-5">
-            <div class="row">
-                <div class="col-md-4 ">
-                    <ul class="list1">
-                        <li><a href="#">TentangKami</a></li>
-                        <li><a href="#">Pendaftaran</a></li>
-                        <li><a href="#">Testimoni</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">LayananLainnya</a></li>
-                        <li><a href="#">KebijakanPrivasi</a></li>
-                        <li><a href="#">Syarat dan Ketentuan</a></li>
-                    </ul>
-                </div>
-                <!-- footer column 2 -->
-                <div class="col-md-4">
-                    <h4>Paket Booking</h4>
-                    <ul class="list2">
-                        <li><a href="#"">DurasiPenitipan</a></li>
-                        <li><a href=" #">Frekuensi</a></li>
-                        <li><a href="#">LayananDasar</a></li>
-                        <li><a href="#">Akses Fasilitas</a></li>
-                        <li><a href="#">LaporanHarian</a></li>
-                        <li><a href="#">PilihanTambahan</a></li>
-                        <li><a href="#">AksesAplikasi</a></li>
-                    </ul>
-                </div>
+                            <ul class="list4">
+                                <h4>Kontak Kami</h4>
+                                <h5>Alamat</h5>
+                                <li>Jl.Mawar No 123, Jakarta, Indonesia</li>
+                            </ul>
+                            <ul class="list4">
+                                <h5>Telepon</h5>
+                                <li>(021)1234-5678</li>
+                            </ul>
+                            <ul class="list4">
+                                <h5>Email</h5>
+                                <li>Daycare01@gmail.com</li>
+                            </ul>
 
-                <div class="col-md-4">
+                        </div>
 
-                    <ul class="list4">
-                        <h4>Kontak Kami</h4>
-                        <h5>Alamat</h5>
-                        <li>Jl.Mawar No 123, Jakarta, Indonesia</li>
-                    </ul>
-                    <ul class="list4">
-                        <h5>Telepon</h5>
-                        <li>(021)1234-5678</li>
-                    </ul>
-                    <ul class="list4">
-                        <h5>Email</h5>
-                        <li>Daycare01@gmail.com</li>
-                    </ul>
+                        <!-- footer column 3/social media -->
+                        <div class="d-flex justify-content-center">
+                            <div class="col-md-4 text-center ">
+                                <h5 class="follow">Follow Us</h5>
+                                <a href="#" class="text-white me-2"><i
+                                        class="bi bi-facebook"></i></a>
+                                <a href="#" class="text-white me-2"><i
+                                        class="bi bi-twitter"></i></a>
+                                <a href="#" class="text-white me-2"><i
+                                        class="bi bi-instagram"></i></a>
+                                <a href="#" class="text-white me-2"><i
+                                        class="bi bi-linkedin"></i></a>
 
-                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- footer column 3/social media -->
-                <div class="d-flex justify-content-center">
-                    <div class="col-md-4 text-center ">
-                        <h5 class="follow">Follow Us</h5>
-                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
-
+                    <!-- Footer Bottom -->
+                    <div class="copyright text-center mt-4 ">
+                        <p> Copyright &copy; 2024 FunEduCare. All rights
+                            reserved.</p>
                     </div>
                 </div>
-            </div>
-
-            <!-- Footer Bottom -->
-            <div class="copyright text-center mt-4 ">
-                <p>&copy; 2024 FunEduCare. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-    <!-- link icon bostrap -->
-    <link rel="stylesheet"
+        </footer>
+        <!-- link icon bostrap -->
+        <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
 
+    </body>
 
-</body>-
-
-</html>
+    </html>
