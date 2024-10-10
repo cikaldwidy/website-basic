@@ -1,600 +1,917 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Contact Us - FunEduCare</title>
-  <meta name="description" content="Contact FunEduCare for more information about our services." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- css -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-  <!-- js -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      /* Mengatur font untuk seluruh halaman */
-      margin: 0;
-      /* Menghilangkan margin default */
-      padding: 0;
-      /* Menghilangkan padding default */
-      background-color: #fff;
-      /* Latar belakang terang untuk kontras */
-      color: #000;
-      /* Mengubah warna teks menjadi hitam */
-    }
-
-    :root {
-      --bg-color: #fff;
-      --text-color1: #1f1f21;
-      --text-color2: #fff;
-      --main-color: #15a6f5;
-      --bg-opacity: #fffefa;
-    }
-
-    /* Gaya Header */
-    .contact-bg {
-      background-color: #6482AD;
-      /* Warna latar belakang header */
-      color: #FFF;
-      /* Warna teks di header */
-      padding: 60px 0;
-      /* Padding atas dan bawah */
-      text-align: center;
-      /* Menyelaraskan teks ke tengah */
-    }
-
-    .contact-bg h2 {
-      margin-bottom: 15px;
-      /* Jarak bawah untuk heading */
-    }
-
-    .contact-bg .line {
-      margin: 20px auto;
-      /* Margin untuk garis pemisah */
-    }
-
-    .line-item {
-      display: inline-block;
-      /* Menampilkan item dalam satu baris */
-    }
-
-    /* Gaya Teks */
-    .text {
-      font-size: 1.1rem;
-      /* Ukuran font untuk teks penjelasan */
-      color: #FFF;
-      /* Warna teks untuk kontras yang lebih baik */
-    }
-
-    /* Gaya Bagian Utama */
-    .container {
-      display: flex;
-      /* Menggunakan flexbox untuk tata letak */
-      justify-content: space-between;
-      /* Memberi jarak antar elemen */
-      align-items: flex-start;
-      /* Menyelaraskan item ke atas */
-    }
-
-    article,
-    aside {
-      padding: 20px;
-      /* Padding untuk memberikan jarak */
-    }
-
-    aside {
-      border-left: 2px solid none;
-      /* Border kiri untuk pemisahan (dapat diaktifkan) */
-      padding-left: 20px;
-      /* Jarak antara border dan konten */
-    }
-
-    /* Gaya Formulir */
-    .form-label {
-      font-weight: bold;
-      /* Membuat label formulir menjadi tebal */
-    }
-
-    .form-control {
-      border-radius: 4px;
-      /* Menambahkan sudut bulat pada input */
-      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-      /* Efek bayangan pada input */
-      transition: border-color 0.3s;
-      /* Transisi warna border */
-    }
-
-    .form-control:focus {
-      border-color: #7FA1C3;
-      /* Mengubah warna border saat input difokuskan */
-    }
-
-    /* Gaya Tombol */
-    .btn-primary {
-      background-color: #7FA1C3;
-      /* Warna latar belakang tombol */
-      border-color: #7FA1C3;
-      /* Warna border tombol */
-      transition: background-color 0.3s, border-color 0.3s;
-      /* Transisi saat hover */
-    }
-
-    .btn-primary:hover {
-      background-color: #7FA1C3;
-      /* Warna latar belakang saat hover */
-      border-color: #7FA1C3;
-      /* Warna border saat hover */
-    }
-
-    /* Gaya Peta */
-    .map {
-      margin: 20px 0;
-      /* Margin atas dan bawah untuk peta */
-    }
-
-
-
-    .social-links a {
-      color: white;
-      /* Warna tautan sosial */
-      font-size: 1.5rem;
-      /* Ukuran font tautan sosial */
-      margin: 0 10px;
-      /* Margin horizontal antar tautan */
-      transition: color 0.3s;
-      /* Transisi warna saat hover */
-    }
-
-    .social-links a:hover {
-      color: #E2DAD6;
-      /* Warna saat tautan sosial dihover */
-    }
-
-    /* Gaya Responsif */
-    @media (max-width: 768px) {
-      .contact-bg {
-        padding: 40px 0;
-        /* Padding lebih kecil pada layar kecil */
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Contact Us - FunEduCare</title>
+    <meta
+      name="description"
+      content="Contact FunEduCare for more information about our services."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        /* Mengatur font untuk seluruh halaman */
+        margin: 0;
+        /* Menghilangkan margin default */
+        padding: 0;
+        /* Menghilangkan padding default */
+        background-color: #fff;
+        /* Latar belakang terang untuk kontras */
+        color: #000;
+        /* Mengubah warna teks menjadi hitam */
       }
 
+      :root {
+        --bg-color: #fff;
+        --text-color1: #1f1f21;
+        --text-color2: #fff;
+        --main-color: #15a6f5;
+        --bg-opacity: #fffefa;
+      }
+
+      /* Gaya Header */
+      .contact-bg {
+        height: 40vh;
+        /* Tinggi bagian kontak diatur menjadi 40% dari viewport height */
+        background: linear-gradient(to right, #011f46, var(--main-color));
+        /* Latar belakang dengan gradien*/
+        background-position: 50% 100%;
+        /* Posisi latar belakang di tengah secara horizontal dan di bawah secara vertikal */
+        background-repeat: no-repeat;
+        /* Gambar latar belakang tidak akan diulang */
+        background-attachment: fixed;
+        /* Latar belakang tetap saat menggulir */
+        text-align: center;
+        /* Teks di tengah */
+        color: #fff;
+        /* Warna teks putih */
+        display: flex;
+        /* Menggunakan flexbox untuk penataan */
+        flex-direction: column;
+        /* Mengatur arah elemen flex menjadi kolom */
+        justify-content: center;
+        /* Menyejajarkan konten di tengah secara vertikal */
+        align-items: center;
+        /* Menyejajarkan konten di tengah secara horizontal */
+      }
+
+      .contact-bg h3 {
+        font-size: 1.3rem;
+        /* Ukuran font untuk sub-judul */
+        font-weight: 400;
+        /* Ketebalan font sub-judul */
+      }
+
+      .contact-bg h2 {
+        font-size: 3rem;
+        /* Ukuran font untuk judul utama */
+        text-transform: uppercase;
+        /* Mengubah teks menjadi huruf kapital */
+        padding: 0.4rem 0;
+        /* Memberikan padding vertikal */
+        letter-spacing: 4px;
+        /* Mengatur jarak antar huruf */
+      }
+
+      .line-item {
+        display: inline-block;
+        /* Menampilkan item dalam satu baris */
+      }
+
+      /* Gaya Teks */
+      .text {
+        font-size: 1.1rem;
+        /* Ukuran font untuk teks penjelasan */
+        color: #fff;
+        /* Warna teks untuk kontras yang lebih baik */
+      }
+
+      /* Gaya Bagian Utama */
       .container {
-        margin: 10px;
-        /* Margin pada kontainer untuk layar kecil */
+        display: flex;
+        /* Menggunakan flexbox untuk tata letak */
+        justify-content: space-between;
+        /* Memberi jarak antar elemen */
+        align-items: flex-start;
+        /* Menyelaraskan item ke atas */
       }
 
       article,
       aside {
-        margin-bottom: 15px;
-        /* Jarak bawah untuk elemen pada layar kecil */
+        padding: 20px;
+        /* Padding untuk memberikan jarak */
       }
 
       aside {
-        margin-left: 0;
-        /* Menghilangkan margin kiri pada layar kecil */
+        border-left: 2px solid none;
+        /* Border kiri untuk pemisahan (dapat diaktifkan) */
+        padding-left: 20px;
+        /* Jarak antara border dan konten */
       }
-    }
 
-    /* navbar */
-    .navbar {
-      width: auto;
-      height: 70px;
-      margin: 15px;
-      border-radius: 25px;
-      -webkit-border-radius: 25px;
-      -moz-border-radius: 25px;
-      -ms-border-radius: 25px;
-      -o-border-radius: 25px;
-      transition: 0.3s background-color;
-      -webkit-transition: 0.3s background-color;
-      -moz-transition: 0.3s background-color;
-      -ms-transition: 0.3s background-color;
-      -o-transition: 0.3s background-color;
-    }
+      /* Gaya Formulir */
+      .form-label {
+        font-weight: bold;
+        /* Membuat label formulir menjadi tebal */
+      }
 
-    .navbar-brand img {
-      width: 40px;
-      height: auto;
-    }
+      .form-control {
+        border-radius: 4px;
+        /* Menambahkan sudut bulat pada input */
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        /* Efek bayangan pada input */
+        transition: border-color 0.3s;
+        /* Transisi warna border */
+      }
 
-    .login-button {
-      margin-right: 10px;
-      background-color: var(--main-color);
-      opacity: 100%;
-      color: var(--text-color2);
-      font-size: 13px;
-      padding: 8px 12px;
-      border-radius: 50px;
-      text-decoration: none;
-      transition: 0.3s backgroud-color;
-      -webkit-transition: 0.3s backgroud-color;
-      -moz-transition: 0.3s backgroud-color;
-      -ms-transition: 0.3s backgroud-color;
-      -o-transition: 0.3s backgroud-color;
-    }
+      .form-control:focus {
+        border-color: #15a6f5;
+        /* Mengubah warna border saat input difokuskan */
+      }
 
-    .login-button:hover {
-      background-color: var(--main-color);
-      opacity: 70%;
-    }
+      /* Gaya Tombol */
+      .btn-primary {
+        background-color: #15a6f5;
+        /* Warna latar belakang tombol */
+        border-color: #15a6f5;
+        /* Warna border tombol */
+        transition: background-color 0.3s, border-color 0.3s;
+        /* Transisi saat hover */
+      }
 
-    .offcanvas-header img {
-      width: 40px;
-      height: auto;
-    }
+      .btn-primary:hover {
+        background-color: #15a6f5;
+        /* Warna latar belakang saat hover */
+        border-color: #15a6f5;
+        /* Warna border saat hover */
+      }
 
-    .navbar-toggler {
-      border: none;
-      font-size: 1.5rem;
-    }
+      /* Mengatur container utama untuk FAQ */
+      /* Gunakan dengan <section class="faq-container"> untuk mengelompokkan seluruh FAQ */
+      .faq-container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
 
-    .navbar-toggler:focus,
-    .btn-close:focus {
-      box-shadow: none;
-      outline: none;
-    }
+      /* Styling untuk setiap item FAQ */
+      /* Gunakan dengan <article class="faq-item"> untuk setiap pasangan pertanyaan-jawaban */
+      .faq-item {
+        border: 1px solid #e0e0e0;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
 
-    .navbar .nav-link.active {
-      color: var(--text-color1);
-      font-weight: 700;
-    }
+      /* Mengatur tampilan pertanyaan FAQ */
+      /* Gunakan dengan <h3 class="faq-question"> untuk setiap pertanyaan */
+      .faq-question {
+        background: #ee0d62;
+        color: #fff;
+        padding: 15px 20px;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease;
+      }
 
-    .navbar .nav-link {
-      color: var(--text-color1);
-      font-size: 18px;
-      font-weight: 550;
-      opacity: 85%;
-      position: relative;
-    }
+      /* Efek hover pada pertanyaan */
+      .faq-question:hover {
+        background: #e9e9e9;
+      }
 
-    .navbar .nav-link:hover,
-    .navbar .nav-link.active:hover {
-      color: var(--text-color1);
-      font-weight: 650;
-      opacity: 100%;
-    }
+      /* Menambahkan ikon panah ke pertanyaan */
+      .faq-question::after {
+        content: "\25BC";
+        /* Unicode untuk panah ke bawah */
+        font-size: 12px;
+        transition: transform 0.3s ease;
+      }
 
-    @media (min-width: 990px) {
-      .navbar .nav-link::before {
-        content: "";
-        color: var(--text-color2);
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 2px;
+      /* Styling untuk pertanyaan aktif */
+      .faq-question.active {
+        background: #ee0d62;
+        color: #fff;
+      }
+
+      /* Memutar ikon panah saat pertanyaan aktif */
+      .faq-question.active::after {
+        transform: rotate(-180deg);
+      }
+
+      /* Mengatur tampilan jawaban FAQ */
+      /* Gunakan dengan <div class="faq-answer"> untuk setiap jawaban */
+      .faq-answer {
+        background: #011f46;
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+      }
+
+      /* Menampilkan jawaban saat aktif */
+      .faq-answer.active {
+        max-height: 1000px;
+        padding: 20px;
+      }
+
+      /* Styling untuk teks jawaban */
+      /* Gunakan dengan <p> di dalam .faq-answer */
+      .faq-answer p {
+        margin: 0;
+        line-height: 1.6;
+        color: #fff;
+      }
+
+      /* Gaya Peta */
+      .map {
+        margin: 20px 0;
+        /* Margin atas dan bawah untuk peta */
+      }
+
+      .social-links a {
+        color: white;
+        /* Warna tautan sosial */
+        font-size: 1.5rem;
+        /* Ukuran font tautan sosial */
+        margin: 0 10px;
+        /* Margin horizontal antar tautan */
+        transition: color 0.3s;
+        /* Transisi warna saat hover */
+      }
+
+      .social-links a:hover {
+        color: #e2dad6;
+        /* Warna saat tautan sosial dihover */
+      }
+
+      /* Gaya Responsif */
+      @media (max-width: 768px) {
+        .contact-bg {
+          padding: 40px 0;
+          /* Padding lebih kecil pada layar kecil */
+        }
+
+        .container {
+          margin: 10px;
+          /* Margin pada kontainer untuk layar kecil */
+        }
+
+        article,
+        aside {
+          margin-bottom: 15px;
+          /* Jarak bawah untuk elemen pada layar kecil */
+        }
+
+        aside {
+          margin-left: 0;
+          /* Menghilangkan margin kiri pada layar kecil */
+        }
+      }
+
+      /* navbar */
+      .navbar {
+        width: auto;
+        height: 70px;
+        margin: 15px;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        transition: 0.3s background-color;
+        -webkit-transition: 0.3s background-color;
+        -moz-transition: 0.3s background-color;
+        -ms-transition: 0.3s background-color;
+        -o-transition: 0.3s background-color;
+      }
+
+      .navbar-brand img {
+        width: 40px;
+        height: auto;
+      }
+
+      .login-button {
+        margin-right: 10px;
         background-color: var(--main-color);
-        visibility: hidden;
-        transition: 0.3s ease-out;
-        -webkit-transition: 0.3s ease-out;
-        -moz-transition: 0.3s ease-out;
-        -ms-transition: 0.3s ease-out;
-        -o-transition: 0.3s ease-out;
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
+        opacity: 100%;
+        color: var(--text-color2);
+        font-size: 13px;
+        padding: 8px 12px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: 0.3s backgroud-color;
+        -webkit-transition: 0.3s backgroud-color;
+        -moz-transition: 0.3s backgroud-color;
+        -ms-transition: 0.3s backgroud-color;
+        -o-transition: 0.3s backgroud-color;
       }
 
-      .navbar .nav-link:hover::before,
-      .navbar .navlink.active::before {
-        width: 100%;
-        visibility: visible;
+      .login-button:hover {
+        background-color: var(--main-color);
+        opacity: 70%;
       }
-    }
 
-    .logo-small {
-      width: 50px;
-      height: auto;
-    }
+      .offcanvas-header img {
+        width: 40px;
+        height: auto;
+      }
 
-    /* footer */
+      .navbar-toggler {
+        border: none;
+        font-size: 1.5rem;
+      }
 
-    .list1,
-    .footer-links,
-    .list2 {
-      list-style-type: none;
-      /* Menghapus bullet points */
-      padding-left: 0;
-      /* Menghapus padding kiri */
-    }
+      .navbar-toggler:focus,
+      .btn-close:focus {
+        box-shadow: none;
+        outline: none;
+      }
 
-    .list1 li,
-    .footer-links li,
-    .list2 li {
-      margin-bottom: 10px;
-      /* Jarak bawah untuk item daftar */
-    }
+      .navbar .nav-link.active {
+        color: var(--text-color1);
+        font-weight: 700;
+      }
 
-    /* Gaya untuk tautan di list1 */
-    .list1 a {
-      color: var(--text-color2);
-      /* Menggunakan variabel warna */
-      text-decoration: none;
-      /* Menghapus garis bawah */
-      letter-spacing: 1px;
-      /* Jarak antar huruf */
-      font-size: 16px;
-      /* Ukuran font */
-    }
+      .navbar .nav-link {
+        color: var(--text-color1);
+        font-size: 18px;
+        font-weight: 550;
+        opacity: 85%;
+        position: relative;
+      }
 
-    .list1 a:hover {
-      text-decoration: underline;
-      /* Garis bawah saat hover */
-    }
+      .navbar .nav-link:hover,
+      .navbar .nav-link.active:hover {
+        color: var(--text-color1);
+        font-weight: 650;
+        opacity: 100%;
+      }
 
-    /* Gaya untuk tautan di footer-links */
-    .footer-links a {
-      text-decoration: none;
-      /* Menghapus garis bawah */
-    }
+      @media (min-width: 990px) {
+        .navbar .nav-link::before {
+          content: "";
+          color: var(--text-color2);
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 2px;
+          background-color: var(--main-color);
+          visibility: hidden;
+          transition: 0.3s ease-out;
+          -webkit-transition: 0.3s ease-out;
+          -moz-transition: 0.3s ease-out;
+          -ms-transition: 0.3s ease-out;
+          -o-transition: 0.3s ease-out;
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+        }
 
-    .footer-links a:hover {
-      text-decoration: underline;
-      /* Garis bawah saat hover */
-    }
+        .navbar .nav-link:hover::before,
+        .navbar .navlink.active::before {
+          width: 100%;
+          visibility: visible;
+        }
+      }
 
-    /* Gaya untuk tautan di list2 */
-    .list2 a {
-      color: var(--text-color2);
-      /* Menggunakan variabel warna */
-      text-decoration: none;
-      /* Menghapus garis bawah */
-      letter-spacing: 0.5px;
-      /* Jarak antar huruf */
-      font-size: 15px;
-      /* Ukuran font */
-    }
+      .logo-small {
+        width: 50px;
+        height: auto;
+      }
 
-    .list2 a:hover {
-      text-decoration: underline;
-      /* Garis bawah saat hover */
-    }
+      /* footer */
 
-    /* Gaya untuk judul di footer */
-    .footer h4 {
-      color: var(--text-color2);
-      /* Menggunakan variabel warna */
-      font-weight: 600;
-      /* Bobot font */
-      font-size: 20px;
-      /* Ukuran font */
-    }
+      .list1,
+      .footer-links,
+      .list2 {
+        list-style-type: none;
+        /* Menghapus bullet points */
+        padding-left: 0;
+        /* Menghapus padding kiri */
+      }
 
-    /* Gaya untuk footer */
-    .footer {
-      background: linear-gradient(to right, #011f46, var(--main-color));
-      /* Gradien latar belakang */
-      opacity: 0.9;
-      /* Transparansi */
-    }
+      .list1 li,
+      .footer-links li,
+      .list2 li {
+        margin-bottom: 10px;
+        /* Jarak bawah untuk item daftar */
+      }
 
-    /* Gaya untuk elemen tambahan */
-    .list4,
-    .follow,
-    .copyright {
-      color: var(--text-color2);
-      /* Menggunakan variabel warna */
-    }
-  </style>
-</head>
+      /* Gaya untuk tautan di list1 */
+      .list1 a {
+        color: var(--text-color2);
+        /* Menggunakan variabel warna */
+        text-decoration: none;
+        /* Menghapus garis bawah */
+        letter-spacing: 1px;
+        /* Jarak antar huruf */
+        font-size: 16px;
+        /* Ukuran font */
+      }
 
-<body>
-  <nav class="navbar navbar-expand-lg fixed-top bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand me-auto" href="#">
-        <img src="./images/logo2.png" alt="logo" class="logo-small" />
-      </a>
+      .list1 a:hover {
+        text-decoration: underline;
+        /* Garis bawah saat hover */
+      }
 
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-            <img src="./images/logo2.png" alt="logo" class="logo-small" />
-          </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      /* Gaya untuk tautan di footer-links */
+      .footer-links a {
+        text-decoration: none;
+        /* Menghapus garis bawah */
+      }
+
+      .footer-links a:hover {
+        text-decoration: underline;
+        /* Garis bawah saat hover */
+      }
+
+      /* Gaya untuk tautan di list2 */
+      .list2 a {
+        color: var(--text-color2);
+        /* Menggunakan variabel warna */
+        text-decoration: none;
+        /* Menghapus garis bawah */
+        letter-spacing: 0.5px;
+        /* Jarak antar huruf */
+        font-size: 15px;
+        /* Ukuran font */
+      }
+
+      .list2 a:hover {
+        text-decoration: underline;
+        /* Garis bawah saat hover */
+      }
+
+      /* Gaya untuk judul di footer */
+      .footer h4 {
+        color: var(--text-color2);
+        /* Menggunakan variabel warna */
+        font-weight: 600;
+        /* Bobot font */
+        font-size: 20px;
+        /* Ukuran font */
+      }
+
+      /* Gaya untuk footer */
+      .footer {
+        background: linear-gradient(to right, #011f46, var(--main-color));
+        /* Gradien latar belakang */
+        opacity: 0.9;
+        /* Transparansi */
+      }
+
+      /* Gaya untuk elemen tambahan */
+      .list4,
+      .follow,
+      .copyright {
+        color: var(--text-color2);
+        /* Menggunakan variabel warna */
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand me-auto" href="#">
+          <img src="./images/logo2.png" alt="logo" class="logo-small" />
+        </a>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <img src="./images/logo2.png" alt="logo" class="logo-small" />
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-3" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active mx-lg-3" href="./aboutus.html"
+                  >About us</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle mx-lg-3"
+                  href=""
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Programs
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="programs.html"
+                      >All-Programs</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="myprogram.html"
+                      >My-Program</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-3" href="./contactus.html"
+                  >Contact us</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link mx-lg-3" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-lg-3" href="./aboutus.html">About us</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link active dropdown-toggle mx-lg-3" aria-current="page" href="#" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Programs
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./programs.html">All-Programs</a></li>
-                <li><a class="dropdown-item" href="./myprogram.html">My-Program</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link mx-lg-3" href="./contactus.html">Contact us</a>
-            </li>
-          </ul>
-        </div>
+        <a href="./login.html" class="login-button">Log in</a>
+        <button
+          class="navbar-toggler pe-2"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
-      <a href="./login.html" class="login-button">Log in</a>
-      <button class="navbar-toggler pe-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </nav>
-  <header class="contact-bg text-center py-5" style="margin-top: 100px;">
-    <h3>Get In Touch with FunEduCare</h3>
-    <h2>Contact Us</h2>
-    <div class="line my-3">
-      <div class="line-item" style="
+    </nav>
+    <header class="contact-bg text-center py-5" style="margin-top: 100px">
+      <h3>Get In Touch with FunEduCare</h3>
+      <h2>Contact Us</h2>
+      <div class="line my-3">
+        <div
+          class="line-item"
+          style="
             height: 3px;
             width: 70px;
             background: #fff;
             border-radius: 5px;
             display: inline-block;
-          "></div>
-      <div class="line-item" style="
+          "
+        ></div>
+        <div
+          class="line-item"
+          style="
             width: 10px;
             height: 10px;
             background: #fff;
             border-radius: 50%;
             display: inline-block;
-          "></div>
-      <div class="line-item" style="
+          "
+        ></div>
+        <div
+          class="line-item"
+          style="
             height: 3px;
             width: 70px;
             background: #fff;
             border-radius: 5px;
             display: inline-block;
-          "></div>
-    </div>
-    <p class="text">
-      Klik di atas untuk menjadwalkan program atau isi formulir di bawah ini,
-      dan salah satu admin kami akan segera menghubungi anda. Kami tidak sabar
-      untuk bertemu anda dan keluarga!
-    </p>
-  </header>
+          "
+        ></div>
+      </div>
+      <p class="text">
+        Klik di atas untuk menjadwalkan program atau isi formulir di bawah ini,
+        dan salah satu admin kami akan segera menghubungi anda. Kami tidak sabar
+        untuk bertemu anda dan keluarga!
+      </p>
+    </header>
 
-  <main class="container my-4">
-    <div class="row">
-      <article class="col-md-7 d-flex flex-column">
-        <h2>Formulir Kontak</h2>
-        <form aria-labelledby="contact-form">
-          <div class="mb-3">
-            <label for="name" class="form-label">Nama</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama Anda" required />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email Anda"
-              required />
-          </div>
-          <div class="mb-3">
-            <label for="contact" class="form-label">Nomor Kontak</label>
-            <input type="tel" class="form-control" id="contact" name="contact" placeholder="Masukkan nomor kontak Anda"
-              required />
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Pesan</label>
-            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Kirim</button>
-        </form>
-      </article>
-
-      <aside class="col-md-5">
-        <h2>Informasi Kontak</h2>
-        <hr />
-        <address class="mt-4">
-          <p class="ms-2">
-            Jl. Letnan Soetopo, Ruko Golden Madrid 2 Blok F No.19, BSD City,
-            Kec. Serpong, Kota Tangerang Selatan, Banten 15310
-          </p>
-        </address>
-        <hr />
-        <div class="d-flex">
-          <p class="ms-2">(021) 1234-5678</p>
-        </div>
-        <hr />
-        <div class="d-flex">
-          <p class="ms-2">info@funeducare.com</p>
-        </div>
-        <hr />
-        <div class="d-flex">
-          <p class="ms-2">Senin - Sabtu (07.00 - 18.00 WIB)</p>
-        </div>
-      </aside>
-    </div>
-  </main>
-
-
-  <section class="map my-4">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.6880355629382!2d106.68383427409745!3d-6.304656361699461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e55e09af6f51%3A0x15d32286238d7a9c!2sEducourse.id%20Office!5e0!3m2!1sid!2sid!4v1727197567537!5m2!1sid!2sid"
-      width="100%" height="450" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-  </section>
-
-
-  <footer class="container-footer footer">
-    <div class="pt-4 p-5">
+    <main class="container my-4">
       <div class="row">
-        <div class="col-md-4 ">
-          <ul class="list1">
-            <li><a href="#">TentangKami</a></li>
-            <li><a href="#">Pendaftaran</a></li>
-            <li><a href="#">Testimoni</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">LayananLainnya</a></li>
-            <li><a href="#">Kebijakan Privasi</a></li>
-            <li><a href="#">Syarat dan Ketentuan</a></li>
-          </ul>
+        <article class="col-md-7 d-flex flex-column">
+          <h2>Contact Form</h2>
+          <form aria-labelledby="contact-form">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nama</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Masukkan nama Anda"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Masukkan email Anda"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="contact" class="form-label">Nomor Kontak</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="contact"
+                name="contact"
+                placeholder="Masukkan nomor kontak Anda"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Pesan</label>
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Kirim</button>
+          </form>
+        </article>
+
+        <aside class="col-md-5">
+          <h2>Contact Information</h2>
+          <hr />
+          <address class="mt-4">
+            <p class="ms-2">
+              Alamat : Jl. Letnan Soetopo, Ruko Golden Madrid 2 Blok F No.19,
+              BSD City, Kec. Serpong, Kota Tangerang Selatan, Banten 15310
+            </p>
+          </address>
+          <hr />
+          <div class="d-flex">
+            <p class="ms-2">Telepon : (021) 1234-5678</p>
+          </div>
+          <hr />
+          <div class="d-flex">
+            <p class="ms-2">Email : Daycare01@gmail.com</p>
+          </div>
+          <hr />
+          <div class="d-flex">
+            <p class="ms-2">
+              Jam Operasional : Senin - Jumat (07.00 - 18.00 WIB)
+            </p>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <section class="faq-container">
+      <h1 class="text-center">FAQS</h1>
+      <div id="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            Apa yang membedakan layanan daycare ini dengan daycare biasa?
+          </div>
+          <div class="faq-answer">
+            <p>
+              Layanan kami tidak hanya menyediakan pengasuhan, tetapi juga
+              mengintegrasikan program pendidikan dini yang terstruktur. Kami
+              fokus pada pengembangan holistik anak, meliputi aspek kognitif,
+              sosial, emosional, dan fisik.
+            </p>
+          </div>
         </div>
-        <!-- footer column 2 -->
-        <div class="col-md-4">
-          <h4>Paket Booking</h4>
-          <ul class="list2">
-            <li><a href="#"">Durasi Penitipan</a></li>
-                    <li><a href=" #">Frekuensi</a></li>
-            <li><a href="#">Layanan Dasar</a></li>
-            <li><a href="#">Akses Fasilitas</a></li>
-            <li><a href="#">Laporan Harian</a></li>
-            <li><a href="#">Pilihan Tambahan</a></li>
-            <li><a href="#">Akses Aplikasi</a></li>
-          </ul>
+        <div class="faq-item">
+          <div class="faq-question">
+            Untuk rentang usia berapa layanan ini tersedia?
+          </div>
+          <div class="faq-answer">
+            <p>
+              Kami melayani anak-anak dari usia 6 bulan hingga 6 tahun, dengan
+              program yang disesuaikan untuk setiap kelompok usia.
+            </p>
+          </div>
         </div>
-
-        <div class="col-md-4">
-
-          <ul class="list4">
-            <h4>Kontak Kami</h4>
-            <h5>Alamat</h5>
-            <li>Jl.Mawar No 123, Jakarta, Indonesia</li>
-          </ul>
-          <ul class="list4">
-            <h5>Telepon</h5>
-            <li>(021)1234-5678</li>
-          </ul>
-          <ul class="list4">
-            <h5>Email</h5>
-            <li>Daycare01@gmail.com</li>
-          </ul>
-
+        <div class="faq-item">
+          <div class="faq-question">
+            Apa kualifikasi staff pengasuh dan pendidik di daycare ini?
+          </div>
+          <div class="faq-answer">
+            <p>
+              Seluruh staff kami memiliki latar belakang pendidikan di bidang
+              pengasuhan anak atau pendidikan usia dini, serta telah melalui
+              pelatihan khusus dan pemeriksaan latar belakang yang ketat.
+            </p>
+          </div>
         </div>
-
-        <!-- footer column 3/social media -->
-        <div class="d-flex justify-content-center">
-          <div class="col-md-4 text-center ">
-            <h5 class="follow">Follow Us</h5>
-            <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
-
+        <div class="faq-item">
+          <div class="faq-question">
+            Bagaimana dengan keamanan dan kebersihan fasilitas?
+          </div>
+          <div class="faq-answer">
+            <p>
+              Kami menerapkan standar keamanan dan kebersihan yang ketat,
+              termasuk sistem pengawasan CCTV, prosedur check-in/check-out yang
+              aman, serta pembersihan dan disinfeksi rutin.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Apakah orang tua dapat memantau aktivitas anak selama di daycare?
+          </div>
+          <div class="faq-answer">
+            <p>
+              Ya, kami menyediakan aplikasi yang memungkinkan orang tua untuk
+              melihat update real-time tentang aktivitas, makan, dan tidur anak
+              mereka.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Bagaimana dengan penyediaan makanan untuk anak-anak?
+          </div>
+          <div class="faq-answer">
+            <p>
+              Kami menyediakan makanan sehat dan bergizi yang disiapkan oleh
+              ahli gizi, dengan mempertimbangkan kebutuhan diet khusus dan
+              alergi.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Apakah ada program khusus untuk mempersiapkan anak masuk sekolah
+            formal?
+          </div>
+          <div class="faq-answer">
+            <p>
+              Ya, kami memiliki program "School Readiness" untuk anak-anak
+              prasekolah yang fokus pada keterampilan akademik dasar dan
+              kesiapan sosial-emosional.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Bagaimana jika anak saya memerlukan perhatian khusus atau memiliki
+            kebutuhan tertentu?
+          </div>
+          <div class="faq-answer">
+            <p>
+              Staf kami dilatih untuk menangani berbagai kebutuhan anak. Kami
+              juga bekerja sama dengan terapis dan spesialis anak untuk
+              memberikan dukungan tambahan jika diperlukan.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Apakah ada fleksibilitas dalam jadwal penitipan?
+          </div>
+          <div class="faq-answer">
+            <p>
+              Ya, kami menawarkan opsi full-time, part-time, dan bahkan
+              penitipan darurat untuk memenuhi kebutuhan berbagai keluarga.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            Bagaimana cara mendaftar dan apa saja yang perlu disiapkan?
+          </div>
+          <div class="faq-answer">
+            <p>
+              Pendaftaran dapat dilakukan online melalui website kami atau
+              langsung di lokasi. Dokumen yang diperlukan meliputi akta
+              kelahiran anak, catatan kesehatan dan imunisasi, serta formulir
+              pendaftaran yang telah diisi lengkap.
+            </p>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Footer Bottom -->
-      <div class="copyright text-center mt-4 ">
-        <p>&copy; 2024 FunEduCare. All rights reserved.</p>
+    <section class="map my-4">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.6880355629382!2d106.68383427409745!3d-6.304656361699461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e55e09af6f51%3A0x15d32286238d7a9c!2sEducourse.id%20Office!5e0!3m2!1sid!2sid!4v1727197567537!5m2!1sid!2sid"
+        width="100%"
+        height="450"
+        frameborder="0"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
+    </section>
+
+    <footer class="container-footer footer">
+      <div class="pt-4 p-5">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list1">
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Pendaftaran</a></li>
+              <li><a href="#">Testimoni</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Layanan Lainnya</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+              <li><a href="#">Syarat dan Ketentuan</a></li>
+            </ul>
+          </div>
+          <!-- footer column 2 -->
+          <div class="col-md-4">
+            <h4>Paket Booking</h4>
+            <ul class="list2">
+              <li><a href="#">Durasi Penitipan</a></li>
+              <li><a href="#">Frekuensi</a></li>
+              <li><a href="#">Layanan Dasar</a></li>
+              <li><a href="#">Akses Fasilitas</a></li>
+              <li><a href="#">Laporan Harian</a></li>
+              <li><a href="#">Pilihan Tambahan</a></li>
+              <li><a href="#">Akses Aplikasi</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <ul class="list4">
+              <h4>Kontak Kami</h4>
+              <h5>Alamat</h5>
+              <li>
+                Jl. Letnan Soetopo, Ruko Golden Madrid 2 Blok F No.19, BSD City,
+                Kec. Serpong, Kota Tangerang Selatan, Banten 15310
+              </li>
+            </ul>
+            <ul class="list4">
+              <h5>Telepon</h5>
+              <li>(021)1234-5678</li>
+            </ul>
+            <ul class="list4">
+              <h5>Email</h5>
+              <li>Daycare01@gmail.com</li>
+            </ul>
+          </div>
+
+          <!-- footer column 3/social media -->
+          <div class="d-flex justify-content-center">
+            <div class="col-md-4 text-center">
+              <h5 class="follow">Follow Us</h5>
+              <a href="#" class="text-white me-2"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="text-white me-2"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="#" class="text-white me-2"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="text-white me-2"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="copyright text-center mt-4">
+          <p>&copy; 2024 FunEduCare. All rights reserved.</p>
+        </div>
       </div>
-    </div>
-  </footer>
-  <!-- link icon bostrap -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+    </footer>
+    <!-- link icon bostrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+    />
 
-
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="contactus.js"></script>
+  </body>
 </html>

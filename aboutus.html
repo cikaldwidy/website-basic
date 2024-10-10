@@ -12,31 +12,24 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <style>
+        /* kelompokkan warna dengan kode */
         :root {
-            /* Deklarasi variabel global untuk warna dan ukuran font */
             --bg-color: #fff;
-            /* Warna latar belakang umum */
             --text-color1: #1f1f21;
-            /* Warna teks utama */
             --text-color2: #fff;
-            /* Warna teks sekunder */
             --main-color: #15a6f5;
-            /* Warna utama untuk elemen interaktif */
             --bg-opacity: #fffefa;
-            /* Warna latar belakang dengan opasitas */
+
             --big-font: 3rem;
-            /* Ukuran font besar */
             --title-font: 40px;
-            /* Ukuran font untuk judul */
             --p-font: 1rem;
-            /* Ukuran font untuk paragraf */
         }
 
         body {
             /* Pengaturan umum untuk body */
             background-color: #f0f4f8;
             /* Warna latar belakang */
-            font-family: 'Arial', sans-serif;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             /* Font yang digunakan */
         }
 
@@ -98,16 +91,17 @@
             /* Rata kanan kiri */
         }
 
-        .team-member {
-            /* Gaya untuk anggota tim */
+        /*GURUUUUUUU*/
+        .pengajar {
+            /* Gaya untuk anggota guru */
             margin-bottom: 30px;
             /* Jarak bawah */
             text-align: center;
             /* Centering teks */
         }
 
-        .team-member img {
-            /* Gaya untuk gambar anggota tim */
+        .pengajar img {
+            /* Gaya untuk gambar guru */
             border-radius: 50%;
             /* Membulatkan gambar */
             width: 150px;
@@ -122,14 +116,14 @@
             /* Efek transisi saat hover */
         }
 
-        .team-member img:hover {
-            /* Efek saat hover pada gambar anggota tim */
+        .pengajar img:hover {
+            /* Efek saat hover pada gambar guru */
             transform: scale(1.1);
             /* Membesarkan gambar */
         }
 
-        .team-member h3 {
-            /* Gaya untuk nama anggota tim */
+        .pengajar h3 {
+            /* Gaya untuk nama guru */
             font-size: 1.5em;
             /* Ukuran font */
             font-weight: bold;
@@ -138,23 +132,25 @@
             /* Warna font */
         }
 
-        .team-member p {
-            /* Gaya untuk deskripsi anggota tim */
+        .pengajar p {
+            /* Gaya untuk deskripsi guru */
             color: #777;
             /* Warna font */
+            text-align: justify;
+            /* Rata kanan dan kiri */
         }
 
         .text-center h1 {
-            /* Gaya untuk judul teks center */
-            font-size: 2.5em;
-            /* Ukuran font */
-            margin-bottom: 30px;
-            /* Jarak bawah */
-            color: #3a3a3a;
-            /* Warna font */
-            font-weight: bold;
-            /* Ketebalan font */
+            font-size: 37px;
+            font-weight: 650;
+            background: linear-gradient(to right, #011f46, var(--main-color));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
         }
+
+        /*GALERIIIIIIII*/
 
         .gallery {
             /* Gaya untuk galeri */
@@ -188,8 +184,6 @@
             /* Gaya untuk deskripsi dalam galeri */
             margin-bottom: 30px;
             /* Jarak bawah */
-            font-weight: bold;
-            /* Ketebalan font */
             color: #555;
             /* Warna font */
         }
@@ -207,13 +201,16 @@
         }
 
         .tulisan-gallery {
-            /* Gaya untuk teks galeri */
-            font-weight: bold;
-            /* Ketebalan font */
+            font-size: 37px;
+            font-weight: 650;
+            background: linear-gradient(to right, #011f46, var(--main-color));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
         }
 
-
-        /* navbar */
+        /* NAVBAR */
         .navbar {
             width: auto;
             height: 70px;
@@ -439,16 +436,16 @@
                                 <a class="nav-link mx-lg-3" href="./index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-lg-3" href="./aboutus.html">About us</a>
+                                <a class="nav-link active mx-lg-3" href="./aboutus.html">About us</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link active dropdown-toggle mx-lg-3" aria-current="page" href="#"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle mx-lg-3" href="" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     Programs
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="./programs.html">All-Programs</a></li>
-                                    <li><a class="dropdown-item" href="./myprogram.html">My-Program</a></li>
+                                    <li><a class="dropdown-item" href="programs.html">All-Programs</a></li>
+                                    <li><a class="dropdown-item" href="myprogram.html">My-Program</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -469,83 +466,201 @@
         <section class="text-center">
             <div class="jumbotron text-center" style="margin-top: 100px;">
                 <h1>Siapa Kami?</h1>
-                <img src="images/logo.jpg" alt="Logo Platform" width="150" height="150">
-                <p>Di FunEduCare, kami percaya bahwa belajar
-                    haruslah menyenangkan! Kami menyediakan metode
-                    pembelajaran interaktif yang melibatkan
-                    permainan edukatif, proyek kreatif, dan
-                    aktivitas fisik. Dengan pendekatan ini,
-                    anak-anak tidak hanya belajar konsep-konsep
-                    dasar.</p>
+                <img src="images/logo2.png" alt="Logo Platform" width="150" height="150">
+                <p>FunEduCare siap mendampingi tumbuh kembang si kecil dalam lingkungan penuh kasih, aman, dan edukatif.
+                    Berlokasi di Jl. Mawar No. 123, Jakarta, kami menawarkan fasilitas lengkap seperti ruang bermain,
+                    ruang belajar nyaman, pengawasan CCTV 24/7, serta program pendidikan menyenangkan.
+
+                    Layanan kami fleksibel—full-day, half-day, atau sesuai kebutuhan Anda, dengan pilihan harian,
+                    mingguan, atau bulanan. Anak-anak akan mendapat pengasuhan penuh perhatian, makanan sehat, aktivitas
+                    edukatif, serta laporan perkembangan harian. Orang tua juga bisa memantau aktivitas anak dan
+                    berkomunikasi langsung dengan pengasuh melalui platform kami.
+
+                    Bergabunglah dengan FunEduCare dan ciptakan masa kecil yang penuh kebahagiaan!</p>
             </div>
         </section>
+        <hr class="divider">
+        <section class="text-center">
+            <h1>Visi</h1>
+            <article class="col-sm-8 mx-auto" style="text-align: center;">
+                Menciptakan lingkungan pendidikan yang aman, kreatif, dan mendukung perkembangan anak secara holistik,
+                serta membantu anak-anak tumbuh menjadi pribadi yang cerdas, mandiri, dan percaya diri.
+            </article>
+            <br>
+            <h1>Misi</h1>
+            <article class="col-sm-8 mx-auto" style="text-align: justify;">
+                <ol>
+                    <li>Menyediakan program pendidikan yang sesuai dengan usia anak dan fokus pada pengembangan
+                        keterampilan kognitif, motorik, dan sosial, agar anak-anak dapat belajar dan berkembang dengan
+                        optimal.</li>
+                    <li>Menghadirkan guru-guru yang profesional dan berpengalaman dalam pendidikan anak usia dini,
+                        sehingga setiap anak mendapatkan perhatian dan pengajaran yang terbaik.</li>
+                    <li>Menciptakan suasana belajar yang menyenangkan melalui pendekatan bermain sambil belajar, yang
+                        dapat meningkatkan minat dan motivasi anak dalam belajar.</li>
+                    <li>Menjamin keamanan dan kenyamanan anak-anak dengan fasilitas yang ramah anak dan standar
+                        keselamatan tinggi, untuk memberikan rasa tenang bagi orang tua saat menitipkan anak mereka.
+                    </li>
+                    <li>Bekerja sama dengan orang tua dalam mendukung perkembangan dan kemajuan anak secara
+                        berkelanjutan, dengan komunikasi yang terbuka dan transparan.</li>
+                </ol>
+            </article>
+        </section>
+        <hr class="divider">
         <section class="text-center">
             <h1>Meet Our Teachers</h1>
-            <p>"Kami memiliki tenaga pengasuh profesional yang siap menjaga dan mendampingi anak-anak..."</p>
-            <div class="row">
-                <article class="col-sm-4 team-member">
-                    <img src="images/img-1.jpg" alt="Team Member 1" class="img-responsive img-circle center-block">
-                    <h3>Mr. Adi</h3>
-                    <p>CEO</p>
-                    <p>Pendidikan: S1 Pendidikan Anak Usia Dini...</p>
-                </article>
-                <article class="col-sm-4 team-member">
-                    <img src="images/img-2.jpg" alt="Team Member 2" class="img-responsive img-circle center-block">
-                    <h3>Mr. Putra</h3>
-                    <p>CTO</p>
-                    <p>Pendidikan: S1 Teknologi Pendidikan...</p>
-                </article>
-                <article class="col-sm-4 team-member">
-                    <img src="images/img-3.jpg" alt="Team Member 3" class="img-responsive img-circle center-block">
-                    <h3>Ms. Dewi</h3>
-                    <p>COO</p>
-                    <p>Pendidikan: S2 Psikologi Pendidikan...</p>
-                </article>
+            <p>Kami memiliki tenaga pengasuh profesional yang siap menjaga dan mendampingi anak-anak</p>
+
+            <div id="carouselTeachers" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <article class="col-sm-4 pengajar">
+                                <img src="images/guru1.jpeg" alt="Ms. Putri"
+                                    class="img-responsive img-circle center-block">
+                                <h3>Ms. Putri</h3>
+                                <p>Berpengalaman dalam pendidikan anak usia dini, Miss Putri sangat sabar dan penuh
+                                    perhatian. Ia
+                                    selalu menciptakan suasana belajar yang menyenangkan dan mendukung anak-anak dalam
+                                    eksplorasi
+                                    dan kreativitas mereka.
+                                </p>
+                            </article>
+                            <article class="col-sm-4 pengajar">
+                                <img src="images/guru2.jpeg" alt="Ms. Permata"
+                                    class="img-responsive img-circle center-block">
+                                <h3>Ms. Permata</h3>
+                                <p>Memiliki passion dalam mendidik anak-anak, Permata membawa energi positif ke kelas.
+                                    Dengan
+                                    pendekatan yang hangat dan penuh kasih, ia membantu anak-anak merasa nyaman dan
+                                    percaya diri.
+                                </p>
+                            </article>
+                            <article class="col-sm-4 pengajar">
+                                <img src="images/guru3.jpeg" alt="Ms. Dewi"
+                                    class="img-responsive img-circle center-block">
+                                <h3>Ms. Dewi</h3>
+                                <p>Dikenal karena pendekatannya yang lembut dan penuh empati, Dewi selalu berhasil
+                                    membangun ikatan
+                                    kuat dengan anak-anak. Ia memastikan setiap anak mendapatkan perhatian yang mereka
+                                    butuhkan.</p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <article class="col-sm-4 pengajar">
+                                <img src="images/guru4.jpeg" alt="Ms. Susi"
+                                    class="img-responsive img-circle center-block">
+                                <h3>Ms. Susi</h3>
+                                <p>Dengan pengalaman bertahun-tahun di bidang pengajaran, Susi fokus pada pengembangan
+                                    keterampilan
+                                    sosial dan emosional anak. Ia pandai menciptakan kegiatan yang interaktif dan
+                                    mendidik.</p>
+                            </article>
+                            <article class="col-sm-4 pengajar">
+                                <img src="images/guru5.jpeg" alt="Ms. Alia"
+                                    class="img-responsive img-circle center-block">
+                                <h3>Ms. Alia</h3>
+                                <p>Kreatif dan inovatif, Alia selalu membawa ide-ide baru ke kelas. Ia suka
+                                    menggabungkan permainan
+                                    edukatif dalam kegiatan sehari-hari untuk membantu anak-anak belajar dengan cara
+                                    yang
+                                    menyenangkan.</p>
+                            </article>
+                            <article class="col-sm-4 pengajar">
+                                <img src="images/guru6.jpeg" alt="Ms. Kayla"
+                                    class="img-responsive img-circle center-block">
+                                <h3>Ms. Kayla</h3>
+                                <p>Penuh semangat dan selalu tersenyum, Kayla menciptakan lingkungan yang hangat dan
+                                    ramah bagi
+                                    anak-anak. Ia memastikan setiap anak merasa diterima dan didukung dalam proses
+                                    belajar mereka.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTeachers"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselTeachers"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </section>
         <hr class="divider">
         <section class="gallery">
             <h1 class="text-center tulisan-gallery">Gallery</h1>
             <p class="text-center">Lihatlah momen-momen berharga...</p>
-            <div class="row">
-                <article class="col-sm-4">
-                    <img src="images/galeri1.jpg" alt="Activity 1">
-                    <div class="gallery-description">
-                        <p>Belajar sambil bermain di ruang kelas.</p>
+
+            <div id="carouselGallery" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <article class="col-sm-4">
+                                <img src="images/galeri1.jpg" alt="Activity 1" class="img-fluid">
+                                <div class="gallery-description">
+                                    <p>Anak-anak sedang terlibat dalam kegiatan belajar yang menyenangkan dengan guru
+                                        mereka</p>
+                                </div>
+                            </article>
+                            <article class="col-sm-4">
+                                <img src="images/galeri2.jpg" alt="Activity 2" class="img-fluid">
+                                <div class="gallery-description">
+                                    <p>Area bermain yang aman dan kreatif untuk mendukung perkembangan fisik anak</p>
+                                </div>
+                            </article>
+                            <article class="col-sm-4">
+                                <img src="images/galeri1.jpg" alt="Activity 3" class="img-fluid">
+                                <div class="gallery-description">
+                                    <p>Anak-anak mengekspresikan kreativitas mereka melalui seni dan kerajinan</p>
+                                </div>
+                            </article>
+                        </div>
                     </div>
-                </article>
-                <article class="col-sm-4">
-                    <img src="images/galeri2.jpg" alt="Activity 2">
-                    <div class="gallery-description">
-                        <p>Aktivitas luar ruangan yang menyenangkan.</p>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <article class="col-sm-4">
+                                <img src="images/galeri1.jpg" alt="Activity 4" class="img-fluid">
+                                <div class="gallery-description">
+                                    <p>Anak-anak menikmati waktu bermain di luar ruangan sambil belajar tentang alam</p>
+                                </div>
+                            </article>
+                            <article class="col-sm-4">
+                                <img src="images/galeri2.jpg" alt="Activity 5" class="img-fluid">
+                                <div class="gallery-description">
+                                    <p>Guru memberikan perhatian khusus kepada anak dalam kegiatan pembelajaran
+                                        individual</p>
+                                </div>
+                            </article>
+                            <article class="col-sm-4">
+                                <img src="images/galeri1.jpg" alt="Activity 6" class="img-fluid">
+                                <div class="gallery-description">
+                                    <p>Momen kebersamaan anak-anak yang penuh tawa dan persahabatan di daycare</p>
+                                </div>
+                            </article>
+                        </div>
                     </div>
-                </article>
-                <article class="col-sm-4">
-                    <img src="images/galeri1.jpg" alt="Activity 3">
-                    <div class="gallery-description">
-                        <p>Pendidikan seni untuk merangsang kreativitas.</p>
-                    </div>
-                </article>
-                <article class="col-sm-4">
-                    <img src="images/galeri1.jpg" alt="Activity 1">
-                    <div class="gallery-description">
-                        <p>Belajar sambil bermain di ruang kelas.</p>
-                    </div>
-                </article>
-                <article class="col-sm-4">
-                    <img src="images/galeri2.jpg" alt="Activity 2">
-                    <div class="gallery-description">
-                        <p>Aktivitas luar ruangan yang menyenangkan.</p>
-                    </div>
-                </article>
-                <article class="col-sm-4">
-                    <img src="images/galeri1.jpg" alt="Activity 3">
-                    <div class="gallery-description">
-                        <p>Pendidikan seni untuk merangsang kreativitas.</p>
-                    </div>
-                </article>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselGallery"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselGallery"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </section>
+
     </main>
 
     <footer class="container-footer footer">
@@ -615,7 +730,6 @@
     </footer>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
-
 </body>
 
 

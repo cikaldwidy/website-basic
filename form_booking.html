@@ -9,27 +9,72 @@
       integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
       crossorigin="anonymous"
     />
-
     <title>Forms</title>
+    <style>
+      /* Atur background form */
+      .form-container {
+        width: 40%;
+        /* Mengatur lebar form menjadi 40% dari layar */
+        margin: 0 auto;
+        /* Agar form berada di tengah */
+        background-color: #15a6f5;
+        /* Background semi-transparan */
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Tambahkan bayangan halus */
+        backdrop-filter: blur(5px);
+        /* Efek blur pada background */
+        margin-top: 50px;
+        /* Spasi dari atas halaman */
+      }
+
+      /* Atur tampilan heading */
+      h1 {
+        text-align: center;
+        font-family: "Arial", sans-serif;
+        font-size: 36px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: #333;
+      }
+
+      /* Untuk membuat form responsif di layar lebih kecil */
+      @media screen and (max-width: 768px) {
+        .form-container {
+          width: 80%;
+          /* Untuk layar kecil, lebar form menjadi 80% */
+        }
+      }
+
+      /* Atur tampilan latar belakang halaman */
+      body {
+        background-image: url("index_background.jpg");
+        /* Ganti dengan gambar index.html */
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* Atur tampilan background putih pada radio buttons */
+      .form-check {
+        background-color: white;
+        /* Background putih untuk pilihan program */
+        padding: 10px;
+        /* Tambahkan padding di dalam form-check */
+        border-radius: 5px;
+        /* Radius border untuk tampilan lebih halus */
+        margin-bottom: 5px;
+        /* Spasi antar pilihan */
+      }
+    </style>
   </head>
+
   <body>
     <div class="container">
-      <h1
-        style="
-          font-family: 'Arial', sans-serif;
-          font-size: 36px;
-          font-weight: bold;
-          letter-spacing: 2px;
-          color: #333;
-        "
-      >
-        Form Booking Class
-      </h1>
-      <!-- Div container untuk form dengan background -->
-      <div
-        style="background-color: #87a2ff; padding: 20px; border-radius: 10px"
-      >
-        <form>
+      <h1>Form Booking Class</h1>
+
+      <div class="form-container">
+        <form id="bookingForm">
           <!-- Nama Orang Tua -->
           <div class="form-group">
             <label for="parentName">Nama Orang Tua / Wali</label>
@@ -91,52 +136,48 @@
           </div>
 
           <!-- Pilih Program dengan Radio Buttons -->
-          <div
-            style="background-color: #ffffff; padding: 14px; border-radius: 8px"
-          >
-            <fieldset class="form-group">
-              <legend>Pilih Program</legend>
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input
-                    type="radio"
-                    class="form-check-input"
-                    name="programOptions"
-                    id="programOption1"
-                    value="toddler"
-                    required
-                  />
-                  Toddler Program (2-3 years)
-                </label>
-              </div>
+          <fieldset class="form-group">
+            <legend>Pilih Program</legend>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="programOptions"
+                  id="programOption1"
+                  value="toddler"
+                  required
+                />
+                Toddler Program (2-3 years)
+              </label>
+            </div>
 
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input
-                    type="radio"
-                    class="form-check-input"
-                    name="programOptions"
-                    id="programOption2"
-                    value="playfull"
-                  />
-                  Playfull Program (3-4 years)
-                </label>
-              </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="programOptions"
+                  id="programOption2"
+                  value="playfull"
+                />
+                Playfull Program (3-4 years)
+              </label>
+            </div>
 
-              <div class="form-check">
-                <label class="form-check-label">
-                  <input
-                    type="radio"
-                    class="form-check-input"
-                    name="programOptions"
-                    id="programOption3"
-                    value="preschool"
-                  />
-                  Preschool (4-6 years)
-                </label>
-              </div>
-            </fieldset>
-          </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="programOptions"
+                  id="programOption3"
+                  value="preschool"
+                />
+                Preschool (4-6 years)
+              </label>
+            </div>
+          </fieldset>
 
           <!-- Tanggal Berkunjung -->
           <div class="form-group">
@@ -163,7 +204,9 @@
 
           <!-- Buttons -->
           <div class="button-group">
-            <button type="button" class="btn btn-secondary">Cancel</button>
+            <button type="button" class="btn btn-secondary" id="cancelButton">
+              Cancel
+            </button>
             <button type="submit" class="btn btn-primary">
               Booking Sekarang
             </button>
@@ -171,5 +214,34 @@
         </form>
       </div>
     </div>
+
+    <script>
+      // Navigasi ke index.html ketika tombol "Cancel" diklik
+      document
+        .getElementById("cancelButton")
+        .addEventListener("click", function () {
+          window.location.href = "index.html"; // Mengarahkan ke index.html
+        });
+
+      // Validasi form saat submit
+      document
+        .getElementById("bookingForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Mencegah form dari submit secara default
+
+          const parentName = document.getElementById("parentName").value;
+          const email = document.getElementById("exampleInputEmail1").value;
+          const phone = document.getElementById("phone").value;
+
+          // Jika ada field kosong, mencegah form submit
+          if (!parentName || !email || !phone) {
+            alert("Mohon isi semua field yang diwajibkan."); // Pesan error
+          } else {
+            // Jika valid, tampilkan pesan sukses dan arahkan ke index.html
+            alert("Form berhasil disubmit!");
+            window.location.href = "index.html"; // Mengarahkan ke index.html
+          }
+        });
+    </script>
   </body>
 </html>

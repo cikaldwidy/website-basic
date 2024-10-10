@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Program Section</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
     /*Mengatur seluruh elemen*/
     :root {
@@ -175,6 +176,13 @@
       /*mengatur teks didalam menjadi ke tengah*/
     }
 
+    .img-custom {
+      max-width: 400px; /* Atur lebar maksimum sesuai kebutuhan */
+      width: 100%; /* Agar tetap responsif */
+      height: auto; /* Menjaga rasio aspek */
+    }
+
+
     /* footer */
 
     .list1,
@@ -262,6 +270,66 @@
     .copyright {
       color: var(--text-color2);
       /* Menggunakan variabel warna */
+      
+    }
+
+    /* Animasi dari perpaduan js */
+    .hidden{
+      opacity: 0;
+      filter: blur(5px);
+      transform: translateX(-100%);
+      transition: all 1s;
+    }
+
+    .show{
+      opacity: 1;
+      filter: blur(0);
+      transform: translateX(0);
+    }
+
+    /* Tombol button */
+    .button-group .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      width: 180px;
+      color: var(--bg-color);
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-right: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+      transition: all 0.3s ease;
+    }
+    /* button 2 css */
+    .button-group .btn-2 {
+      background-color: var(--main-color);
+    }
+    /* button 2 css */
+    .button-group .btn-1 {
+      background-color: #ee0d62;
+    }
+    /* animasi*/
+    .button-group .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
+      opacity: 0.9;
+      -webkit-transform: translateY(-5px);
+      -moz-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      -o-transform: translateY(-5px);
+    }
+    /* gradien css judul */
+    .content-2 h1 {
+      font-size: 37px;
+      font-weight: 650;
+      background: linear-gradient(to right, #011f46, var(--main-color));
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
     }
   </style>
 </head>
@@ -326,18 +394,49 @@
       </div>
     </section>
 
-    <!--Kurikulum Kami-->
-    <section class="pt-5 p-4" id="kurikulum">
+    <!--Upcoming Event-->
+    <section class="hidden pt-5 p-4" id="upcoming-event">
       <div class="container">
-        <p class="text-center fs-1 fw-bolder mx-auto pb-4">Kurikulum Kami</p>
+        <div class="row g-5 align-items-center">
+          <h2 class="text-center fs-1 fw-bolder mx-auto pb-4">Upcoming Event</h2>
+          <div class="col-md-6">
+            <img src="./images/Child-Care-Safety-Certificate-Template-edit-online.jpg" alt="Deskripsi Gambar" class="img-custom rounded mx-auto d-block">
+          </div>
+          <div class="col-md-6">
+            <h5 class="fs-3 fw-bolder pb-2">Junior Chef Cooking Competition: Hai Moms, Siapkan Si Kecil Menjadi Bintang Dapur!</h5>
+            <p class=" fw-medium">
+              Jangan lewatkan kesempatan emas ini! Daftarkan Si Kecil sekarang dan saksikan mereka bersinar di panggung dapur! 🌟
+              <br>
+              Yuk, moms! Ayo ajak Si Kecil untuk ikut berpartisipasi dan tunjukkan bakatnya! 🍽️✨
+            </p>
+            <h5 class="pt-5">Ayuk daftar sebelum ketinggalan</h5>
+            <h3 id="teks" class="pb-1" style="color: red;"></h3>
+            <div class="button-group mb-5 d-flex">
+              <button class="btn btn-1 mt-3 w-100" data-bs-target="#cookingCompetitionModal" data-bs-toggle="modal">Daftar Lomba Sekarang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!--Kurikulum Kami-->
+    <section class="hidden pt-5 p-4" id="kurikulum">
+      <div class="container">
+        <h2 class="text-center fs-1 fw-bolder mx-auto pb-4">Kurikulum Kami</h2>
         <div class="row g-5">
           <!--Card 1 Infant Care (0-12 Bulan)-->
-          <div class="col-md-4 shadow-sm --bs-tertiary-bg rounded">
+          <div class="col-md-6 shadow-sm --bs-tertiary-bg rounded">
             <div class="card border border-0 d-flex flex-column h-100">
-              <img class="pt-4" src="images/baby.jpg" class="card-img-top" alt="..." />
+              <img
+              class="pt-4"
+              src="images/baby.jpg"
+              class="card-img-top"
+              alt="..."
+              />
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fs-2 fw-semibold">
-                  Infant Care <br />(0-12 Bulan)
+                  Infant Care (0-12 Bulan)
                 </h5>
                 <p class="card-text fw-medium fst-italic mt-4">
                   Kurikulum Infant Care kami berfokus mencakup
@@ -359,19 +458,24 @@
                     Pengenalan bahasa isyarat untuk bayi
                   </li>
                 </ul>
-                <a href="/FunEduCare_13/form_booking/form_booking.html"
-                  class="btn btn-primary mt-auto mb-2 d-grid gap-2">Booking Infant Care Program</a>
+                <div class="button-group mb-5 d-flex">
+                  <button class="btn btn-2 mt-3 w-100">Booking Infant Care Program</button>
+                </div>
               </div>
             </div>
           </div>
           <!--Card 2 Toddler Program-->
-          <div class="col-md-4 shadow-sm --bs-tertiary-bg rounded">
+          <div class="col-md-6 shadow-sm --bs-tertiary-bg rounded">
             <div class="card border border-0 d-flex flex-column h-100">
-              <img class="pt-4" src="images/toddler.jpg" class="card-img-top" alt="..." />
+              <img
+                class="pt-4"
+                src="images/toddler-1.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fs-2 fw-semibold">
-                  Toddler Program <br />
-                  (1-2 Tahun)
+                  Toddler Program (1-2 Tahun)
                 </h5>
                 <p class="card-text fw-medium fst-italic mt-4">
                   Kurikulum Toddler kami berfokus mencakup
@@ -392,18 +496,24 @@
                     Mewarnai menggunakan media tempel
                   </li>
                 </ul>
-                <a href="/FunEduCare_13/form_booking/form_booking.html"
-                  class="btn btn-primary mt-auto mb-2 d-grid gap-2">Booking Toddler Program</a>
+                <div class="button-group mb-5 d-flex">
+                  <button class="btn btn-2 mt-3 w-100">Booking Toddler Program</button>
+                </div>
               </div>
             </div>
           </div>
           <!--Card 3 PreSchool Program-->
-          <div class="col-md-4 shadow-sm --bs-tertiary-bg rounded">
+          <div class="col-md-6 shadow-sm --bs-tertiary-bg rounded">
             <div class="card border border-0 d-flex flex-column h-100">
-              <img class="pt-4" src="images/preschool-1.jpg" class="card-img-top" alt="..." />
+              <img
+                class="pt-4"
+                src="images/preschool-1.jpg"
+                class="card-img-top"
+                alt="..."
+              />
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fs-2 fw-semibold">
-                  Pre-School <br />(3-4 Tahun)
+                  Pre-School Program (3-4 Tahun)
                 </h5>
                 <p class="card-text fw-medium fst-italic mt-4">
                   Kurikulum Pre-School kami berfokus mencakup
@@ -422,18 +532,24 @@
                     Keterampilan pengembangan sosial dan emosional
                   </li>
                 </ul>
-                <a href="/FunEduCare_13/form_booking/form_booking.html"
-                  class="btn btn-primary mt-auto mb-2 d-grid gap-2">Booking Pre-School Program</a>
+                <div class="button-group mb-5 d-flex">
+                  <button class="btn btn-2 mt-3 w-100">Booking Pre-School Program</button>
+                </div>
               </div>
             </div>
           </div>
           <!--Card 4 Pre-Kindergarten-->
-          <div class="col-md-4 shadow-sm --bs-tertiary-bg rounded">
+          <div class="col-md-6 shadow-sm --bs-tertiary-bg rounded">
             <div class="card border border-0 d-flex flex-column h-100">
-              <img class="pt-4" src="images/prekindergarten.jpg" class="card-img-top" alt="..." />
+              <img
+                class="pt-4"
+                src="images/prekindergarten.jpg"
+                class="card-img-top"
+                alt="..."
+              />
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fs-2 fw-semibold">
-                  Pre-Kindergarten <br />(4-5 Tahun)
+                  Pre-Kindergarten (4-5 Tahun)
                 </h5>
                 <p class="card-text fw-medium fst-italic mt-4">
                   Kurikulum Pre-Kindergarten kami berfokus mencakup
@@ -452,7 +568,9 @@
                   </li>
                   <li class="list-group-item">Edukasi fisik dan olahraga</li>
                 </ul>
-                <a href="#" class="btn btn-primary mt-auto mb-2 d-grid gap-2">Booking Pre-Kindergarten Program</a>
+                <div class="button-group mb-5 d-flex">
+                  <button class="btn btn-2 mt-3 w-100">Booking Pre-Kindergarten Program</button>
+                </div>
               </div>
             </div>
           </div>
@@ -461,37 +579,26 @@
     </section>
 
     <!--Program Lainnya-->
-    <section class="pt-5" id="program-lainnya">
+    <section class="hidden pt-5 pb-5" id="program-lainnya">
       <div class="container">
-        <p class="text-center fs-1 fw-bolder mx-auto pb-4">Program Lainnya</p>
+        <h2 class="text-center fs-1 fw-bolder mx-auto pb-4">Program Lainnya</h2>
         <div class="row g-4">
           <!--Parenting Seminar-->
           <div class="col-md">
             <div class="card border border-1 d-flex flex-column h-100">
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title fs-2 fw-semibold text-center">
-                  Parenting Seminar
+                  Seminar Parenting: Edukasi Anak
                 </h5>
-                <p class="card-text fw-medium mt-2 text-center">
+                <p class="card-text fw-medium mt-2 text-center p-3">
                   Ikuti seminar yang dipandu oleh para ahli mengenai berbagai
-                  topik parenting:
+                  topik parenting
                 </p>
-                <ul class="list-group list-group-flush flex-grow-1 pb-5 pt-3">
-                  <li class="list-group-item">
-                    Teknik Kedisplinan anak yang positif
-                  </li>
-                  <li class="list-group-item">
-                    Mendorong kecerdasan emosional pada anak
-                  </li>
-                  <li class="list-group-item">
-                    Cara berkomunikasi yang efektif dengan anak
-                  </li>
-                  <li class="list-group-item">
-                    Mengatasi tantangan perilaku yang sering muncul
-                  </li>
-                </ul>
-                <a href="/FunEduCare_13/form_booking/form_booking.html"
-                  class="btn btn-outline-primary mt-auto rounded-pill">Learn More Parenting Seminar</a>
+                <div class="button-group mb-5 d-flex">
+                  <button data-bs-target="#parentingSeminarModal" data-bs-toggle="modal" class="btn btn-1 mt-3 w-100 rounded-pill">
+                    Learn More Parenting Seminar
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -502,26 +609,15 @@
                 <h5 class="card-title fs-2 fw-semibold text-center">
                   Cooking Classes for Children's Nutrition
                 </h5>
-                <p class="card-text fw-medium mt-2 text-center">
+                <p class="card-text fw-medium mt-2 text-center p-3">
                   Pelajari cara menyiapkan makanan bergizi dan lezat untuk
-                  anak-anak Anda:
+                  anak-anak Anda
                 </p>
-                <ul class="list-group list-group-flush flex-grow-1 pb-5">
-                  <li class="list-group-item">
-                    Perencanaan menu yang sesuai usia
-                  </li>
-                  <li class="list-group-item">
-                    Memperkenalkan makanan baru kepada anak picky eaters
-                  </li>
-                  <li class="list-group-item">
-                    Ide kotak makan siang yang cepat dan sehat
-                  </li>
-                  <li class="list-group-item">Memahami kebutuhan gizi anak</li>
-                  <li class="list-group-item">
-                    Memasak bersama anak: resep yang menyenangkan dan edukatif
-                  </li>
-                </ul>
-                <a href="#" class="btn btn-outline-primary mt-auto rounded-pill">Learn More Cooking Class</a>
+                <div class="button-group mb-5 d-flex">
+                  <button data-bs-target="#cookingClassModal" data-bs-toggle="modal" class="btn btn-1 mt-3 w-100 rounded-pill">
+                    Learn More Cooking Class
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -532,29 +628,248 @@
                 <h5 class="card-title fs-2 fw-semibold text-center">
                   Children's Work Exhibitions
                 </h5>
-                <p class="card-text fw-medium mt-2 text-center">
+                <p class="card-text fw-medium mt-2 text-center p-3">
                   Pekan pameran karya kreativitas dan pencapaian anak:
                 </p>
-                <ul class="list-group list-group-flush flex-grow-1 pb-5">
-                  <li class="list-group-item">
-                    Pameran seni triwulanan yang menampilkan karya anak-anak
-                  </li>
-                  <li class="list-group-item">
-                    Pameran sains yang menonjolkan proyek-proyek siswa
-                  </li>
-                  <li class="list-group-item">Pertunjukan musik dan tarian</li>
-                  <li class="list-group-item">Pameran keberagaman budaya</li>
-                  <li class="list-group-item">
-                    Presentasi portofolio di penghujung tahun
-                  </li>
-                </ul>
-                <a href="#" class="btn btn-outline-primary mt-auto rounded-pill">Learn More Exhibitions</a>
+                <div class="button-group mb-5 d-flex">
+                  <button data-bs-target="#childrenWorkExhibitions" data-bs-toggle="modal" class="btn btn-1 mt-3 w-100 rounded-pill">
+                    Learn More Exhibitions Party
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!--Modal Area Button-->
+    <!--Modal Button Seminar Parenting-->
+    <div class="modal modal-xl fade" id="parentingSeminarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="parentingSeminarModalLabel">Seminar Parenting Yang Akan Datang</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Tanggal</th>
+                  <th>Judul Seminar</th>
+                  <th>Pemateri</th>
+                  <th>Info Book</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>25 Oktober 2024</td>
+                  <td>Teknik Pengasuhan Anak Usia Dini</td>
+                  <td>Dr.Siti Aminah, Psikolog</td>
+                  <td><button class="btn btn-primary btn-sm">Tiket Tersedia</button></td>
+                </tr>
+                <tr>
+                  <td>5 November 2024</td>
+                  <td>Memahami Kesehatan Mental Anak</td>
+                  <td>Dr. Budi Setiawan, Sp.KJ</td>
+                  <td><button class="btn btn-warning btn-sm">Tiket Hampir Habis</button></td>
+                </tr>
+                <tr>
+                  <td>15 November 2024</td>
+                  <td>Pendidikan Karakter pada Anak</td>
+                  <td>Dr. Rina Kartika, M.Psi</td>
+                  <td><button class="btn btn-danger btn-sm" disabled>Tiket Habis Terjual</button></td>
+                </tr>
+                <tr>
+                  <td>22 November 2024</td>
+                  <td>Komunikasi Efektif dalam Keluarga</td>
+                  <td>Dr. Lina Maulida, M.A</td>
+                  <td><button class="btn btn-primary btn-sm">Tiket Tersedia</button></td>
+                </tr>
+                <tr>
+                  <td>25 November 2024</td>
+                  <td>Strategi Menghadapi Perilaku Anak</td>
+                  <td>Dr. Joko Prasetyo, M.Si</td>
+                  <td><button class="btn btn-primary btn-sm">Tiket Tersedia</button></td>
+                </tr>
+                <tr></tr>
+                  <td>1 Desember 2024</td>
+                  <td>Membangun Hubungan Positif dengan Anak</td>
+                  <td>Dr. Andi Susanto, M.Pd</td>
+                  <td><button class="btn btn-primary btn-sm">Tiket Tersedia</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal Button Cooking Class-->
+    <div class="modal modal-xl fade" id="cookingClassModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="cookingClassModalLabel">Cooking Class Yang Akan Datang</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Judul Kelas</th>
+                        <th>Pemateri</th>
+                        <th>Info Book</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1 November 2024</td>
+                        <td>Dasar-dasar Memasak untuk Anak</td>
+                        <td>Chef Ani Pratiwi</td>
+                        <td><button class="btn btn-primary btn-sm">Tiket Tersedia</button></td>
+                    </tr>
+                    <tr>
+                        <td>8 November 2024</td>
+                        <td>Makanan Sehat dan Lezat untuk Anak</td>
+                        <td>Chef Budi Santoso</td>
+                        <td><button class="btn btn-warning btn-sm">Tiket Hampir Habis</button></td>
+                    </tr>
+                    <tr>
+                        <td>15 November 2024</td>
+                        <td>Snack Sehat yang Mudah Dibuat</td>
+                        <td>Chef Rina Mulyani</td>
+                        <td><button class="btn btn-primary btn-sm">Tiket Tersedia</button></td>
+                    </tr>
+                    <tr>
+                        <td>22 November 2024</td>
+                        <td>Menu Kreatif untuk Picky Eaters</td>
+                        <td>Chef Taufik Hidayat</td>
+                        <td><button class="btn btn-danger btn-sm" disabled>Tiket Habis Terjual</button></td>
+                    </tr>
+                    <tr>
+                        <td>29 November 2024</td>
+                        <td>Pentingnya Nutrisi Seimbang untuk Anak</td>
+                        <td>Chef Siti Rahmawati</td>
+                        <td><button class="btn btn-primary btn-sm">Tiket Tersedia</button></td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal Button Children's Work Exhibitions-->
+    <div class="modal modal-xl fade" id="childrenWorkExhibitions" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="childrenWorkExhibitionsLabel">Pameran Yang Akan Datang</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Judul Pameran</th>
+                        <th>Deskripsi</th>
+                        <th>Info Pendaftaran</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10 Januari 2025</td>
+                        <td>Pameran Karya Seni Anak</td>
+                        <td>Pameran seni lukis dan kerajinan tangan oleh anak-anak.</td>
+                        <td><button class="btn btn-primary btn-sm">Daftar Sekarang</button></td>
+                    </tr>
+                    <tr>
+                        <td>17 Januari 2025</td>
+                        <td>Pameran Inovasi Anak</td>
+                        <td>Pameran inovasi dan proyek kreatif dari anak-anak sekolah.</td>
+                        <td><button class="btn btn-warning btn-sm">Tempat Terbatas</button></td>
+                    </tr>
+                    <tr>
+                        <td>24 Januari 2025</td>
+                        <td>Pameran Talenta Anak</td>
+                        <td>Pameran bakat anak dalam bidang musik dan tari.</td>
+                        <td><button class="btn btn-danger btn-sm" disabled>Pendaftaran Tutup</button></td>
+                    </tr>
+                    <tr>
+                        <td>31 Januari 2025</td>
+                        <td>Pameran Sains Anak</td>
+                        <td>Pameran eksperimen sains dan penemuan oleh anak-anak.</td>
+                        <td><button class="btn btn-primary btn-sm">Daftar Sekarang</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal Button Cooking Competition-->
+    <div class="modal fade" id="cookingCompetitionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Isi Data Diri Buah Hati</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="full-name" class="col-form-label">Nama Lengkap Anak:</label>
+                <input type="text" class="form-control" id="full-name" required>
+              </div>            
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email Orang Tua / Wali:</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="col-form-label">Nomor Telepon Orang Tua:</label>
+                <input type="tel" class="form-control" id="phone" required>
+              </div>
+              <div class="mb-3">
+                <label for="dob" class="col-form-label">Tanggal Lahir Anak:</label>
+                <input type="date" class="form-control" id="dob" required>
+            </div>
+            <div class="mb-3">
+              <label class="col-form-label">Jenis Kelamin:</label>
+              <select class="form-control" id="gender" required>
+                  <option value="">Pilih</option>
+                  <option value="male">Laki-laki</option>
+                  <option value="female">Perempuan</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="consent" required>
+                  <label class="form-check-label" for="consent">
+                      Saya setuju untuk mengikuti lomba dan mengikuti syarat dan ketentuan yang berlaku.
+                  </label>
+              </div>
+            </div>                                          
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
+            <button type="button" class="btn btn-primary">Ikut Lomba</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </main>
 
   <!--Footer-->
@@ -628,8 +943,8 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="programs.js"></script>
 </body>
 
 </html>
