@@ -1,4 +1,3 @@
-FunEduCare
 Kami dari kelompok 13 yang beranggotakan:
 - 11614159 DIANA TRIMUAWASIH 
 - 10107804 ALICA PUTRI AZZAHRA
