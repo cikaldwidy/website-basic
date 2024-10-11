@@ -13,44 +13,33 @@
     <style>
       /* Atur background form */
       .form-container {
-        width: 40%;
-        /* Mengatur lebar form menjadi 40% dari layar */
+        width: 70%;
         margin: 0 auto;
-        /* Agar form berada di tengah */
-        background-color: #15a6f5;
-        /* Background semi-transparan */
+        background-color: #ffffff;
         padding: 30px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        /* Tambahkan bayangan halus */
         backdrop-filter: blur(5px);
-        /* Efek blur pada background */
-        margin-top: 50px;
-        /* Spasi dari atas halaman */
+        margin-top: 20px;
       }
 
-      /* Atur tampilan heading */
-      h1 {
-        text-align: center;
-        font-family: "Arial", sans-serif;
-        font-size: 36px;
-        font-weight: bold;
-        letter-spacing: 2px;
-        color: #333;
+      /* Atur tampilan logo */
+      .form-logo {
+        display: block;
+        margin: 0 auto 20px; /* Meletakkan logo di tengah dan memberi jarak di bawahnya */
+        width: 100px; /* Memperkecil ukuran logo */
       }
 
       /* Untuk membuat form responsif di layar lebih kecil */
       @media screen and (max-width: 768px) {
         .form-container {
           width: 80%;
-          /* Untuk layar kecil, lebar form menjadi 80% */
         }
       }
 
       /* Atur tampilan latar belakang halaman */
       body {
-        background-image: url("index_background.jpg");
-        /* Ganti dengan gambar index.html */
+        background-image: url("images/bg3.png"); /* Menggunakan gambar bg3.png sebagai background */
         background-size: cover;
         background-position: center;
       }
@@ -58,22 +47,20 @@
       /* Atur tampilan background putih pada radio buttons */
       .form-check {
         background-color: white;
-        /* Background putih untuk pilihan program */
         padding: 10px;
-        /* Tambahkan padding di dalam form-check */
         border-radius: 5px;
-        /* Radius border untuk tampilan lebih halus */
         margin-bottom: 5px;
-        /* Spasi antar pilihan */
       }
     </style>
   </head>
 
   <body>
     <div class="container">
-      <h1>Form Booking Class</h1>
-
       <div class="form-container">
+        <!-- Logo -->
+        <img src="images/logo2.png" alt="FunEduCare Logo" class="form-logo" />
+
+        <!-- Form -->
         <form id="bookingForm">
           <!-- Nama Orang Tua -->
           <div class="form-group">
@@ -138,6 +125,7 @@
           <!-- Pilih Program dengan Radio Buttons -->
           <fieldset class="form-group">
             <legend>Pilih Program</legend>
+
             <div class="form-check">
               <label class="form-check-label">
                 <input
@@ -145,10 +133,10 @@
                   class="form-check-input"
                   name="programOptions"
                   id="programOption1"
-                  value="toddler"
+                  value="infant"
                   required
                 />
-                Toddler Program (2-3 years)
+                Infant Care (0-12 bulan)
               </label>
             </div>
 
@@ -159,9 +147,9 @@
                   class="form-check-input"
                   name="programOptions"
                   id="programOption2"
-                  value="playfull"
+                  value="toddler"
                 />
-                Playfull Program (3-4 years)
+                Toddler Program (1-2 tahun)
               </label>
             </div>
 
@@ -174,7 +162,20 @@
                   id="programOption3"
                   value="preschool"
                 />
-                Preschool (4-6 years)
+                Pre-school Program (3-4 tahun)
+              </label>
+            </div>
+
+            <div class="form-check">
+              <label class="form-check-label">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="programOptions"
+                  id="programOption4"
+                  value="prekindergarten"
+                />
+                Pre-kindergarten (4-5 tahun)
               </label>
             </div>
           </fieldset>
@@ -189,17 +190,6 @@
               class="form-control"
               required
             />
-          </div>
-
-          <!-- Additional Comments -->
-          <div class="form-group">
-            <label for="exampleTextarea">Additional Comments</label>
-            <textarea
-              class="form-control"
-              id="exampleTextarea"
-              rows="3"
-              placeholder="Tambahkan komentar tambahan"
-            ></textarea>
           </div>
 
           <!-- Buttons -->

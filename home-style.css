@@ -9,10 +9,10 @@
   text-decoration: none;
   list-style: none;
 }
-.logo-small {
+/* .logo-small {
   width: 50px;
   height: auto;
-}
+} */
 :root {
   --bg-color: #fff;
   --text-color1: #1f1f21;
