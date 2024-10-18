@@ -46,7 +46,7 @@ if (contactForm) {
       "Terima kasih! Pesan Anda telah terkirim. Kami akan segera menghubungi Anda."
     );
 
-    // Reset formulir setelah pengiriman
+    // Reset form setelah pengiriman
     contactForm.reset();
   });
 }
