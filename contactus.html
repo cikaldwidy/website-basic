@@ -9,33 +9,36 @@
       content="Contact FunEduCare for more information about our services."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- css -->
+    <!-- CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <!-- js -->
+    <!-- JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="jquery-3.7.1.min.js"></script>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
       body {
-        font-family: Arial, sans-serif;
-        /* Mengatur font untuk seluruh halaman */
+        font-family: "Poppins", sans-serif;
         margin: 0;
-        /* Menghilangkan margin default */
         padding: 0;
-        /* Menghilangkan padding default */
         background-color: #fff;
-        /* Latar belakang terang untuk kontras */
         color: #000;
-        /* Mengubah warna teks menjadi hitam */
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        text-decoration: none;
+        list-style: none;
       }
 
+      /* Definisi warna dan gaya */
       :root {
         --bg-color: #fff;
         --text-color1: #1f1f21;
@@ -44,60 +47,47 @@
         --bg-opacity: #fffefa;
       }
 
-      /* Gaya Header */
-      .contact-bg {
-        height: 40vh;
-        /* Tinggi bagian kontak diatur menjadi 40% dari viewport height */
-        background: linear-gradient(to right, #011f46, var(--main-color));
-        /* Latar belakang dengan gradien*/
-        background-position: 50% 100%;
-        /* Posisi latar belakang di tengah secara horizontal dan di bawah secara vertikal */
-        background-repeat: no-repeat;
-        /* Gambar latar belakang tidak akan diulang */
-        background-attachment: fixed;
-        /* Latar belakang tetap saat menggulir */
-        text-align: center;
-        /* Teks di tengah */
-        color: #fff;
-        /* Warna teks putih */
-        display: flex;
-        /* Menggunakan flexbox untuk penataan */
-        flex-direction: column;
-        /* Mengatur arah elemen flex menjadi kolom */
-        justify-content: center;
-        /* Menyejajarkan konten di tengah secara vertikal */
-        align-items: center;
-        /* Menyejajarkan konten di tengah secara horizontal */
+      .image-section {
+        position: relative; /* Menetapkan posisi elemen relatif terhadap posisinya sendiri. */
+        height: 50vh; /* Menentukan tinggi elemen 50% dari tinggi viewport. */
+        overflow: hidden; /* Menyembunyikan konten yang melebihi batas elemen. */
       }
 
-      .contact-bg h3 {
-        font-size: 1.3rem;
-        /* Ukuran font untuk sub-judul */
-        font-weight: 400;
-        /* Ketebalan font sub-judul */
+      .image-section img {
+        width: 100%; /* Gambar melebar penuh sesuai dengan ukuran kontainer. */
+        height: 100%; /* Gambar meninggi penuh sesuai dengan ukuran kontainer. */
+        object-fit: cover; /* Gambar tidak terdistorsi dan mengisi seluruh area tanpa mengubah rasio. */
       }
 
-      .contact-bg h2 {
-        font-size: 3rem;
-        /* Ukuran font untuk judul utama */
-        text-transform: uppercase;
-        /* Mengubah teks menjadi huruf kapital */
-        padding: 0.4rem 0;
-        /* Memberikan padding vertikal */
-        letter-spacing: 4px;
-        /* Mengatur jarak antar huruf */
+      .overlay {
+        position: absolute; /* Posisi overlay akan relatif terhadap elemen parent-nya. */
+        top: 0; /* Menempatkan overlay di bagian atas. */
+        left: 0; /* Menempatkan overlay di sisi kiri. */
+        width: 100%; /* Overlay mengisi seluruh lebar elemen. */
+        height: 100%; /* Overlay mengisi seluruh tinggi elemen. */
+        display: flex; /* Mengatur penataan konten di dalamnya dengan mudah. */
+        flex-direction: column; /* Mengatur arah penataan elemen agar disusun secara vertikal. */
+        justify-content: center; /* Menyusun elemen di tengah secara vertikal dalam overlay. */
+        align-items: center; /* Menyusun elemen di tengah secara horizontal dalam overlay. */
+        color: #2f3438; /* Mengatur warna teks menjadi hitam. */
+        text-align: center; /* Mengatur teks agar terletak di tengah. */
       }
 
-      .line-item {
-        display: inline-block;
-        /* Menampilkan item dalam satu baris */
+      .content-1 h1 {
+        font-size: 50px;
+        font-weight: 650;
+        margin-top: 5rem;
+        background: linear-gradient(to right, var(--main-color), #ee0d62);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        align-items: start;
       }
 
       /* Gaya Teks */
       .text {
         font-size: 1.1rem;
         /* Ukuran font untuk teks penjelasan */
-        color: #fff;
+        color: #2f3539;
         /* Warna teks untuk kontras yang lebih baik */
       }
 
@@ -108,7 +98,17 @@
         justify-content: space-between;
         /* Memberi jarak antar elemen */
         align-items: flex-start;
-        /* Menyelaraskan item ke atas */
+        color: #363636;
+      }
+
+      .container h2 {
+        font-size: 37px;
+        font-weight: 650;
+        background: linear-gradient(to right, #011f46, var(--main-color));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
       }
 
       article,
@@ -140,7 +140,7 @@
       }
 
       .form-control:focus {
-        border-color: #15a6f5;
+        border-color: rgba(0, 0, 0, 0.1);
         /* Mengubah warna border saat input difokuskan */
       }
 
@@ -155,22 +155,31 @@
       }
 
       .btn-primary:hover {
-        background-color: #15a6f5;
+        background-color: rgba(0, 0, 0, 0.1);
         /* Warna latar belakang saat hover */
-        border-color: #15a6f5;
+        border-color: rgba(0, 0, 0, 0.1);
         /* Warna border saat hover */
       }
 
       /* Mengatur container utama untuk FAQ */
-      /* Gunakan dengan <section class="faq-container"> untuk mengelompokkan seluruh FAQ */
       .faq-container {
         max-width: 800px;
         margin: 40px auto;
         padding: 0 20px;
+        color: #ee0d62;
+      }
+
+      .faq-container h1 {
+        font-size: 37px;
+        font-weight: 650;
+        background: #ee0d62;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
       }
 
       /* Styling untuk setiap item FAQ */
-      /* Gunakan dengan <article class="faq-item"> untuk setiap pasangan pertanyaan-jawaban */
       .faq-item {
         border: 1px solid #e0e0e0;
         margin-bottom: 15px;
@@ -180,9 +189,8 @@
       }
 
       /* Mengatur tampilan pertanyaan FAQ */
-      /* Gunakan dengan <h3 class="faq-question"> untuk setiap pertanyaan */
       .faq-question {
-        background: #ee0d62;
+        background: #15a6f5;
         color: #fff;
         padding: 15px 20px;
         font-weight: 600;
@@ -219,9 +227,8 @@
       }
 
       /* Mengatur tampilan jawaban FAQ */
-      /* Gunakan dengan <div class="faq-answer"> untuk setiap jawaban */
       .faq-answer {
-        background: #011f46;
+        background: #fff;
         padding: 0 20px;
         max-height: 0;
         overflow: hidden;
@@ -235,11 +242,10 @@
       }
 
       /* Styling untuk teks jawaban */
-      /* Gunakan dengan <p> di dalam .faq-answer */
       .faq-answer p {
         margin: 0;
         line-height: 1.6;
-        color: #fff;
+        color: #494949;
       }
 
       /* Gaya Peta */
@@ -519,7 +525,7 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link mx-lg-3" href="./index.html">Home</a>
+                <a class="nav-link mx-lg-3" href="./homepage.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link mx-lg-3" href="./aboutus.html">About us</a>
@@ -568,48 +574,16 @@
         </button>
       </div>
     </nav>
-    <header class="contact-bg text-center py-5" style="margin-top: 100px">
-      <h3>Get In Touch with FunEduCare</h3>
-      <h2>Contact Us</h2>
-      <div class="line my-3">
-        <div
-          class="line-item"
-          style="
-            height: 3px;
-            width: 70px;
-            background: #fff;
-            border-radius: 5px;
-            display: inline-block;
-          "
-        ></div>
-        <div
-          class="line-item"
-          style="
-            width: 10px;
-            height: 10px;
-            background: #fff;
-            border-radius: 50%;
-            display: inline-block;
-          "
-        ></div>
-        <div
-          class="line-item"
-          style="
-            height: 3px;
-            width: 70px;
-            background: #fff;
-            border-radius: 5px;
-            display: inline-block;
-          "
-        ></div>
+    <section class="image-section">
+      <img src="./images/landing-page-new.jpg" alt="Program Image" />
+      <div class="overlay content-1">
+        <h1>Contact Us</h1>
+        <hr class="garis mx-auto mx-md-0" />
+        <p>
+          Klik di atas untuk menjadwalkan program atau isi formulir di bawah ini
+        </p>
       </div>
-      <p class="text">
-        Klik di atas untuk menjadwalkan program atau isi formulir di bawah ini,
-        dan salah satu admin kami akan segera menghubungi anda. Kami tidak sabar
-        untuk bertemu anda dan keluarga!
-      </p>
-    </header>
-
+    </section>
     <main class="container my-4">
       <div class="row">
         <article class="col-md-7 d-flex flex-column">
@@ -690,7 +664,7 @@
     </main>
 
     <section class="faq-container">
-      <h1 class="text-center">FAQS</h1>
+      <h1 class="text-center">FAQS?</h1>
       <div id="faq-list">
         <div class="faq-item">
           <div class="faq-question">

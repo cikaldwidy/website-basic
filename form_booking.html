@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Class</title>
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -9,229 +11,285 @@
       integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
       crossorigin="anonymous"
     />
-    <title>Forms</title>
+    <link href="style.css" rel="stylesheet" /> <!-- Jika style dipisah ke file eksternal -->
+
     <style>
-      /* Atur background form */
-      .form-container {
-        width: 70%;
-        margin: 0 auto;
-        background-color: #ffffff;
+      :root {
+        --bg-color: #fff;
+        --text-color1: #1f1f21;
+        --text-color2: #fff;
+        --main-color: #15a6f5;
+        --bg-opacity: #fffefa;
+        --big-font: 3rem;
+        --title-font: 40px;
+        --p-font: 1rem;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
+        text-decoration: none;
+        list-style: none;
+      }
+
+      /* Gambar background */
+      body {
+        background: url('./images/h-bg-1.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: var(--text-color1);
+      }
+
+      .content-1 {
+        position: relative;
+        background: rgba(255, 255, 255, 0.8); /* Latar belakang transparan untuk konten */
         padding: 30px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
+        margin-top: 20px;
+        width: 90%; /* Lebar konten responsif */
+        max-width: 600px; /* Lebar maksimum konten */
+        margin: 20px auto; /* Margin untuk pusat konten */
+      }
+
+      .form-logo {
+        display: block;
+        margin: 0 auto;
+        width: 20%; /* Ukuran logo responsif */
+        max-width: 100px; /* Lebar maksimum logo */
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      .button-group {
+        display: flex;
+        justify-content: space-between;
         margin-top: 20px;
       }
 
-      /* Atur tampilan logo */
-      .form-logo {
-        display: block;
-        margin: 0 auto 20px; /* Meletakkan logo di tengah dan memberi jarak di bawahnya */
-        width: 100px; /* Memperkecil ukuran logo */
+      .button-group .btn {
+        padding: 10px 20px;
+        width: 180px;
+        color: var(--bg-color);
+        background-color: var(--main-color);
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        transition: all 0.3s ease;
       }
 
-      /* Untuk membuat form responsif di layar lebih kecil */
-      @media screen and (max-width: 768px) {
-        .form-container {
-          width: 80%;
+      .button-group .btn:hover {
+        background-color: #0e87c2;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
+      }
+
+      label {
+        font-size: var(--p-font);
+      }
+
+      legend {
+        font-size: var(--title-font);
+      }
+
+      h1 {
+        font-size: var(--big-font);
+      }
+
+      @media (min-width: 768px) {
+        .form-logo {
+          width: 80px; /* Ukuran logo pada layar besar */
+        }
+
+        .content-1 {
+          width: 50%; /* Lebar konten pada layar besar */
         }
       }
 
-      /* Atur tampilan latar belakang halaman */
-      body {
-        background-image: url("images/bg3.png"); /* Menggunakan gambar bg3.png sebagai background */
-        background-size: cover;
-        background-position: center;
-      }
-
-      /* Atur tampilan background putih pada radio buttons */
-      .form-check {
-        background-color: white;
-        padding: 10px;
-        border-radius: 5px;
-        margin-bottom: 5px;
+      @media (max-width: 768px) {
+        .content-1 {
+          width: 80%; /* Memperlebar form pada layar kecil */
+        }
+        .form-logo {
+          width: 50px; /* Mengurangi ukuran logo pada layar kecil */
+        }
       }
     </style>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
 
   <body>
-    <div class="container">
-      <div class="form-container">
-        <!-- Logo -->
-        <img src="images/logo2.png" alt="FunEduCare Logo" class="form-logo" />
+    <div class="container content-1">
+      <img src="images/logo2.png" alt="FunEduCare Logo" class="form-logo" />
+      <!-- Form -->
+      <form id="bookingForm">
+        <!-- Nama Orang Tua -->
+        <div class="form-group">
+          <label for="parentName">Nama Orang Tua / Wali</label>
+          <input
+            type="text"
+            class="form-control"
+            id="parentName"
+            placeholder="Masukkan Nama Orang Tua / Wali"
+            required
+          />
+        </div>
 
-        <!-- Form -->
-        <form id="bookingForm">
-          <!-- Nama Orang Tua -->
-          <div class="form-group">
-            <label for="parentName">Nama Orang Tua / Wali</label>
-            <input
-              type="text"
-              class="form-control"
-              id="parentName"
-              placeholder="Masukkan Nama Orang Tua / Wali"
-              required
-            />
+        <!-- Email -->
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            placeholder="Enter email"
+            required
+          />
+        </div>
+
+        <!-- Nomor Telepon -->
+        <div class="form-group">
+          <label for="phone">Nomor Telepon</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="phone"
+            placeholder="Masukkan Nomor Telepon"
+            required
+          />
+        </div>
+
+        <!-- Nama Anak -->
+        <div class="form-group">
+          <label for="childName">Nama Anak</label>
+          <input
+            type="text"
+            class="form-control"
+            id="childName"
+            placeholder="Masukkan Nama Anak"
+            required
+          />
+        </div>
+
+        <!-- Umur Anak -->
+        <div class="form-group">
+          <label for="exampleSelect1">Umur Anak</label>
+          <select class="form-control" id="exampleSelect1" required>
+            <option value="2">0-12 bulan</option>
+            <option value="3">1 tahun</option>
+            <option value="4">2 tahun</option>
+            <option value="5">3 tahun</option>
+            <option value="6">4 tahun</option>
+            <option value="7">5 tahun</option>
+          </select>
+        </div>
+
+        <!-- Pilih Program dengan Radio Buttons -->
+        <fieldset class="form-group">
+          <h>Pilih Program :</h>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="programOptions"
+                id="programOption1"
+                value="infant"
+                required
+              />
+              Infant Care (0-12 bulan)
+            </label>
           </div>
 
-          <!-- Email -->
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              placeholder="Enter email"
-              required
-            />
+          <div class="form-check">
+            <label class="form-check-label">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="programOptions"
+                id="programOption2"
+                value="toddler"
+              />
+              Toddler Program (1-2 tahun)
+            </label>
           </div>
 
-          <!-- Nomor Telepon -->
-          <div class="form-group">
-            <label for="phone">Nomor Telepon</label>
-            <input
-              type="tel"
-              class="form-control"
-              id="phone"
-              placeholder="Masukkan Nomor Telepon"
-              required
-            />
+          <div class="form-check">
+            <label class="form-check-label">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="programOptions"
+                id="programOption3"
+                value="preschool"
+              />
+              Pre-school Program (3-4 tahun)
+            </label>
           </div>
 
-          <!-- Nama Anak -->
-          <div class="form-group">
-            <label for="childName">Nama Anak</label>
-            <input
-              type="text"
-              class="form-control"
-              id="childName"
-              placeholder="Masukkan Nama Anak"
-              required
-            />
+          <div class="form-check">
+            <label class="form-check-label">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="programOptions"
+                id="programOption4"
+                value="prekindergarten"
+              />
+              Pre-kindergarten (4-5 tahun)
+            </label>
           </div>
+        </fieldset>
 
-          <!-- Umur Anak -->
-          <div class="form-group">
-            <label for="exampleSelect1">Umur Anak</label>
-            <select class="form-control" id="exampleSelect1" required>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-            </select>
-          </div>
-
-          <!-- Pilih Program dengan Radio Buttons -->
-          <fieldset class="form-group">
-            <legend>Pilih Program</legend>
-
-            <div class="form-check">
-              <label class="form-check-label">
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="programOptions"
-                  id="programOption1"
-                  value="infant"
-                  required
-                />
-                Infant Care (0-12 bulan)
-              </label>
-            </div>
-
-            <div class="form-check">
-              <label class="form-check-label">
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="programOptions"
-                  id="programOption2"
-                  value="toddler"
-                />
-                Toddler Program (1-2 tahun)
-              </label>
-            </div>
-
-            <div class="form-check">
-              <label class="form-check-label">
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="programOptions"
-                  id="programOption3"
-                  value="preschool"
-                />
-                Pre-school Program (3-4 tahun)
-              </label>
-            </div>
-
-            <div class="form-check">
-              <label class="form-check-label">
-                <input
-                  type="radio"
-                  class="form-check-input"
-                  name="programOptions"
-                  id="programOption4"
-                  value="prekindergarten"
-                />
-                Pre-kindergarten (4-5 tahun)
-              </label>
-            </div>
-          </fieldset>
-
-          <!-- Tanggal Berkunjung -->
-          <div class="form-group">
-            <label for="startDate">Tanggal Berkunjung:</label>
-            <input
-              type="date"
-              id="startDate"
-              name="startDate"
-              class="form-control"
-              required
-            />
-          </div>
-
-          <!-- Buttons -->
-          <div class="button-group">
-            <button type="button" class="btn btn-secondary" id="cancelButton">
-              Cancel
-            </button>
-            <button type="submit" class="btn btn-primary">
-              Booking Sekarang
-            </button>
-          </div>
-        </form>
-      </div>
+        <!-- Tanggal Berkunjung -->
+        <div class="form-group">
+          <label for="startDate">Tanggal Berkunjung:</label>
+          <input
+            type="date"
+            id="startDate"
+            name="startDate"
+            class="form-control"
+            required
+          />
+        </div>
+        <div class="button-group">
+          <button type="button" class="btn btn-secondary" id="cancelButton">
+            Cancel
+          </button>
+          <button type="submit" class="btn btn-primary">
+            Booking Sekarang
+          </button>
+        </div>
+      </form>
     </div>
 
     <script>
-      // Navigasi ke index.html ketika tombol "Cancel" diklik
-      document
-        .getElementById("cancelButton")
-        .addEventListener("click", function () {
-          window.location.href = "index.html"; // Mengarahkan ke index.html
-        });
+      // jQuery untuk menangani event klik tombol Cancel
+      $("#cancelButton").on("click", function () {
+        window.location.href = "index.html";
+      });
 
-      // Validasi form saat submit
-      document
-        .getElementById("bookingForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Mencegah form dari submit secara default
-
-          const parentName = document.getElementById("parentName").value;
-          const email = document.getElementById("exampleInputEmail1").value;
-          const phone = document.getElementById("phone").value;
-
-          // Jika ada field kosong, mencegah form submit
-          if (!parentName || !email || !phone) {
-            alert("Mohon isi semua field yang diwajibkan."); // Pesan error
-          } else {
-            // Jika valid, tampilkan pesan sukses dan arahkan ke index.html
-            alert("Form berhasil disubmit!");
-            window.location.href = "index.html"; // Mengarahkan ke index.html
-          }
-        });
+      // jQuery untuk menangani pengiriman form
+      $("#bookingForm").on("submit", function (event) {
+        event.preventDefault();
+        const parentName = $("#parentName").val();
+        const email = $("#exampleInputEmail1").val();
+        const phone = $("#phone").val();
+        if (!parentName || !email || !phone) {
+          alert("Mohon isi semua field yang diperlukan!");
+          return;
+        }
+        // Simulasi pengiriman data
+        alert("Booking berhasil untuk " + parentName);
+        $(this).trigger("reset"); // Reset form setelah berhasil
+      });
     </script>
   </body>
 </html>

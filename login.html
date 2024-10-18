@@ -9,159 +9,147 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <style>
-      body {
-        background-image: url("images/1.png");
-        /* Mengatur gambar latar belakang */
-        background-repeat: no-repeat;
-        /* Mencegah pengulangan gambar latar */
-        background-position: center;
-        /* Menempatkan gambar di tengah halaman */
-        background-size: cover;
-        /* Membuat gambar menutupi seluruh halaman */
-        color: black;
-        /* Mengatur warna teks menjadi hitam */
-      }
-
-      .container {
-        display: flex;
-        /* Menggunakan Flexbox untuk tata letak */
-        justify-content: center;
-        /* Memposisikan elemen secara horizontal di tengah */
-        align-items: center;
-        /* Memposisikan elemen secara vertikal di tengah */
-        flex-direction: column;
-        /* Mengatur elemen secara vertikal (kolom) */
-        height: 100vh;
-        /* Mengatur tinggi container menjadi 100% tinggi viewport */
-      }
-
-      h1 {
-        text-align: center;
-        /* Mengatur teks judul agar rata tengah */
-        padding-bottom: 50px;
-        /* Menambahkan jarak bawah 50px */
-        font-size: 250%;
-        /* Mengatur ukuran font menjadi 250% dari ukuran default */
-      }
-
-      form {
-        width: 500px;
-        /* Mengatur lebar form */
-        background-color: white;
-        /* Mengatur warna latar belakang form */
-        border: solid 3px #15a6f5;
-        backdrop-filter: blur(20px);
-        /* Menambahkan efek blur di latar belakang form */
-        box-shadow: 0 0 10px black;
-        /* Menambahkan bayangan hitam di sekitar form */
-        border-radius: 20px;
-        /* Membuat sudut form menjadi tumpul dengan radius 5px */
-        padding: 30px;
-        /* Menambahkan padding dalam form sebesar 30px */
-      }
-
-      .submit {
-        display: flex;
-        /* Menggunakan Flexbox untuk tata letak */
-        justify-content: center;
-        /* Memposisikan elemen secara horizontal di tengah */
-        align-items: center;
-        /* Memposisikan elemen secara vertikal di tengah */
-        flex-direction: column;
-        /* Mengatur elemen secara vertikal */
-        height: 100px;
-        /* Mengatur tinggi section submit */
-      }
-
-      .btn {
-        width: 150px;
-        /* Mengatur lebar tombol */
-        background-color: #15a6f5;
-        /* Mengatur warna latar tombol */
-        border-radius: 15px;
-        /* Membuat sudut tombol melengkung dengan radius 15px */
-        font-weight: bold;
-        /* Mengatur teks tombol menjadi tebal */
-        color: white;
-      }
-
-      .btn:hover {
-        background-color: white;
-        /* Mengubah warna latar tombol saat hover */
-        color: #15a6f5;
-        border: solid 3px #15a6f5;
-        /* Mengubah warna border tombol saat hover */
-      }
-
-      p {
-        font-size: 80%;
-        /* Mengatur ukuran font menjadi 80% dari ukuran default */
-        padding-top: 5px;
-        /* Menambahkan jarak atas pada paragraf sebesar 5px */
-      }
-
-      .box {
-        padding-bottom: 10px;
-        /* Menambahkan jarak bawah pada elemen box sebesar 10px */
-      }
-
-      .link {
-        font-weight: bold;
-        color: #15a6f5;
-      }
-
-      .link:hover {
-        font-weight: bold;
-        color: #ee0d52;
-      }
-    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./style_log-in_&_sign-up.css" />
     <title>Log-in</title>
   </head>
 
   <body>
-    <div class="container">
-      <form action="index.html" id="loginForm">
-        <h1 class="box">Log In</h1>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input
-            type="email"
-            placeholder="Masukkan Email Anda"
-            class="form-control"
-            id="email"
-            name="email"
-            required
-          />
+    <div class="content">
+      <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+          <div class="container">
+            <div class="picture">
+              <img class="img" src="images/img.png" alt="" />
+            </div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input
-            type="password"
-            placeholder="Masukkan Password Anda"
-            class="form-control"
-            id="password"
-            name="password"
-            required
-          />
+        <div class="col-md-auto">
+          <div class="container">
+            <form action="homepage.html" id="loginForm">
+              <div class="box">
+                <h1>Selamat Datang di FunEduCare!</h1>
+                <p>
+                  Masuk untuk memantau perkembangan dan aktivitas belajar si
+                  kecil.
+                </p>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  placeholder="Masukkan Email Anda"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  placeholder="Masukkan Password Anda"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  required
+                />
+              </div>
+              <div style="display: flex">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label
+                    style="font-size: 70%"
+                    class="form-check-label"
+                    for="flexCheckDefault"
+                  >
+                    Remember Me
+                  </label>
+                </div>
+                <a href="#" style="font-size: 70%; padding-left: 50%"
+                  >Forgot Password?</a
+                >
+              </div>
+              <div class="submit">
+                <button href="homepage.html" type="submit" class="btn">
+                  Log In
+                </button>
+              </div>
+            </form>
+            <div class="submit-2">
+              <button href="#" type="submit" class="btn-gg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-google"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"
+                  />
+                </svg>
+                Sign in with Google
+              </button>
+              <p style="padding-top: 10px">
+                Belum punya akun? <a class="link" href="signup.html">Sign Up</a>
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="submit">
-          <button href="index.html" type="submit" class="btn">MASUK</button>
-          <p>
-            Belum punya akun? <a class="link" href="signup.html">Sign Up</a>
-          </p>
+      </div>
+    </div>
+
+    <!-- Modal Pop-up -->
+    <div id="loginSuccessModal" class="modal">
+      <div class="modal-content">
+        <p>Log-in Berhasil!</p>
+        <img class="verified" src="images/verified.png" alt="Verified" />
+        <div class="modal-body">
+          Selamat, Anda telah berhasil masuk ke FunEduCare
+          <button class="btn-modal close-btn">OK</button>
+          <!-- Tombol untuk menutup modal -->
         </div>
-      </form>
+      </div>
     </div>
 
     <script>
-      document
-        .getElementById("loginForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault(); // Mencegah form dari pengiriman default
-          alert("Log-in Berhasil!"); // Menampilkan pop-up log-in berhasil
-          this.submit(); // Melanjutkan pengiriman form setelah menampilkan alert
+      $(document).ready(function () {
+        // Fungsi untuk menampilkan modal
+        function showModal() {
+          $("#loginSuccessModal").fadeIn(); // Menggunakan fadeIn() untuk efek muncul modal
+        }
+
+        // Menutup modal jika pengguna mengklik di luar modal
+        $(window).on("click", function (event) {
+          if ($(event.target).is("#loginSuccessModal")) {
+            $("#loginSuccessModal").fadeOut(); // Menutup modal dengan fadeOut
+          }
         });
+
+        // Event listener untuk form submit
+        $("#loginForm").on("submit", function (event) {
+          event.preventDefault(); // Mencegah form dari pengiriman default
+          showModal(); // Menampilkan modal
+        });
+
+        // Menutup modal hanya jika tombol OK diklik
+        $(".close-btn").on("click", function () {
+          // Setelah modal ditutup, pindahkan pengguna ke halaman homepage.html
+          window.location.href = "homepage.html"; // Pindah ke halaman homepage.html
+        });
+      });
     </script>
   </body>
 </html>
