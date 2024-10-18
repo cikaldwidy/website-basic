@@ -1,5 +1,5 @@
-// Menunggu hingga seluruh konten halaman telah dimuat
-document.addEventListener("DOMContentLoaded", function () {
+// js jquery membuat teks disembunyikan content-4
+$(document).ready(function () {
   // Membuat array yang berisi ID dari semua tombol 'Tampilkan lebih banyak'
   const readMoreButtons = [
     "readMoreBtn1",
@@ -10,40 +10,49 @@ document.addEventListener("DOMContentLoaded", function () {
     "readMoreBtn6",
   ];
 
-  // Melakukan iterasi atau perulangan pada setiap ID tombol di dalam array
+  // Melakukan iterasi pada setiap ID tombol di dalam array
   readMoreButtons.forEach((buttonId) => {
-    // Mendapatkan elemen tombol berdasarkan ID-nya
-    const button = document.getElementById(buttonId);
+    $(`#${buttonId}`).on("click", function () {
+      const index = buttonId.charAt(buttonId.length - 1);
+      const $dots = $(`#dots${index}`);
+      const $moreText = $(`#more${index}`);
 
-    // Menambahkan event listener untuk menangani klik pada tombol
-    button.addEventListener("click", function () {
-      // Mendapatkan elemen 'dots' (tiga titik yang menunjukkan teks terpotong)
-      // 'dots' disesuaikan dengan angka terakhir dari ID tombol (misalnya, 'dots1', 'dots2', dll.)
-      const dots = document.getElementById(
-        `dots${buttonId.charAt(buttonId.length - 1)}`
-      );
+      const isExpanded = $moreText.css("display") === "inline";
 
-      // Mendapatkan elemen 'more' (teks yang akan ditampilkan lebih banyak)
-      // 'more' disesuaikan dengan angka terakhir dari ID tombol
-      const moreText = document.getElementById(
-        `more${buttonId.charAt(buttonId.length - 1)}`
-      );
-
-      // Mengecek apakah teks 'more' sudah terlihat atau tidak (inline artinya terlihat)
-      const isExpanded = moreText.style.display === "inline";
-
-      // Jika teks lebih sudah terlihat, maka kita sembunyikan lagi
       if (isExpanded) {
-        dots.style.display = "inline"; // Menampilkan kembali 'dots' (titik-titik)
-        moreText.style.display = "none"; // Menyembunyikan teks lebih
-        button.innerText = "Tampilkan lebih banyak"; // Mengubah teks tombol menjadi 'Tampilkan lebih banyak'
-      }
-      // Jika teks lebih belum terlihat, maka kita tampilkan
-      else {
-        dots.style.display = "none"; // Menyembunyikan 'dots'
-        moreText.style.display = "inline"; // Menampilkan teks lebih
-        button.innerText = "Sembunyikan"; // Mengubah teks tombol menjadi 'Sembunyikan'
+        $dots.css("display", "inline");
+        $moreText.css("display", "none");
+        $(this).text("Tampilkan lebih banyak");
+      } else {
+        $dots.css("display", "none");
+        $moreText.css("display", "inline");
+        $(this).text("Sembunyikan");
       }
     });
+  });
+});
+// INTERVAL C-4
+
+// INTERVAL C-5
+
+//js-jquery form hubungi kami content-6
+$(document).ready(function () {
+  $("#contactForm").on("submit", function (event) {
+    event.preventDefault(); // Mencegah pengiriman form
+
+    // Validasi form
+    if (
+      $("#nameInput").val() === "" ||
+      $("#genderInput").val() === "" ||
+      $("#emailInput").val() === "" ||
+      $("#phoneInput").val() === "" ||
+      $("#addressInput").val() === ""
+    ) {
+      alert("Terjadi kesalahan, mohon lengkapi field!");
+    } else {
+      alert("Jawaban anda berhasil dikirim!");
+      // Di sini Anda bisa menambahkan logika untuk mengirim data ke server
+      $(this).trigger("reset"); // Reset form setelah pengiriman
+    }
   });
 });
