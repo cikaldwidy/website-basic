@@ -226,7 +226,7 @@ body {
 }
 @media (max-width: 770px) {
   .content-1 h1 {
-    font-size: 3rem; /* Sesuaikan ukuran font */
+    font-size: 2rem;
   }
   .content-1 h3 {
     font-size: 1.5rem;
@@ -235,19 +235,34 @@ body {
     padding: 10px;
   }
 
-  .content-1 .button-group {
-    text-align: center;
-  }
-
   .content-1 .img-k1 {
     display: none;
   }
 }
-
-/* content2 */
-.content-2 {
-  margin-top: 20px;
+@media (max-width: 1085px) {
+  .content-1 h1 {
+    font-size: 3rem;
+  }
+  .content-1 h3 {
+    font-size: 1.5rem;
+  }
+  .content-1 {
+    padding: 10px;
+  }
 }
+@media (max-width: 810px) {
+  .content-1 h1 {
+    font-size: 2.5rem;
+  }
+  .content-1 h3 {
+    font-size: 1.5rem;
+  }
+  .content-1 {
+    padding: 10px;
+  }
+}
+/* content2 */
+
 .content-2 h1 {
   font-size: 37px;
   font-weight: 605;
@@ -279,7 +294,7 @@ body {
   opacity: 87%;
 }
 
-.d-flex .circle p {
+.content-2 .circle p {
   text-align: justify;
   margin-top: 20px;
   font-size: 14px;
@@ -442,46 +457,88 @@ body {
 }
 
 /* content5 */
-content-5 {
-  display: inline-block;
+.carousel-item {
+  position: relative; /* Pastikan item carousel memiliki posisi relatif */
 }
-.content-5 .text-content {
-  /* background: url(./images/h-c-5.2.jpg); */
-  /* background: linear-gradient(to right, var(--main-color), #ee0d62); */
-  background-color: #0b3061;
-  transition: all 0.3s ease-in-out;
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -50%);
+  text-align: center;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
 }
-.content-5 .text-content:hover {
-  /*background: url(./images/h-c-5.2.jpg);
-  */
-  /* background: linear-gradient(to right, var(--main-color), #ee0d62); */
-  transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -o-transform: scale(1.05);
-}
-.content-5 .text-content h1 {
-  font-weight: 550;
-  opacity: 90%;
-  font-size: 17px;
+.carousel-caption h5 {
   color: var(--text-color2);
+  font-size: 30px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+.carousel-caption p {
+  font-style: italic;
+  color: var(--text-color2);
+  font-size: 16px;
+  letter-spacing: 1.7px;
+  font-weight: 400;
+}
+/* Media Query untuk layar 900px */
+@media (max-width: 1200px) {
+  .carousel-caption {
+    margin-top: 10px;
+  }
+  .carousel-caption h5 {
+    font-size: 1.1rem; /* Ukuran font yang lebih kecil */
+  }
+  .carousel-caption p {
+    font-size: 0.7rem; /* Ukuran font yang lebih kecil */
+  }
 }
 
-.content-5 .text-content p {
-  color: var(--text-color2);
-  opacity: 95%;
-  font-weight: bold;
-  font-size: 16px;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 1px;
-  line-height: 30px;
+/* Media Query untuk layar 700px */
+@media (max-width: 900px) {
+  .carousel-caption {
+    margin-top: 5px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1rem; /* Ukuran font yang lebih kecil lagi */
+  }
+  .carousel-caption p {
+    font-size: 0.8rem; /* Ukuran font yang lebih kecil */
+  }
 }
-.content-5 .text-content span {
-  color: var(--bg-color);
-  font-size: 23px;
-  font-weight: 650;
+@media (max-width: 895px) {
+  .carousel-caption {
+    margin-top: -30px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1rem; /* Ukuran font yang lebih kecil lagi */
+  }
+  .carousel-caption p {
+    font-size: 0.8rem; /* Ukuran font yang lebih kecil */
+  }
+}
+@media (max-width: 550px) {
+  .carousel-caption h5 {
+    font-size: 0.9rem; /* Ukuran font yang lebih kecil lagi */
+  }
+  .carousel-caption p {
+    font-size: 0.5rem; /* Ukuran font yang lebih kecil */
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 390px) {
+  .carousel-caption h5 {
+    font-size: 0.8rem; /* Ukuran font yang lebih kecil lagi */
+  }
+  .carousel-caption p {
+    font-size: 0.4rem; /* Ukuran font yang lebih kecil */
+    margin-bottom: 30px;
+  }
 }
 
 /* content6 */
@@ -516,7 +573,7 @@ content-5 {
   height: 50px;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
-@media (max-width: 700px) {
+@media (max-width: 995px) {
   .custom-img {
     display: none;
   }
