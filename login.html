@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="./style_log-in_&_sign-up.css" />
+    <link rel="stylesheet" href="./assets/css/style_log-in_&_sign-up.css" />
     <title>Log-in</title>
   </head>
 
@@ -24,13 +24,13 @@
         <div class="col-md-auto">
           <div class="container">
             <div class="picture">
-              <img class="img" src="images/img.png" alt="" />
+              <img class="img" src="./assets/images/img.png" alt="" />
             </div>
           </div>
         </div>
         <div class="col-md-auto">
           <div class="container">
-            <form action="homepage.html" id="loginForm">
+            <form action="./homepage.html" id="loginForm">
               <div class="box">
                 <h1>Selamat Datang di FunEduCare!</h1>
                 <p>
@@ -81,7 +81,7 @@
                 >
               </div>
               <div class="submit">
-                <button href="homepage.html" type="submit" class="btn">
+                <button href="./homepage.html" type="submit" class="btn">
                   Log In
                 </button>
               </div>
@@ -103,7 +103,8 @@
                 Sign in with Google
               </button>
               <p style="padding-top: 10px">
-                Belum punya akun? <a class="link" href="signup.html">Sign Up</a>
+                Belum punya akun?
+                <a class="link" href="./signup.html">Sign Up</a>
               </p>
             </div>
           </div>
@@ -115,7 +116,11 @@
     <div id="loginSuccessModal" class="modal">
       <div class="modal-content">
         <p>Log-in Berhasil!</p>
-        <img class="verified" src="images/verified.png" alt="Verified" />
+        <img
+          class="verified"
+          src="./assets/images/verified.png"
+          alt="Verified"
+        />
         <div class="modal-body">
           Selamat, Anda telah berhasil masuk ke FunEduCare
           <button class="btn-modal close-btn">OK</button>
@@ -123,33 +128,6 @@
         </div>
       </div>
     </div>
-
-    <script>
-      $(document).ready(function () {
-        // Fungsi untuk menampilkan modal
-        function showModal() {
-          $("#loginSuccessModal").fadeIn(); // Menggunakan fadeIn() untuk efek muncul modal
-        }
-
-        // Menutup modal jika pengguna mengklik di luar modal
-        $(window).on("click", function (event) {
-          if ($(event.target).is("#loginSuccessModal")) {
-            $("#loginSuccessModal").fadeOut(); // Menutup modal dengan fadeOut
-          }
-        });
-
-        // Event listener untuk form submit
-        $("#loginForm").on("submit", function (event) {
-          event.preventDefault(); // Mencegah form dari pengiriman default
-          showModal(); // Menampilkan modal
-        });
-
-        // Menutup modal hanya jika tombol OK diklik
-        $(".close-btn").on("click", function () {
-          // Setelah modal ditutup, pindahkan pengguna ke halaman homepage.html
-          window.location.href = "homepage.html"; // Pindah ke halaman homepage.html
-        });
-      });
-    </script>
+    <script src="./assets/js/log-in.js"></script>
   </body>
 </html>

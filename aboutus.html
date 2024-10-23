@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
+    <!-- link css -->
+     <link rel="stylesheet" href="./assets/css/aboutus-style.css">
+     <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
@@ -15,496 +19,65 @@
     <!-- jquery-->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <style>
-        :root {
-            /* kelompokkan warna dengan kode */
-            --bg-color: #fff;
-            --text-color1: #1f1f21;
-            --text-color2: #fff;
-            --main-color: #15a6f5;
-            --bg-opacity: #fffefa;
-            --big-font: 3rem;
-            --title-font: 40px;
-            --p-font: 1rem;
-        }
-
-        body {
-            /* Pengaturan umum untuk body dan background image*/
-            background-color: white;
-            background-image: url(./images/h-bg-1.jpg);
-            background-repeat: no-repeat;
-            background-position: top;
-            background-size: cover;
-            height: 0vh;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .about-us-container {
-            /* Gaya untuk kontainer 'About Us' */
-            margin-top: 50px;
-            padding-bottom: 50px;
-        }
-
-        .jumbotron {
-            /* Gaya untuk jumbotron siapa kami */
-            margin: 0 auto;
-            max-width: 900px;
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 100px;
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px 4px 10px rgba(0, 0, 0, 0.2),
-                0px 6px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .jumbotron h1 {
-            /* Gaya untuk judul dalam jumbotron siapa kami */
-            font-size: 3em;
-            font-weight: bold;
-            color: #3a3a3a;
-        }
-
-        .jumbotron img {
-            /* Gaya untuk gambar logo dalam jumbotron siapa kami */
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .jumbotron p {
-            /* Gaya untuk paragraf dalam jumbotron siapa kami */
-            font-size: 1.2em;
-            line-height: 1.6em;
-            color: #555;
-            text-align: justify;
-        }
-
-        .content2 {
-            /*Mengatur background kayu pada visi misi*/
-            background: url(./images/kayu.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            padding: 40px 20px;
-            margin: 20px 0;
-            border-radius: 15px;
-        }
-
-        /*GURUUUUUUU*/
-        .shadow-box {
-            /* Efek box-shadow pada guru dan galeri*/
-            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2),
-                -4px 4px 10px rgba(0, 0, 0, 0.2),
-                0px 6px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .pengajar-item {
-            /*Mengatur konten pada box carousel guru*/
-            width: 500px;
-            padding: 20px;
-            margin: 20px auto;
-            background-color: #fff;
-            border-radius: 15px;
-            text-align: center;
-        }
-
-        .pengajar-item img {
-            /*Mengatur foto guru*/
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border: 3.5px solid #007bff;
-            margin-bottom: 15px;
-        }
-
-        #detail {
-            /*Rata kanan kiri untuk detail deskripsi*/
-            text-align: justify;
-        }
-
-        .additional-info {
-            /*Mengatur jarak antara tulisan informasi selengkapnya dengan bawahnya*/
-            margin-top: 10px;
-            padding: 10px;
-            background-color: #f2f2f2;
-            border-radius: 5px;
-            display: none;
-        }
-
-        .text-center h1 {
-            /*Mengatur huruf judul h1*/
-            font-size: 37px;
-            font-weight: 650;
-            background: linear-gradient(to right, #011f46, var(--main-color));
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /*GALERIIIIIIII*/
-        .gallery {
-            margin-bottom: 100px;
-        }
-
-        .gallery-item {
-            /*Mengatur konten pada box carousel galeri*/
-            width: 500px;
-            padding: 15px;
-            margin: 20px auto;
-            background-color: #fff;
-            border-radius: 15px;
-        }
-
-        .gallery-item:hover {
-            /* Hover Effect */
-            box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3),
-                -6px 6px 15px rgba(0, 0, 0, 0.3),
-                0px 8px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .gallery-description {
-            /*Deskripsi setiap foto di galeri*/
-            margin-top: 10px;
-            text-align: center;
-            font-size: 1rem;
-        }
-
-        .divider {
-            /*Garis pemisah*/
-            border: none;
-            height: 2px;
-            background-color: #007bff;
-            margin: 40px 0;
-        }
-
-        /*Agar ukuran foto pada guru dan galeri responsif*/
-        @media (max-width: 768px) {
-            .pengajar-item {
-                width: 90%;
-                /* Lebar yang lebih besar pada tampilan mobile */
-            }
-
-            .gallery-item {
-                width: 90%;
-                /* Lebar yang lebih besar pada tampilan mobile */
-            }
-        }
-
-        @media (min-width: 769px) {
-            .pengajar-item {
-                width: 500px;
-                /* Lebar default untuk laptop */
-            }
-
-            .gallery-item {
-                width: 500px;
-                /* Lebar default untuk laptop */
-            }
-        }
-
-        /*Tulisan pada informasi selengkapnya*/
-        .more-info {
-            color: #011f46;
-            opacity: 90%;
-            letter-spacing: 0.5px;
-            cursor: pointer;
-            font-size: 15px;
-            font-weight: 650;
-            border: none;
-            background: none;
-            padding: 0;
-            text-decoration: underline;
-        }
-
-        .more-info:hover {
-            color: #011f46;
-            opacity: 70%;
-            text-decoration: none;
-        }
-
-        /*MENGATUR CAROUSEL*/
-        .carousel-control-prev {
-            left: 20px;
-            /* Menggeser tombol previous lebih dekat ke konten */
-        }
-
-        .carousel-control-next {
-            right: 20px;
-            /* Menggeser tombol next lebih dekat ke konten */
-        }
-
-        .carousel-inner {
-            /*Mengatur jarak antara carousel dengan tulisan diatasnya*/
-            padding: 20px 0;
-        }
-
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            /*Mengatur ikon untuk menggeser carousel*/
-            background-color: rgba(0, 0, 0, 0.248);
-            border-radius: 50%;
-        }
-
-        /* NAVBAR */
-        .navbar {
-            width: auto;
-            height: 70px;
-            margin: 15px;
-            border-radius: 25px;
-            -webkit-border-radius: 25px;
-            -moz-border-radius: 25px;
-            -ms-border-radius: 25px;
-            -o-border-radius: 25px;
-            transition: 0.3s background-color;
-            -webkit-transition: 0.3s background-color;
-            -moz-transition: 0.3s background-color;
-            -ms-transition: 0.3s background-color;
-            -o-transition: 0.3s background-color;
-        }
-
-        .navbar-brand img {
-            width: 40px;
-            height: auto;
-        }
-
-        .login-button {
-            margin-right: 10px;
-            background-color: var(--main-color);
-            opacity: 100%;
-            color: var(--text-color2);
-            font-size: 13px;
-            padding: 8px 12px;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: 0.3s backgroud-color;
-            -webkit-transition: 0.3s backgroud-color;
-            -moz-transition: 0.3s backgroud-color;
-            -ms-transition: 0.3s backgroud-color;
-            -o-transition: 0.3s backgroud-color;
-        }
-
-        .login-button:hover {
-            background-color: var(--main-color);
-            opacity: 70%;
-        }
-
-        .offcanvas-header img {
-            width: 40px;
-            height: auto;
-        }
-
-        .navbar-toggler {
-            border: none;
-            font-size: 1.5rem;
-        }
-
-        .navbar-toggler:focus,
-        .btn-close:focus {
-            box-shadow: none;
-            outline: none;
-        }
-
-        .navbar .nav-link.active {
-            color: var(--text-color1);
-            font-weight: 700;
-        }
-
-        .navbar .nav-link {
-            color: var(--text-color1);
-            font-size: 18px;
-            font-weight: 550;
-            opacity: 85%;
-            position: relative;
-        }
-
-        .navbar .nav-link:hover,
-        .navbar .nav-link.active:hover {
-            color: var(--text-color1);
-            font-weight: 650;
-            opacity: 100%;
-        }
-
-        @media (min-width: 990px) {
-            .navbar .nav-link::before {
-                content: "";
-                color: var(--text-color2);
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 0;
-                height: 2px;
-                background-color: var(--main-color);
-                visibility: hidden;
-                transition: 0.3s ease-out;
-                -webkit-transition: 0.3s ease-out;
-                -moz-transition: 0.3s ease-out;
-                -ms-transition: 0.3s ease-out;
-                -o-transition: 0.3s ease-out;
-                -webkit-transform: translateX(-50%);
-                -moz-transform: translateX(-50%);
-                -ms-transform: translateX(-50%);
-                -o-transform: translateX(-50%);
-            }
-
-            .navbar .nav-link:hover::before,
-            .navbar .navlink.active::before {
-                width: 100%;
-                visibility: visible;
-            }
-        }
-
-        .logo-small {
-            width: 50px;
-            height: auto;
-        }
-
-        /* FOOTERRRRR */
-        .list1,
-        .footer-links,
-        .list2 {
-            list-style-type: none;
-            /* Menghapus bullet points */
-            padding-left: 0;
-            /* Menghapus padding kiri */
-        }
-
-        .list1 li,
-        .footer-links li,
-        .list2 li {
-            margin-bottom: 10px;
-            /* Jarak bawah untuk item daftar */
-        }
-
-        /* Gaya untuk tautan di list1 */
-        .list1 a {
-            color: var(--text-color2);
-            /* Menggunakan variabel warna */
-            text-decoration: none;
-            /* Menghapus garis bawah */
-            letter-spacing: 1px;
-            /* Jarak antar huruf */
-            font-size: 16px;
-            /* Ukuran font */
-        }
-
-        .list1 a:hover {
-            text-decoration: underline;
-            /* Garis bawah saat hover */
-        }
-
-        /* Gaya untuk tautan di footer-links */
-        .footer-links a {
-            text-decoration: none;
-            /* Menghapus garis bawah */
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-            /* Garis bawah saat hover */
-        }
-
-        /* Gaya untuk tautan di list2 */
-        .list2 a {
-            color: var(--text-color2);
-            /* Menggunakan variabel warna */
-            text-decoration: none;
-            /* Menghapus garis bawah */
-            letter-spacing: 0.5px;
-            /* Jarak antar huruf */
-            font-size: 15px;
-            /* Ukuran font */
-        }
-
-        .list2 a:hover {
-            text-decoration: underline;
-            /* Garis bawah saat hover */
-        }
-
-        /* Gaya untuk judul di footer */
-        .footer h4 {
-            color: var(--text-color2);
-            /* Menggunakan variabel warna */
-            font-weight: 600;
-            /* Bobot font */
-            font-size: 20px;
-            /* Ukuran font */
-        }
-
-        /* Gaya untuk footer */
-        .footer {
-            background: linear-gradient(to right, #011f46, var(--main-color));
-            /* Gradien latar belakang */
-            opacity: 0.9;
-            /* Transparansi */
-        }
-
-        /* Gaya untuk elemen tambahan */
-        .list4,
-        .follow,
-        .copyright {
-            color: var(--text-color2);
-            /* Menggunakan variabel warna */
-        }
-    </style>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand me-auto" href="#">
-                    <img src="./images/logo2.png" alt="logo" class="logo-small" />
-                </a>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                            <img src="./images/logo2.png" alt="logo" class="logo-small" />
-                        </h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link mx-lg-3" href="./homepage.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active mx-lg-3" href="./aboutus.html">About us</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle mx-lg-3" href="" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Programs
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="programs.html">All-Programs</a></li>
-                                    <li><a class="dropdown-item" href="myprogram.html">My-Program</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link mx-lg-3" href="./contactus.html">Contact us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <a href="./login.html" class="login-button">Log in</a>
-                <button class="navbar-toggler pe-2" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <nav class="navbar navbar-expand-lg sticky-top">
+          <div class="container-fluid  me-3 ms-3">
+            <a class="navbar-brand me-auto " href="#">
+              <img src="./assets/images/logo2.png" alt="logo" width="50px" />
+            </a>
+    
+            <div class="offcanvas offcanvas-end bg-secondary" tabindex="-1" id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header mt-3">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                  <img src="./assets/images/logo2.png" alt="logo" class="logo-small" />
+                </h5>
+                <button type="button" class="btn-close bg-secondary" data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-start flex-grow-1 pe-4">
+                  <li class="nav-item">
+                    <a class="nav-link mx-lg-2" aria-current="page" href="./homepage.html">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active mx-lg-2" href="aboutus.html">ABOUT US</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mx-lg-2" href role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      PROGRAMS
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="programs.html">ALL-PROGRAM</a></li>
+                      <li><a class="dropdown-item" href="myprogram.html">MY-PROGRAM</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-lg-2" href="contactus.html">CONTACT US</a>
+                  </li>
+                </ul>
+              </div>
             </div>
+            <div class="d-flex align-items-center">
+              <a href="./login.html" class="signin-button p-2 me-2">Open Your
+                Account</a>
+              <button class="navbar-toggler pe-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </div>
         </nav>
-    </header>
+      </header>
     <main class="container">
         <section class="text-center">
             <div class="jumbotron text-center" style="margin-top: 100px;">
                 <h1>Siapa Kami?</h1>
-                <img src="images/logo2.png" alt="Logo Platform" width="150" height="150">
+                <img src="./assets/images/logo2.png" alt="Logo Platform" width="150" height="150">
                 <p>FunEduCare siap mendampingi tumbuh kembang si kecil dalam lingkungan penuh kasih, aman, dan edukatif.
                     Berlokasi di Jl. Mawar No. 123, Jakarta, kami menawarkan fasilitas lengkap seperti ruang bermain,
                     ruang belajar nyaman, pengawasan CCTV 24/7, serta program pendidikan menyenangkan.
@@ -552,7 +125,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <article class="pengajar-item shadow-box mx-auto">
-                            <img src="images/guru1.jpeg" alt="Ms. Putri"
+                            <img src="./assets/images/guru1.jpeg" alt="Ms. Putri"
                                 class="img-fluid rounded-circle mx-auto d-block">
                             <h3>Ms. Putri</h3>
                             <p>Miss Putri menciptakan suasana belajar yang menyenangkan dengan pendekatan yang sabar dan
@@ -571,7 +144,7 @@
                     </div>
                     <div class="carousel-item">
                         <article class="pengajar-item shadow-box mx-auto">
-                            <img src="images/guru2.jpeg" alt="Permata" class="img-fluid rounded-circle mx-auto d-block">
+                            <img src="./assets/images/guru2.jpeg" alt="Permata" class="img-fluid rounded-circle mx-auto d-block">
                             <h3>Ms. Permata</h3>
                             <p>Dengan energi positif dan kasih sayang, Permata membantu anak-anak merasa nyaman dan
                                 percaya diri dalam belajar.</p>
@@ -588,7 +161,7 @@
                     </div>
                     <div class="carousel-item">
                         <article class="pengajar-item shadow-box mx-auto">
-                            <img src="images/guru3.jpeg" alt="Dewi" class="img-fluid rounded-circle mx-auto d-block">
+                            <img src="./assets/images/guru3.jpeg" alt="Dewi" class="img-fluid rounded-circle mx-auto d-block">
                             <h3>Ms. Dewi</h3>
                             <p>Pendekatan lembut dan penuh empati Dewi memastikan setiap anak merasa diperhatikan dan
                                 terhubung.</p>
@@ -606,7 +179,7 @@
 
                     <div class="carousel-item">
                         <article class="pengajar-item shadow-box mx-auto">
-                            <img src="images/guru4.jpeg" alt="Ms. Susi"
+                            <img src="./assets/images/guru4.jpeg" alt="Ms. Susi"
                                 class="img-fluid rounded-circle mx-auto d-block">
                             <h3>Ms. Susi</h3>
                             <p>Susi fokus pada pengembangan keterampilan sosial dan emosional melalui kegiatan
@@ -624,7 +197,7 @@
 
                     <div class="carousel-item">
                         <article class="pengajar-item shadow-box mx-auto">
-                            <img src="images/guru5.jpeg" alt="Ms. Alia"
+                            <img src="./assets/images/guru5.jpeg" alt="Ms. Alia"
                                 class="img-fluid rounded-circle mx-auto d-block">
                             <h3>Ms. Alia</h3>
                             <p>Kreativitas dan inovasi Alia membawa pengalaman belajar yang menyenangkan dengan
@@ -643,7 +216,7 @@
 
                     <div class="carousel-item">
                         <article class="pengajar-item shadow-box mx-auto">
-                            <img src="images/guru6.jpeg" alt="Ms. Kayla"
+                            <img src="./assets/images/guru6.jpeg" alt="Ms. Kayla"
                                 class="img-fluid rounded-circle mx-auto d-block">
                             <h3>Ms. Kayla</h3>
                             <p>Kayla menciptakan lingkungan yang hangat dan ramah, memastikan setiap anak merasa
@@ -684,7 +257,7 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <article class="gallery-item shadow-box mx-auto">
-                            <img src="images/galeri1.jpg" alt="Activity 1" class="img-fluid rounded">
+                            <img src="./assets/images/galeri1.jpg" alt="Activity 1" class="img-fluid rounded">
                             <div class="gallery-description">
                                 <p>Belajar Bersama Didalam Ruangan</p>
                                 <a href="#" class="more-info">Informasi selengkapnya...</a>
@@ -700,7 +273,7 @@
 
                     <div class="carousel-item">
                         <article class="gallery-item shadow-box mx-auto">
-                            <img src="images/galeri2.jpg" alt="Activity 2" class="img-fluid rounded">
+                            <img src="./assets/images/galeri2.jpg" alt="Activity 2" class="img-fluid rounded">
                             <div class="gallery-description">
                                 <p>Bermain Bersama Teman - Teman</p>
                                 <a href="#" class="more-info">Informasi selengkapnya...</a>
@@ -715,7 +288,7 @@
 
                     <div class="carousel-item">
                         <article class="gallery-item shadow-box mx-auto">
-                            <img src="images/galeri3.png" alt="Activity 3" class="img-fluid rounded">
+                            <img src="./assets/images/galeri3.png" alt="Activity 3" class="img-fluid rounded">
                             <div class="gallery-description">
                                 <p>Belajar Private</p>
                                 <a href="#" class="more-info">Informasi selengkapnya...</a>
@@ -730,7 +303,7 @@
 
                     <div class="carousel-item">
                         <article class="gallery-item shadow-box mx-auto">
-                            <img src="images/galeri4.png" alt="Activity 4" class="img-fluid rounded">
+                            <img src="./assets/images/galeri4.png" alt="Activity 4" class="img-fluid rounded">
                             <div class="gallery-description">
                                 <p>Olahraga Bersama</p>
                                 <a href="#" class="more-info">Informasi selengkapnya...</a>
@@ -744,7 +317,7 @@
                     </div>
                     <div class="carousel-item">
                         <article class="gallery-item shadow-box mx-auto">
-                            <img src="images/galeri5.png" alt="Activity 4" class="img-fluid rounded">
+                            <img src="./assets/images/galeri5.png" alt="Activity 4" class="img-fluid rounded">
                             <div class="gallery-description">
                                 <p>Bermain di luar ruangan</p>
                                 <a href="#" class="more-info">Informasi selengkapnya...</a>
@@ -773,100 +346,75 @@
     </main>
     <footer class="container-footer footer">
         <div class="pt-4 p-5">
-            <div class="row">
-                <div class="col-md-4 ">
-                    <ul class="list1">
-                        <li><a href="#">Tentang Kami</a></li>
-                        <li><a href="#">Pendaftaran</a></li>
-                        <li><a href="#">Testimoni</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Layanan Lainnya</a></li>
-                        <li><a href="#">Kebijakan Privasi</a></li>
-                        <li><a href="#">Syarat dan Ketentuan</a></li>
-                    </ul>
-                </div>
-                <!-- footer column 2 -->
-                <div class="col-md-4">
-                    <h4>Paket Booking</h4>
-                    <ul class="list2">
-                        <li><a href="#"">Durasi Penitipan</a></li>
-                        <li><a href=" #">Frekuensi</a></li>
-                        <li><a href="#">Layanan Dasar</a></li>
-                        <li><a href="#">Akses Fasilitas</a></li>
-                        <li><a href="#">Laporan Harian</a></li>
-                        <li><a href="#">Pilihan Tambahan</a></li>
-                        <li><a href="#">Akses Aplikasi</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4">
-
-                    <ul class="list4">
-                        <h4>Kontak Kami</h4>
-                        <h5>Alamat</h5>
-                        <li>Jl.Mawar No 123, Jakarta, Indonesia</li>
-                    </ul>
-                    <ul class="list4">
-                        <h5>Telepon</h5>
-                        <li>(021)1234-5678</li>
-                    </ul>
-                    <ul class="list4">
-                        <h5>Email</h5>
-                        <li>Daycare01@gmail.com</li>
-                    </ul>
-
-                </div>
-
-                <!-- footer column 3/social media -->
-                <div class="d-flex justify-content-center">
-                    <div class="col-md-4 text-center ">
-                        <h5 class="follow">Follow Us</h5>
-                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
-
-                    </div>
-                </div>
+          <div class="row">
+            <div class="col-md-4 ">
+              <ul class="list1">
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Pendaftaran</a></li>
+                <li><a href="#">Testimoni</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Layanan Lainnya</a></li>
+                <li><a href="#">Kebijakan Privasi</a></li>
+                <li><a href="#">Syarat dan Ketentuan</a></li>
+              </ul>
             </div>
-
-            <!-- Footer Bottom -->
-            <div class="copyright text-center mt-4 ">
-                <p>&copy; 2024 FunEduCare. All rights reserved.</p>
+            <!-- footer column 2 -->
+            <div class="col-md-4">
+              <h4>Paket Booking</h4>
+              <ul class="list2">
+                <li><a href="#"">Durasi Penitipan</a></li>
+                    <li><a href=" #">Frekuensi</a></li>
+                <li><a href="#">Layanan Dasar</a></li>
+                <li><a href="#">Akses Fasilitas</a></li>
+                <li><a href="#">Laporan Harian</a></li>
+                <li><a href="#">Pilihan Tambahan</a></li>
+                <li><a href="#">Akses Aplikasi</a></li>
+              </ul>
             </div>
+    
+            <div class="col-md-4">
+              <ul class="list4">
+                <h4>Kontak Kami</h4>
+                <h5>Alamat</h5>
+                <li>Jl.Mawar No 123, Jakarta, Indonesia</li>
+              </ul>
+              <ul class="list4">
+                <h5>Telepon</h5>
+                <li>(021)1234-5678</li>
+              </ul>
+              <ul class="list4">
+                <h5>Email</h5>
+                <li>Daycare01@gmail.com</li>
+              </ul>
+            </div>
+    
+            <!-- btn up -->
+            <div class="button-group d-flex justify-content-center mb-4">
+              <button id="backToTop" class="btn btn-1 ">Back to Top</button>
+            </div>
+            <!-- footer column 3/social media -->
+            <div class="d-flex justify-content-center mt-5">
+              <div class="col-md-4 text-center ">
+                <h5 class="follow">Follow Us</h5>
+                <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+    
+              </div>
+            </div>
+          </div>
+    
+          <!-- Footer Bottom -->
+          <div class="copyright text-center mt-4 ">
+            <p> Copyright &copy; 2024 FunEduCare. All rights
+              reserved.</p>
+          </div>
         </div>
-    </footer>
-    <script>
-        $(document).ready(function () {
-            /* FITUR LIHAT INFORMASI SELENGKAPNYA */
-            $('.more-info').on('click', function (e) {
-                e.preventDefault();
-                $(this).siblings('.additional-info').slideToggle();
-            });
-            /* EFEK KETIKA KURSOR DIARAHKAN KE BOX CAROUSEL GURU DAN GALERI MAKA AKAN MEMPERBESAR */
-            $('.pengajar-item, .gallery-item').hover(
-                function () {
-                    $(this).css({
-                        'transform': 'scale(1.05)',
-                        'transition': 'transform 0.3s ease'
-                    });
-                },
-                function () {
-                    $(this).css({
-                        'transform': 'scale(1)',
-                        'transition': 'transform 0.3s ease'
-                    });
-                }
-            );
-            /* EFEK LOGO DIBAWAH TULISAN SIAPA KAMI  MEMPERBESAR DAN MEMPERKECIL*/
-            function pulsateLogo() {
-                $('.jumbotron img').animate({ scale: 1.1 }, 1000, function () {
-                    $(this).animate({ scale: 1 }, 1000, pulsateLogo);
-                });
-            }
-            pulsateLogo();
-        });
-    </script>
+      </footer>
+
+<!-- link js -->
+ <script src="./assets/js/aboutus.js"></script>
 </body>
 
 
