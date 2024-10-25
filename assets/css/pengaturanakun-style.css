@@ -9,7 +9,7 @@
 body {
   font-family: Arial, sans-serif;
   color: #333;
-  background-image: url("img/baground.jpg"); /* Ganti dengan gambar background yang sesuai */
+  background-image: url("../images/baground.jpg"); /* Ganti dengan gambar background yang sesuai */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
