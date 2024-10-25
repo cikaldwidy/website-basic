@@ -1,3 +1,16 @@
+// scroll explore
+$(document).ready(function () {
+  $("#scrollButton").on("click", function (event) {
+    event.preventDefault(); // Mencegah default action
+    $("html, body").animate(
+      {
+        scrollTop: $("#marqueForm").offset().top, // Mengatur scroll ke posisi bagian tujuan
+      },
+      1500
+    ); // Durasi animasi dalam milidetik
+  });
+});
+
 // js jquery membuat teks disembunyikan content-4
 $(document).ready(function () {
   // Membuat array yang berisi ID dari semua tombol 'Tampilkan lebih banyak'
@@ -31,9 +44,6 @@ $(document).ready(function () {
     });
   });
 });
-// INTERVAL C-4
-
-// INTERVAL C-5
 
 //js-jquery form hubungi kami content-6
 $(document).ready(function () {
@@ -72,4 +82,48 @@ $(document).ready(function () {
     $("html, body").animate({ scrollTop: 0 }, 1500); // Menggunakan animasi
   });
 });
-// animasi
+
+// animasi pop up
+$(document).ready(function () {
+  $("#getStarted").on("click", function (event) {
+    event.preventDefault();
+    $("#verificationModal").modal("show");
+  });
+
+  $("#loginForm").on("submit", function (event) {
+    event.preventDefault(); // Mencegah form dari pengiriman default
+    showModal(); // Menampilkan modal
+  });
+  // Menutup modal hanya jika tombol OK diklik
+  $(".close").on("click", function () {
+    $("#verificationModal").modal("hide");
+  });
+  $(".close-btn").on("click", function () {
+    // Setelah modal ditutup, pindahkan pengguna ke halaman homepage.html
+    window.location.href = "login.html"; // Pindah ke halaman homepage.html
+  });
+  $(".close-btn2").on("click", function () {
+    // Setelah modal ditutup, pindahkan pengguna ke halaman homepage.html
+    window.location.href = "index.html"; // Pindah ke halaman homepage.html
+  });
+});
+// pop up log in
+$(document).ready(function () {
+  $("#getLogin").on("click", function (event) {
+    event.preventDefault();
+    $("#verificationModal").modal("show");
+  });
+
+  $("#loginForm").on("submit", function (event) {
+    event.preventDefault(); // Mencegah form dari pengiriman default
+    showModal(); // Menampilkan modal
+  });
+  // Menutup modal hanya jika tombol OK diklik
+  $(".close").on("click", function () {
+    $("#verificationModal").modal("hide");
+  });
+  $(".close-btn").on("click", function () {
+    // Setelah modal ditutup, pindahkan pengguna ke halaman homepage.html
+    window.location.href = "login.html"; // Pindah ke halaman homepage.html
+  });
+});
