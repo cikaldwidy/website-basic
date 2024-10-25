@@ -22,11 +22,8 @@
 }
 
 body {
-  /* Pengaturan umum untuk body dan background image*/
+  /* Pengaturan umum untuk body */
   background-color: white;
-  background-image: url(../images/h-bg-1.jpg);
-  background-repeat: no-repeat;
-  background-position: top;
   background-size: cover;
   height: 0vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
