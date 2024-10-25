@@ -593,7 +593,7 @@ body {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: #011f46;
+  background-color: var(--text-color1);
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -608,11 +608,10 @@ body {
 
 .read-more-btn {
   color: #011f46;
-  opacity: 90%;
   letter-spacing: 0.5px;
   cursor: pointer;
-  font-size: 15px;
-  font-weight: 650;
+  font-size: 13px;
+  font-weight: 600;
   border: none;
   background: none;
   padding: 0;
@@ -620,7 +619,7 @@ body {
 }
 .read-more-btn:hover {
   color: #011f46;
-  opacity: 70%;
+  opacity: 80%;
   text-decoration: none;
 }
 
@@ -818,4 +817,111 @@ body {
 .follow,
 .copyright {
   color: var(--text-color2);
+}
+
+/* pop up  */
+/* Modal Background */
+#verificationModal .modal-dialog {
+  max-width: 900px; /* Set the desired width */
+  width: 100%; /* Make it responsive */
+  height: auto;
+}
+.modal-body h3 {
+  font-size: 30px;
+  background: linear-gradient(to right, #011f46, var(--main-color));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+.modal-body h5 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-color1);
+  opacity: 85%;
+}
+.modal-body p {
+  font-size: var(--p-font);
+  color: var(--text-color1);
+  font-weight: 400;
+  opacity: 85%;
+}
+
+/* media responsice c2 */
+@media (max-width: 768px) {
+  .text-content1 h1 {
+    font-size: 3em; /* Ukuran font untuk tablet */
+  }
+
+  .textImg img {
+    width: 30%; /* Gambar mengisi lebar penuh */
+    height: auto; /* Menjaga rasio aspek */
+  }
+
+  .button-group a {
+    display: block; /* Tombol ditampilkan dalam satu kolom */
+    margin: 10px 0; /* Margin antara tombol */
+  }
+}
+
+@media (max-width: 576px) {
+  .text-content1 h1 {
+    font-size: 3em; /* Ukuran font untuk mobile */
+  }
+
+  /* Mengatur posisi gambar pada mobile */
+  .textImg img {
+    position: static; /* Menghapus posisi absolut */
+    margin: 10px 0; /* Margin untuk gambar */
+  }
+}
+
+/* media responsive content img2 */
+@media (max-width: 768px) {
+  .marquee img {
+    max-width: 200px; /* Ukuran gambar lebih kecil di tablet */
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .marquee img {
+    max-width: 150px; /* Ukuran gambar lebih kecil di mobile */
+    height: auto;
+  }
+}
+/* content2 */
+@media (max-width: 768px) {
+  .content-1-4 {
+    padding: 5px; /* Mengurangi padding pada perangkat kecil */
+  }
+
+  .cText h3 {
+    font-size: 2rem; /* Mengatur ukuran font pada perangkat kecil */
+  }
+
+  .cText p {
+    font-size: 1rem; /* Mengatur ukuran font pada perangkat kecil */
+  }
+  .img-fluid {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .content-1-4 {
+    padding: 5px; /* Mengurangi padding pada perangkat kecil */
+  }
+
+  .cText h3 {
+    font-size: 1.5rem; /* Mengatur ukuran font pada perangkat kecil */
+  }
+
+  .cText p {
+    font-size: 0.8rem; /* Mengatur ukuran font pada perangkat kecil */
+  }
+  .img-fluid {
+    display: none;
+  }
+  .button-group .btn {
+    font-size: 13px;
+  }
 }
