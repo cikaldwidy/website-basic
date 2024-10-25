@@ -51,32 +51,32 @@ $(document).ready(function () {
       name: "Mayanda Bella",
       program: "Infant Care",
       age: "5 Bulan",
-      img: "img/anak1.jpg",
+      img: "./assets/images/anak1.jpg",
     },
     {
       name: "Arya Dinata",
       program: "Toddler Program",
       age: "2 Tahun",
-      img: "img/anak2.jpg",
+      img: "./assets/images/anak2.jpg",
     },
     {
       name: "Arumi Khanza",
       program: "Pre-School Program",
       age: "3 Tahun",
-      img: "img/anak3.jpg",
+      img: "./assets/images/anak3.jpg",
     },
     {
       name: "Rafif Akbar",
       program: "Pre-Kindergarten",
       age: "5 Tahun",
-      img: "img/anak4.jpg",
+      img: "./assets/images/anak4.jpg",
     },
   ];
 
   $.each(childrenData, function (index, child) {
     let card = `<div class="col-md-3">
                   <div class="card profile-card">
-                    <img src="${child.img}" alt="Foto ${child.name}" class="card-img-top profile-img" />
+                    <img src="${child.img}" alt="Foto ${child.name}" class="card-img-top profile-img " />
                     <div class="card-body">
                       <h5 class="card-title">${child.name}</h5>
                       <p><strong>Program:</strong> ${child.program}</p>
