@@ -22,13 +22,13 @@
 }
 body {
   background: var(--bg-color);
-  overflow-x: hidden;
 }
 
 /* navbar */
 .navbar-brand img {
   height: auto;
 }
+
 /* sb-1 */
 .offcanvas-title .logo-small {
   width: 50px;
@@ -38,18 +38,19 @@ body {
   background-color: var(--main-color);
   opacity: 100%;
   color: var(--text-color2);
+  font-weight: 500;
   font-size: 13px;
-  border-radius: 50px;
+  border-radius: 30px;
   text-decoration: none;
   transition: 0.3s backgroud-color;
   -webkit-transition: 0.3s backgroud-color;
   -moz-transition: 0.3s backgroud-color;
   -ms-transition: 0.3s backgroud-color;
   -o-transition: 0.3s backgroud-color;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
 .signup-button:hover {
   background-color: var(--main-color);
@@ -173,10 +174,7 @@ body {
   color: var(--text-color2);
   text-decoration: none;
 }
-.contentImg {
-  width: 500px;
-  height: auto;
-}
+
 /* contentlower */
 .contentlower {
   position: relative;
@@ -229,50 +227,35 @@ body {
 /* content-1.2 */
 .content-1-2 {
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
+
 .marquee-container {
-  position: relative;
-  overflow: visible;
+  display: flex;
   white-space: nowrap;
-  background-color: var(--bg-color);
-  padding: 5px;
 }
 
 .marquee {
-  white-space: nowrap;
   display: inline-block;
-  animation: marquee 30s linear infinite;
-  -webkit-animation: marquee 30s linear infinite;
+  animation: marquee 40s linear infinite;
+  -webkit-animation: marquee 40s linear infinite;
 }
 
 .marquee img {
-  margin: 0 12px;
-  transition: transform 0.3s ease;
-}
-
-.marquee img:hover {
-  transform: scale(1.15);
-  -webkit-transform: scale(1.15);
-  -moz-transform: scale(1.15);
-  -ms-transform: scale(1.15);
-  -o-transform: scale(1.15);
+  width: 400px;
+  height: 500px;
+  margin-right: 20px;
 }
 
 @keyframes marquee {
   0% {
     transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
   }
-
   100% {
-    transform: translateX(-60%);
-    -webkit-transform: translateX(-60%);
-    -moz-transform: translateX(-60%);
-    -ms-transform: translateX(-60%);
-    -o-transform: translateX(-60%);
+    transform: translateX(
+      -100%
+    ); /* Pindahkan ke kiri berdasarkan 100% dari total lebar */
   }
 }
 
@@ -875,6 +858,11 @@ body {
   }
 }
 
+@media (max-width: 700px) {
+  .content-1 .text-content h1 {
+    font-size: 3rem;
+  }
+}
 /* media responsive content img2 */
 @media (max-width: 768px) {
   .marquee img {
@@ -923,5 +911,17 @@ body {
   }
   .button-group .btn {
     font-size: 13px;
+  }
+}
+/* content 1.4 */
+@media (max-width: 552px) {
+  .c3-circle {
+    max-width: 100px; /* Adjust size for smaller screens */
+    max-height: 100px;
+  }
+
+  .c3-oval {
+    max-width: 90px; /* Adjust size for smaller screens */
+    max-height: auto;
   }
 }
