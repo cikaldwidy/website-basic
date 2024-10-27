@@ -240,6 +240,24 @@ body {
   }
 }
 
+/* ISI MENU ABOUT US */
+/* Mengatur background image */
+.image-section { 
+            position: relative;
+            /* Menetapkan posisi elemen relatif terhadap posisinya sendiri. */
+            height: 50vh;
+            /* Menentukan tinggi elemen 50% dari tinggi viewport. */
+            overflow: hidden;
+            /* Menyembunyikan konten yang melebihi batas elemen. */
+        }
+.image-section img {
+            width: 100%;
+            /* Gambar melebar penuh sesuai dengan ukuran kontainer. */
+            height: 100%;
+            /* Gambar meninggi penuh sesuai dengan ukuran kontainer. */
+            object-fit: cover;
+            /* Gambar tidak terdistorsi dan mengisi seluruh area tanpa mengubah rasio. */
+        }
 .about-us-container {
   /* Gaya untuk kontainer 'About Us' */
   margin-top: 50px;
@@ -274,6 +292,14 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+            /* Ukuran logonya mengecil jika layar HP */
+            .jumbotron img {
+                max-width: 100px;
+                max-height: 100px;
+            }
+        }
 
 .jumbotron p {
   /* Gaya untuk paragraf dalam jumbotron siapa kami */
