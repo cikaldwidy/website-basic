@@ -103,8 +103,8 @@ $(document).ready(function () {
     window.location.href = "login.html"; // Pindah ke halaman homepage.html
   });
   $(".close-btn2").on("click", function () {
-    // Setelah modal ditutup, pindahkan pengguna ke halaman homepage.html
-    window.location.href = "index.html"; // Pindah ke halaman homepage.html
+    // Setelah modal ditutup, pindahkan pengguna ke halaman dashboard.html
+    window.location.href = "dashboard.html"; // Pindah ke halaman dashboardwali.html
   });
 });
 // pop up log in
@@ -124,7 +124,7 @@ $(document).ready(function () {
   });
   $(".close-btn").on("click", function () {
     // Setelah modal ditutup, pindahkan pengguna ke halaman homepage.html
-    window.location.href = "login.html"; // Pindah ke halaman homepage.html
+    window.location.href = "login.html"; // Pindah ke halaman login
   });
 });
 //

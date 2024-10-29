@@ -21,6 +21,6 @@ $(document).ready(function () {
   // Menutup modal hanya jika tombol OK diklik
   $(".close-btn").on("click", function () {
     // Setelah modal ditutup, pindahkan pengguna ke halaman homepage.html
-    window.location.href = "homepage.html"; // Pindah ke halaman homepage.html
+    window.location.href = "index.html"; // Pindah ke halaman homepage.html
   });
 });
