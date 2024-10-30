@@ -1,7 +1,7 @@
 $(document).ready(function () {
   // Fungsi untuk tombol kembali ke halaman utama
   $(".btn-back").on("click", function () {
-    window.location.href = "index.html"; // Ganti dengan URL halaman utama Anda
+    window.location.href = "homepage.html"; // Ganti dengan URL halaman utama Anda
   });
 
   // Fungsi hover untuk menu sidebar
