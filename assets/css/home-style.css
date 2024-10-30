@@ -802,7 +802,7 @@ body {
   color: var(--text-color2);
 }
 
-/* pop up  */
+/* pop up dasboard wali */
 /* Modal Background */
 #verificationModal .modal-dialog {
   max-width: 900px; /* Set the desired width */
@@ -828,7 +828,42 @@ body {
   font-weight: 400;
   opacity: 85%;
 }
+/* pop up login */
+#verificationModal2 .box {
+  max-width: 750px; /* Set the desired width */
+  width: 100%; /* Make it responsive */
+  height: auto;
+}
+.modal-body2 img {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+}
+.modal-body2 img:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+.modal-body2 h2 {
+  font-size: 35px;
+  color: #ee0d62;
+  font-weight: 700;
+}
 
+.modal-body2 p {
+  font-size: var(--p-font);
+  color: var(--text-color1);
+  font-weight: 400;
+  opacity: 85%;
+}
+.modal-body2 span {
+  font-weight: 700;
+}
 /* media responsice c2 */
 @media (max-width: 768px) {
   .text-content1 h1 {

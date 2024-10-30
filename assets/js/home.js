@@ -83,14 +83,14 @@ $(document).ready(function () {
   });
 });
 
-// animasi pop up
+// animasi pop up formwali
 $(document).ready(function () {
   $("#getStarted").on("click", function (event) {
     event.preventDefault();
     $("#verificationModal").modal("show");
   });
 
-  $("#loginForm").on("submit", function (event) {
+  $("#waliForm").on("submit", function (event) {
     event.preventDefault(); // Mencegah form dari pengiriman default
     showModal(); // Menampilkan modal
   });
@@ -107,14 +107,14 @@ $(document).ready(function () {
     window.location.href = "dashboard.html"; // Pindah ke halaman dashboardwali.html
   });
 });
-// pop up log in
+// pop up verified
 $(document).ready(function () {
-  $("#getLogin").on("click", function (event) {
+  $("#getStarted").on("click", function (event) {
     event.preventDefault();
     $("#verificationModal").modal("show");
   });
 
-  $("#loginForm").on("submit", function (event) {
+  $("#waliForm").on("submit", function (event) {
     event.preventDefault(); // Mencegah form dari pengiriman default
     showModal(); // Menampilkan modal
   });
@@ -128,3 +128,39 @@ $(document).ready(function () {
   });
 });
 //
+
+// animasi pop up form login
+$(document).ready(function () {
+  $("#getLogin").on("click", function (event) {
+    event.preventDefault();
+    $("#verificationModal2").modal("show");
+  });
+
+  $("#loginForm").on("submit", function (event) {
+    event.preventDefault(); // Mencegah form dari pengiriman default
+    showModal(); // Menampilkan modal
+  });
+  // Menutup modal hanya jika tombol OK diklik
+  $(".close").on("click", function () {
+    $("#verificationModal2").modal("hide");
+  });
+  $(".close-btn3").on("click", function () {
+    // Setelah modal ditutup, pindahkan pengguna ke halaman homepage.html
+    window.location.href = "login.html"; // Pindah ke halaman homepage.html
+  });
+  $(".close-btn4").on("click", function () {
+    // Setelah modal ditutup, pindahkan pengguna ke halaman dashboard.html
+    window.location.href = "signup.html"; // Pindah ke halaman dashboardwali.html
+  });
+});
+// teks sembuyikan login
+$(document).ready(function () {
+  $("#toggleButton").click(function () {
+    $("#infoText").toggle(); // Menyembunyikan atau menampilkan teks
+    $(this).text(
+      $(this).text() === "Sembunyikan Teks"
+        ? "Tampilkan Teks"
+        : "Sembunyikan Teks"
+    ); // Mengubah teks tombol
+  });
+});

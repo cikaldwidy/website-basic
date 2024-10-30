@@ -22,98 +22,66 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-
+   
     <link rel="stylesheet" href="./assets/css/contactus-style.css" />
   </head>
 
   <body>
     <header>
       <nav class="navbar navbar-expand-lg fixed-top">
-        <div
-          class="container-fluid me-3 ms-3 rounded-5"
-          style="background-color: #cfcfcf"
-        >
+        <div class="container-fluid me-3 ms-3 rounded-5 "
+          style="background-color:  #cfcfcf;">
           <a class="navbar-brand me-auto p-3" href="#">
             <img src="./assets/images/logo2.png" alt="logo" width="40px" />
           </a>
-          <div
-            class="offcanvas offcanvas-end text-center"
-            tabindex="-1"
+          <div class="offcanvas offcanvas-end text-center " tabindex="-1"
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
-            style="background-color: #cfcfcf"
-          >
+            style="background-color:  #cfcfcf;">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                <img
-                  src="./assets/images/logo2.png"
-                  alt="logo"
-                  class="logo-small"
-                />
+                <img src="./assets/images/logo2.png" alt="logo"
+                  class="logo-small" />
               </h5>
-              <button
-                type="button"
-                class="btn-close bg-light"
+              <button type="button" class="btn-close bg-light"
                 data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
+                aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-center flex-grow-1 pe-4">
                 <li class="nav-item">
-                  <a
-                    class="nav-link mx-lg-3"
-                    aria-current="page"
-                    href="./index.html"
-                    >HOME</a
-                  >
+                  <a class="nav-link mx-lg-3" aria-current="page"
+                    href="./index.html">HOME</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link mx-lg-3" href="aboutus.html">ABOUT US</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle mx-lg-3"
-                    href
-                    role="button"
+                  <a class="nav-link dropdown-toggle mx-lg-3" href role="button"
                     data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
+                    aria-expanded="false">
                     PROGRAMS
                   </a>
                   <ul class="dropdown-menu">
-                    <li>
-                      <a class="dropdown-item" href="programs.html"
-                        >ALL-PROGRAM</a
-                      >
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="myprogram.html"
-                        >MY-PROGRAM</a
-                      >
-                    </li>
+                    <li><a class="dropdown-item"
+                        href="programs.html">ALL-PROGRAM</a></li>
+                    <li><a class="dropdown-item"
+                        href="myprogram.html">MY-PROGRAM</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active mx-lg-3" href="contactus.html"
-                    >CONTACT US</a
-                  >
+                  <a class="nav-link active mx-lg-3" href="contactus.html">CONTACT
+                    US</a>
                 </li>
               </ul>
             </div>
           </div>
           <div class="d-flex align-items-center">
-            <a href="./login.html" class="signup-button p-2 me-2"
-              >Open Your Account</a
-            >
-            <button
-              class="navbar-toggler pe-2"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar"
-              aria-controls="offcanvasNavbar"
-              aria-label="Toggle navigation"
-            >
+            <a href="./login.html" class="signup-button p-2 me-2">Open Your
+              Account</a>
+            <button class="navbar-toggler pe-2" type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
           </div>
@@ -121,7 +89,7 @@
       </nav>
     </header>
     <section class="image-section">
-      <img src="./assets/images/landing-page-new.jpg" alt="Program Image" />
+      <img src="./assets/images/bg-contactus.png" alt="Program Image" />
       <div class="overlay content-1">
         <h1>Contact Us</h1>
         <hr class="garis mx-auto mx-md-0" />
@@ -131,7 +99,7 @@
       </div>
     </section>
     <main class="container my-4">
-      <div id="konsultasi" class="row">
+      <div class="row">
         <article class="col-md-7 d-flex flex-column">
           <h2>Contact Form</h2>
           <form aria-labelledby="contact-form">
@@ -209,7 +177,83 @@
       </div>
     </main>
 
-    <section id="faqq" class="faq-container">
+    <section class="container mt-5">
+      <div id="testimonialCarousel" class="carousel slide mx-auto" style="max-width: 600px;" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <article class="testimonial-card text-center p-4">
+              <div class="overlay"></div>
+              <div class="content">
+                <header>
+                  <figure>
+                    <img src="./assets/images/IMG_6643.PNG" class="rounded-circle mx-auto d-block" alt="Admin 1" width="100">
+                    <figcaption class="testimonial-author mt-2">Admin 1</figcaption>
+                  </figure>
+                </header>
+    
+                <blockquote class="mt-3">
+                  <p class="testimonial-text">
+                    Anda dapat menghubungi contact information di atas atau
+                    <span id="dots1">...</span>
+                    <span id="more1" class="hidden-text">
+                      Nomor Telepon : +62 880-0000-0000
+                    </span>
+                  </p>
+                </blockquote>
+                <footer>
+                  <button class="read-more-btn" id="readMoreBtn1" aria-expanded="false">
+                    Tampilkan lebih banyak
+                  </button>
+                </footer>
+              </div>
+            </article>
+          </div>
+
+          <div class="carousel-item">
+            <article class="testimonial-card text-center p-4">
+              <div class="overlay"></div>
+              <div class="content">
+                <header>
+                  <figure>
+                    <img src="./assets/images/IMG_6643.PNG" class="rounded-circle mx-auto d-block" alt="Admin 2" width="100">
+                    <figcaption class="testimonial-author mt-2">Admin 2</figcaption>
+                  </figure>
+                </header>
+    
+                <blockquote class="mt-3">
+                  <p class="testimonial-text">
+                    Anda dapat menghubungi contact information di atas atau
+                    <span id="dots2">...</span>
+                    <span id="more2" class="hidden-text">
+                      Nomor Telepon : +62 881-1111-1111
+                    </span>
+                  </p>
+                </blockquote>
+                <footer>
+                  <button class="read-more-btn" id="readMoreBtn2" aria-expanded="false">
+                    Tampilkan lebih banyak
+                  </button>
+                </footer>
+              </div>
+            </article>
+          </div>
+        </div>
+    
+        <nav>
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </nav>
+      </div>
+    </section>
+
+    <section class="faq-container">
       <h1 class="text-center">FAQS?</h1>
       <div id="faq-list">
         <div class="faq-item">
@@ -313,7 +357,7 @@
       </div>
     </section>
 
-    <section id="maps" class="map my-4">
+    <section class="map my-4">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.6880355629382!2d106.68383427409745!3d-6.304656361699461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69e55e09af6f51%3A0x15d32286238d7a9c!2sEducourse.id%20Office!5e0!3m2!1sid!2sid!4v1727197567537!5m2!1sid!2sid"
         width="100%"
@@ -328,82 +372,68 @@
     <footer class="container-footer footer">
       <div class="pt-4 p-5">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 ">
             <ul class="list1">
-              <li><a href="aboutus.html#siapakami">Tentang Kami</a></li>
-              <li><a href="form_booking.html">Pendaftaran</a></li>
-              <li><a href="index.html#testimoni">Testimoni</a></li>
-              <li><a href="contactus.html#faqq">FAQ</a></li>
-              <li><a href="contactus.html#konsultasi">Konsultasi</a></li>
-              <li><a href="index.html#fasilitas">Fasilitas</a></li>
-              <li><a href="aboutus.html#galeri">Galeri</a></li>
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Pendaftaran</a></li>
+              <li><a href="#">Testimoni</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Layanan Lainnya</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+              <li><a href="#">Syarat dan Ketentuan</a></li>
             </ul>
           </div>
           <!-- footer column 2 -->
           <div class="col-md-4">
-            <h4>Paket Kami</h4>
+            <h4>Paket Booking</h4>
             <ul class="list2">
-              <li><a href="programs.html#infant">Infant Care</a></li>
-              <li><a href="programs.html#toddler">Toddler Program</a></li>
-              <li><a href="programs.html#preschool">Pre-School Program</a></li>
-              <li><a href="programs.html#prekind">Pre-Kindergarten</a></li>
-              <li><a href="programs.html#upcoming">Upcoming Events</a></li>
-              <li>
-                <a href="programs.html#program-lainnya">Program Lainnya</a>
-              </li>
+              <li><a href="#"">Durasi Penitipan</a></li>
+                  <li><a href=" #">Frekuensi</a></li>
+              <li><a href="#">Layanan Dasar</a></li>
+              <li><a href="#">Akses Fasilitas</a></li>
+              <li><a href="#">Laporan Harian</a></li>
+              <li><a href="#">Pilihan Tambahan</a></li>
+              <li><a href="#">Akses Aplikasi</a></li>
             </ul>
           </div>
+  
           <div class="col-md-4">
-            <h4>Kontak Kami</h4>
             <ul class="list4">
-              <li>
-                <i class="bi bi-geo-alt me-2"></i>
-                Jl.Mawar No 123, Jakarta, Indonesia
-              </li>
-              <br />
-              <li>
-                <i class="bi bi-whatsapp me-2"></i>
-                088221319983
-              </li>
-              <br />
-              <li>
-                <i class="bi bi-envelope me-2"></i>
-                funeducare@gmail.com
-              </li>
+              <h4>Kontak Kami</h4>
+              <h5>Alamat</h5>
+              <li>Jl.Mawar No 123, Jakarta, Indonesia</li>
+            </ul>
+            <ul class="list4">
+              <h5>Telepon</h5>
+              <li>(021)1234-5678</li>
+            </ul>
+            <ul class="list4">
+              <h5>Email</h5>
+              <li>Daycare01@gmail.com</li>
             </ul>
           </div>
+  
           <!-- btn up -->
           <div class="button-group d-flex justify-content-center mb-4">
-            <button id="backToTop" class="btn btn-1">Back to Top</button>
+            <button id="backToTop" class="btn btn-1 ">Back to Top</button>
           </div>
           <!-- footer column 3/social media -->
           <div class="d-flex justify-content-center mt-5">
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center ">
               <h5 class="follow">Follow Us</h5>
-              <a
-                href="https://www.facebook.com/ruanggurucom/"
-                class="text-white me-2"
-                ><i class="bi bi-facebook"></i
-              ></a>
-              <a href="https://x.com/ruangguru/" class="text-white me-2"
-                ><i class="bi bi-twitter"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/ruangguru/"
-                class="text-white me-2"
-                ><i class="bi bi-instagram"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/company/ruangguru-com?referralCookiesId=23cf3dc9-bba5-43d3-ba10-a086684aef0e"
-                class="text-white me-2"
-                ><i class="bi bi-linkedin"></i
-              ></a>
+              <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+  
             </div>
           </div>
         </div>
+  
         <!-- Footer Bottom -->
-        <div class="copyright text-center mt-4">
-          <p>Copyright &copy; 2024 FunEduCare. All rights reserved.</p>
+        <div class="copyright text-center mt-4 ">
+          <p> Copyright &copy; 2024 FunEduCare. All rights
+            reserved.</p>
         </div>
       </div>
     </footer>

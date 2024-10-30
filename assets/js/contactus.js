@@ -1,3 +1,49 @@
+// gulir jelajahi
+$(document).ready(function () {
+  $("#scrollButton").on("click", function (event) {
+    event.preventDefault(); // Mencegah default action
+    $("html, body").animate(
+      {
+        scrollTop: $("#marqueForm").offset().top, // Mengatur scroll ke posisi bagian tujuan
+      },
+      1500
+    ); // Durasi animasi dalam milidetik
+  });
+});
+
+// js jquery membuat teks disembunyikan content-4
+$(document).ready(function () {
+  // Membuat array yang berisi ID dari semua tombol 'Tampilkan lebih banyak'
+  const readMoreButtons = [
+    "readMoreBtn1",
+    "readMoreBtn2",
+    "readMoreBtn3",
+    "readMoreBtn4",
+    "readMoreBtn5",
+    "readMoreBtn6",
+  ];
+
+  // Melakukan iterasi pada setiap ID tombol di dalam array
+  readMoreButtons.forEach((buttonId) => {
+    $(`#${buttonId}`).on("click", function () {
+      const index = buttonId.charAt(buttonId.length - 1);
+      const $dots = $(`#dots${index}`);
+      const $moreText = $(`#more${index}`);
+
+      const isExpanded = $moreText.css("display") === "inline";
+
+      if (isExpanded) {
+        $dots.css("display", "inline");
+        $moreText.css("display", "none");
+        $(this).text("Tampilkan lebih banyak");
+      } else {
+        $dots.css("display", "none");
+        $moreText.css("display", "inline");
+        $(this).text("Sembunyikan");
+      }
+    });
+  });
+});
 document.addEventListener("DOMContentLoaded", function () {
   const faqItems = document.querySelectorAll(".faq-item");
 
@@ -8,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     question.addEventListener("click", () => {
       const isActive = question.classList.contains("active");
 
-      // Close all other open answers
+      // Tutup semua jawaban terbuka lainnya
       faqItems.forEach((otherItem) => {
         if (otherItem !== item) {
           otherItem.querySelector(".faq-question").classList.remove("active");
@@ -16,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // Toggle the clicked item
+      // Alihkan item yang diklik
       question.classList.toggle("active", !isActive);
       answer.classList.toggle("active", !isActive);
     });
