@@ -104,7 +104,7 @@ $(document).ready(function () {
   });
   $(".close-btn2").on("click", function () {
     // Setelah modal ditutup, pindahkan pengguna ke halaman homepage.html
-    window.location.href = "index.html"; // Pindah ke halaman homepage.html
+    window.location.href = "dashboard.html"; // Pindah ke halaman homepage.html
   });
 });
 // pop up verified
