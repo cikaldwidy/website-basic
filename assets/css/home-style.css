@@ -470,12 +470,6 @@ body {
   font-weight: 500;
   opacity: 90%;
 }
-.content-3 .row,
-.h5 .p .a {
-  max-width: 1200px;
-  text-align: start;
-}
-
 .content-3 h3 {
   font-size: 27px;
   font-weight: 600;
