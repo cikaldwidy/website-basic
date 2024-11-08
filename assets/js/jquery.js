@@ -7,7 +7,7 @@ $(document).ready(function () {
   // Fungsi hover untuk menu sidebar
   $(".menu a").hover(
     function () {
-      $(this).css("background-color", "#03aef0"); // Warna hover biru muda
+      $(this).css("background-color", "#15a6f5"); // Warna hover biru
       $(this).css("color", "#fff"); // Warna teks putih saat hover
     },
     function () {
@@ -91,3 +91,9 @@ $(document).ready(function () {
   // Pesan sambutan untuk orang tua
   alert("Selamat datang di dashboard orang tua!");
 });
+
+// pengaturan akun popup
+function simpanPerubahan(event) {
+  event.preventDefault(); // Mencegah reload halaman setelah submit
+  alert("Perubahan berhasil disimpan!"); // Menampilkan pesan konfirmasi
+}

@@ -19,17 +19,23 @@
           <li><a href="laporanperkembangan.html">Laporan Perkembangan</a></li>
           <li><a href="pembayaran.html">Pembayaran</a></li>
           <li><a href="#">Pengaturan Akun</a></li>
-          <!-- Halaman saat ini -->
         </ul>
-        <button class="btn-back" onclick="window.location.href='dashboard.html'">
+        <button
+          class="btn-back"
+          onclick="window.location.href='dashboard.html'"
+        >
           Kembali ke halaman utama
         </button>
       </aside>
 
       <main class="content">
         <h1>Pengaturan Akun</h1>
-
-        <form action="#" method="post" class="account-settings-form">
+        <form
+          action="#"
+          method="post"
+          class="account-settings-form"
+          onsubmit="simpanPerubahan(event)"
+        >
           <div class="form-group">
             <label for="name">Nama Lengkap</label>
             <input
@@ -87,5 +93,6 @@
         </form>
       </main>
     </div>
+    <script src="./assets/js/jquery.js"></script>
   </body>
 </html>

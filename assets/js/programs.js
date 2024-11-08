@@ -1,4 +1,24 @@
 $(document).ready(function () {
+  // ===== tabs start =====
+  // Menangani klik pada tombol tab
+  $(".program-tab").on("click", function () {
+    // Menghapus kelas 'active' dari semua tab
+    $(".program-tab").removeClass("active");
+    $(this).addClass("active"); // Menambahkan kelas 'active' pada tab yang diklik
+
+    // Mengambil ID konten yang sesuai dengan tab yang diklik
+    var program = $(this).data("program");
+    var target = "#" + program;
+
+    // Menyembunyikan semua konten tab dan hanya menampilkan konten yang dipilih
+    $("#infantcare, #toddler, #preschool, #prekindergarten").hide();
+    $(target).show();
+  });
+
+  // Menampilkan konten dari tab pertama saat halaman pertama kali dimuat
+  $(".program-tab").first().trigger("click");
+  // ===== tabs end =====
+
   $("#toggleInfoInfantCare").click(function () {
     $("#moreInfoInfantCare").slideToggle("slow", function () {
       if ($(this).is(":visible")) {
@@ -47,7 +67,7 @@ $(document).ready(function () {
 
   // Countdown Timer
   function updateTimer() {
-    var future = Date.parse("2024-10-31T00:00:00");
+    var future = Date.parse("2024-11-31T00:00:00");
     var now = new Date();
     var diff = future - now;
 

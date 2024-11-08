@@ -484,7 +484,15 @@ body {
   font-weight: 300;
   letter-spacing: 0.4px;
 }
-
+.content-3 a {
+  font-size: 15px;
+  text-decoration: none;
+  background: linear-gradient(to right, #011f46, var(--main-color));
+  opacity: 95%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
 /* content4 */
 
 .content-4 h3 {
